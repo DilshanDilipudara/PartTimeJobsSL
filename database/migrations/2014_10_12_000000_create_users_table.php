@@ -20,6 +20,14 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table -> String('Location','191');
+            $table -> String('NIC_Number')->unique(); 
+            $table -> integer('Phone_Number')->unique();
+            $table -> String('Sex','191');
+            $table -> String('Positon','191')->default('User');
+            $table -> text('Description');
+            $table  -> String('country','191'); 
+         
             $table->timestamps();
         });
     }
