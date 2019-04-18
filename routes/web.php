@@ -12,5 +12,32 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Home');
 });
+
+Route::get('/About', function () {
+    return view('About');
+});
+
+Route::get('/Blog', function () {
+    return view('Blog');
+});
+
+Route::get('/Category', function () {
+    return view('Category');
+});
+
+Route::get('/Contact', function () {
+    return view('Contact');
+});
+
+Route::get('/Job_Single', function () {
+    return view('Job_Single');
+});
+
+Route::get('/New_Post', function () {
+    return view('New_Post');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
