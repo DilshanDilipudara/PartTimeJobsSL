@@ -20,11 +20,11 @@ class Jobs extends Migration
             $table->String('Event');
             $table ->date('In_Date')->nullable();
             $table ->date('Out_Date')->nullable();
-            $table -> Integer('Per_Day_Payment');
-            $table -> Integer('Full_Payment');
-            $table -> Integer('quantity');
-            $table -> String('Location')->nullable();
-            $table -> String('Discription');
+            $table ->Integer('Per_Day_Payment');
+            $table ->Integer('Full_Payment');
+            $table ->Integer('quantity');
+            $table ->String('Location')->nullable();
+            $table ->String('Discription');
             // $table -> foreign('User_ID')
             //        -> references('id')->on('users')
             //        -> onDelete('cascade');

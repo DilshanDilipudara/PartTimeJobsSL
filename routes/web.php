@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('Home');
-});
+Route::get('/','availablejobshow@availablejobs');
 
 Route::get('/About', function () {
     return view('About');
