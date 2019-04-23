@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Jobstart &mdash; Colorlib Website Template</title>
+    <title>Job &mdash; Post</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -100,9 +100,10 @@
           
             
           
-            <form action="#" class="p-5 bg-white">
-              
-              <div class="row form-group">
+            <form action="/jobpost" method = "POST" class="p-5 bg-white">
+                   {{csrf_field()}}
+
+              <!-- <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label for="option-price-1">
                     <input type="checkbox" id="option-price-1"> <span class="text-success">$300</span> For 30 days
@@ -113,23 +114,47 @@
                     <input type="checkbox" id="option-price-2"> <span class="text-success">$200</span> / Monthly Recurring
                   </label>
                 </div>
-              </div>
+              </div> -->
 
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="fullname">Job Title</label>
-                  <input type="text" id="fullname" class="form-control" placeholder="eg. Full Stack Frontend">
+                  <label class="font-weight-bold" for="fullname">Job Title/Event</label>
+                  <input type="text" id="fullname" name = "event" class="form-control" placeholder="eg. Mobile app promote">
                 </div>
               </div>
 
               <div class="row form-group mb-5">
                 <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="fullname">Company</label>
-                  <input type="text" id="fullname" class="form-control" placeholder="eg. Facebook, Inc.">
+                  <label class="font-weight-bold" for="fullname">Start Date</label>
+                  <input type="date" id="fullname" name = "startdate" class="form-control" placeholder="eg. 2019/01/01">
                 </div>
               </div>
 
 
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">End Date</label>
+                  <input type="date" id="fullname" name = "enddate" class="form-control" placeholder="eg. Mobile app promote">
+                </div>
+              </div>
+               
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Per Day Payment</label>
+                  <input type="int" idint="fullname" name = "perdaypayment" class="form-control" placeholder="eg. 1500">
+                </div>
+              </div>
+             
+               
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Quantity</label>
+                  <input type="int" idint="fullname" name = "quantity" class="form-control" placeholder="eg. 4">
+                </div>
+              </div>
+
+
+<!-- 
               <div class="row form-group">
                 <div class="col-md-12"><h3>Job Type</h3></div>
                 <div class="col-md-12 mb-3 mb-md-0">
@@ -158,19 +183,19 @@
                   </label>
                 </div>
 
-              </div>
+              </div> -->
 
               <div class="row form-group mb-4">
                 <div class="col-md-12"><h3>Location</h3></div>
                 <div class="col-md-12 mb-3 mb-md-0">
-                  <input type="text" class="form-control" placeholder="New York City">
+                  <input type="text" name = "location" class="form-control" placeholder="eg. Colombo">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12"><h3>Job Description</h3></div>
                 <div class="col-md-12 mb-3 mb-md-0">
-                  <textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+                  <textarea  name = "discription" class="form-control" id="" cols="30" rows="5" placeholder="eg. We provide lanch and transport."></textarea>
                 </div>
               </div>
 
@@ -188,19 +213,19 @@
             <div class="p-4 mb-3 bg-white">
               <h3 class="h5 text-black mb-3">Contact Info</h3>
               <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+              <p class="mb-4">No.346/6, 6 canel, Moraketiya, Embilipitiya, Sri Lanka.</p>
 
-              <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+              <p class="mb-0 font-weight-bold">Mobile Number</p>
+              <p class="mb-4"><a href="#">+94 71 73 78 668</a></p>
 
               <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+              <p class="mb-0"><a href="#">gunawardhanaudara@gmail.com</a></p>
 
             </div>
             
             <div class="p-4 mb-3 bg-white">
               <h3 class="h5 text-black mb-3">More Info</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur</p>
+              <p>Part Time Job SL is the bigest largest prat time job in Sri Lanka.If you want find a part time job or you want to find worker for your work you can easy to do.</p>
               <p><a href="#" class="btn btn-primary  py-2 px-4">Learn More</a></p>
             </div>
           </div>

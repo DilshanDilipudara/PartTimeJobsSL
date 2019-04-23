@@ -32,10 +32,11 @@ Route::get('/Contact', function () {
 Route::get('/Job_Single', function () {
     return view('Job_Single');
 });
-
 Route::get('/New_Post', function () {
     return view('New_Post');
 });
+
+Route::post('/jobpost','PostJob@post');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
