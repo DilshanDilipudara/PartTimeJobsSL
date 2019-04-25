@@ -53,8 +53,8 @@
 
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active"><a href="/">Home</a></li>
-                <li class="has-children">
-                  <a href="/Category">Category</a>
+                <!-- <li class="has-children">
+                  <a href="/Candidate">Candidate</a>
                   <ul class="dropdown">
                     <li><a href="#">Full Time</a></li>
                     <li><a href="#">Part Time</a></li>
@@ -62,12 +62,12 @@
                     <li><a href="#">Internship</a></li>
                     <li><a href="#">Termporary</a></li>
                   </ul>
-                </li>
-                <li><a href="/Blog">Blog</a></li>
+                </li> -->
+                <li><a href="/Candidates">Candidates</a></li>
                 <li><a href="/About">About</a></li>
                 <li><a href="/Contact">Contact</a></li>
                 <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
-                 &nbsp &nbsp 
+                 &nbsp 
                  <li><a href="/profile" class="rounded bg-primary py-2 px-3 text-white">Profile</a></li>
                  <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white">Login</a></li>
                 <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white">Register</a></li> 
@@ -101,9 +101,9 @@
                 <li class="nav-item">
                   <a class="nav-link active py-3" id="pills-job-tab" data-toggle="pill" href="#pills-job" role="tab" aria-controls="pills-job" aria-selected="true">Find A Job</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link py-3" id="pills-candidate-tab" data-toggle="pill" href="#pills-candidate" role="tab" aria-controls="pills-candidate" aria-selected="false">Find A Candidate</a>
-                </li>
+                </li> -->
               </ul>
               <div class="tab-content bg-white p-4 rounded" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-job" role="tabpanel" aria-labelledby="pills-job-tab">
@@ -166,12 +166,10 @@
                       </div>
                     </div>
                   </form>
-
-
-
-
                 </div>
-                <div class="tab-pane fade" id="pills-candidate" role="tabpanel" aria-labelledby="pills-candidate-tab">
+
+
+                <!-- <div class="tab-pane fade" id="pills-candidate" role="tabpanel" aria-labelledby="pills-candidate-tab">
                   <form action="#" method="post">
                     <div class="row">
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
@@ -189,16 +187,16 @@
                             <option value="internship">Termporary</option>
                           </select>
                         </div>
-                      </div>
+                      </div> 
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                         <input type="text" class="form-control form-control-block search-input" id="autocomplete" placeholder="Location" onFocus="geolocate()">
-                      </div>
+                      </div> &nbsp;
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                         <input type="submit" class="btn btn-primary btn-block" value="Search">
                       </div>
                     </div>
                   </form>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

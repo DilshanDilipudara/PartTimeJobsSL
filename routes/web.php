@@ -25,9 +25,7 @@ Route::get('/About', function () {
     return view('About');
 });
 
-Route::get('/Blog', function () {
-    return view('Blog');
-});
+Route::get('/Candidates','Candidates@allcandidate');
 
 Route::get('/Category', function () {
     return view('Category');

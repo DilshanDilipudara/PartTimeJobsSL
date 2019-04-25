@@ -54,7 +54,7 @@
         <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
           <li class="active"><a href="/">Home</a></li>
           <li class="has-children">
-            <a href="/Category">Category</a>
+            <a href="/Candidate">Candidate</a>
             <ul class="dropdown">
               <li><a href="#">Full Time</a></li>
               <li><a href="#">Part Time</a></li>
@@ -84,8 +84,8 @@
 
     <div class="unit-5 overlay" style="background-image: url('images/hero_bg_2.jpg');">
       <div class="container text-center">
-        <h2 class="mb-0">Category</h2>
-        <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep">></span> <span>Category</span></p>
+        <h2 class="mb-0">Candidate</h2>
+        <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep">></span> <span>Candidate</span></p>
       </div>
     </div>
 
@@ -96,20 +96,40 @@
       <div class="container">
         <div class="row justify-content-start text-left mb-5">
           <div class="col-md-9" data-aos="fade">
-            <span class="text-gray-500">Category</span>
-            <h2 class="font-weight-bold text-black">Full Time</h2>
+            <span class="text-gray-500">Candidate</span>
+            <h2 class="font-weight-bold text-black">Location</h2>
           </div>
           <div class="col-md-3" data-aos="fade" data-aos-delay="200">
             <div class="select-wrap mr-auto">
               <span class="icon-keyboard_arrow_down arrow-down"></span>
-              <select name="" id="" class="form-control">
-                <option value="">Category</option>
-                <option value="fulltime" selected>Full Time</option>
-                <option value="fulltime">Part Time</option>
-                <option value="freelance">Freelance</option>
-                <option value="internship">Internship</option>
-                <option value="internship">Termporary</option>
-              </select>
+              <select  type="text" name = "location" class="form-control" placeholder="eg. Colombo">
+                            <option>Chose location</option>
+                            <option>Ampara</option>
+                            <option>Anuradhapura</option>
+                            <option>Badulla</option>
+                            <option>Batticaloa</option>
+                            <option>Colombo</option>
+                            <option>Galle</option>
+                            <option>Gampaha</option>
+                            <option>Hambantota</option>
+                            <option>Jaffna</option>
+                            <option>Kalutara</option>
+                            <option>Kandy</option>
+                            <option>Kegalle</option>
+                            <option>Kilinochchi</option>
+                            <option>Kurunegala</option>
+                            <option>Mannar</option>
+                            <option>Matale</option>
+                            <option>Matara</option>
+                            <option>Monaragala</option>
+                            <option>Mullativu</option>
+                            <option>Nuwara Eliya</option>
+                            <option>Polonnaruwa</option>
+                            <option>Puttalam</option>
+                            <option>Ratnapura</option>
+                            <option>Trincomalee</option>
+                            <option>Vavuniya</option>
+                        </select>
             </div>
           </div>
         </div>
