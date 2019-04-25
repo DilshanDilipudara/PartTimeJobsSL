@@ -221,7 +221,7 @@
 
 
 
-    @foreach($data as $value)
+    @foreach($searchdata as $value)
         <div class="row" data-aos="fade">
          <div class="col-md-12">
 

@@ -188,7 +188,34 @@
               <div class="row form-group mb-4">
                 <div class="col-md-12"><h3>Location</h3></div>
                 <div class="col-md-12 mb-3 mb-md-0">
-                  <input type="text" name = "location" class="form-control" placeholder="eg. Colombo">
+                   <select  type="text" name = "location" class="form-control" placeholder="eg. Colombo">
+                      <option>Chose location</option>
+                      <option>Ampara</option>
+                      <option>Anuradhapura</option>
+                      <option>Badulla</option>
+                      <option>Batticaloa</option>
+                      <option>Colombo</option>
+                      <option>Galle</option>
+                      <option>Gampaha</option>
+                      <option>Hambantota</option>
+                      <option>Jaffna</option>
+                      <option>Kalutara</option>
+                      <option>Kandy</option>
+                      <option>Kegalle</option>
+                      <option>Kilinochchi</option>
+                      <option>Kurunegala</option>
+                      <option>Mannar</option>
+                      <option>Matale</option>
+                      <option>Matara</option>
+                      <option>Monaragala</option>
+                      <option>Mullativu</option>
+                      <option>Nuwara Eliya</option>
+                      <option>Polonnaruwa</option>
+                      <option>Puttalam</option>
+                      <option>Ratnapura</option>
+                      <option>Trincomalee</option>
+                      <option>Vavuniya</option>
+                  </select> 
                 </div>
               </div>
 
