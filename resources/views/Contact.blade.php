@@ -145,7 +145,7 @@
               <p class="mb-0 font-weight-bold">Address</p>
               <p class="mb-4">No.346/6, 6 ela, Moraketiya, Embilipitiya.</p>
 
-              <p class="mb-0 font-weight-bold">Mobile Number</p>
+              <p class="mb-0 font-weight-bold">Mobile Number  </p>
               <p class="mb-4"><a href="#">+94 71 73 78 668</a></p>
 
               <p class="mb-0 font-weight-bold">Email Address</p>

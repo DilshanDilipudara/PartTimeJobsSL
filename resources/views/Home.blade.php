@@ -68,9 +68,9 @@
                 <li><a href="/Contact">Contact</a></li>
                 <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
                  &nbsp 
-                 <li><a href="/profile" class="rounded bg-primary py-2 px-3 text-white">Profile</a></li>
-                 <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white">Login</a></li>
-                <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white">Register</a></li> 
+                 <li><a href="/profile" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Profile</span></a></li>
+                 <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>
+                <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a></li> 
               
               
              
@@ -161,7 +161,7 @@
                       </div>
               
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                      <label class="font-weight-bold" for="stratdate">. </label> 
+                      <label class="font-weight-bold" for="stratdate"> </label> 
                         <input type="submit" class="btn btn-primary btn-block" value="Search">
                       </div>
                     </div>
@@ -203,7 +203,7 @@
         </div>
       </div>
     </div>  
-    
+    <br><br>
 
     <div class="site-section bg-light">
       <div class="container">
@@ -341,21 +341,11 @@
                 <h2 class="h5">Top Careers</h2>
               </div>
               <div class="unit-3-body">
-                <p>Lorem ipsum dolor sit amet consectetur is a nice adipisicing elita ssumenda a similique perferendis dolorem eos.</p>
+                 we have joining with largest company in sri lanka. If it has jab vacancies the can easily find a candidate in our webs site.</p>
               </div>
             </div>
 
           </div>
-
-
-
-
-
-
-
-
-
-
 
 
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-4" data-aos="fade" data-aos-delay="400">
@@ -371,7 +361,7 @@
                 <h2 class="h5">Search Expert Candidates</h2>
               </div>
               <div class="unit-3-body">
-                <p>Lorem ipsum dolor sit amet consectetur is a nice adipisicing elita ssumenda a similique perferendis dolorem eos.</p>
+                <p>If you find candidate your work you can easy to find good ability,good perfomence candidate easy.</p>
               </div>
             </div>
 
@@ -389,7 +379,7 @@
                 <h2 class="h5">Easy To Manage Jobs</h2>
               </div>
               <div class="unit-3-body">
-                <p>Lorem ipsum dolor sit amet consectetur is a nice adipisicing elita ssumenda a similique perferendis dolorem eos.</p>
+                <p>You can't waste your time you can 1 second find a candidate in your work. </p>
               </div>
             </div>
 
@@ -407,7 +397,7 @@
                 <h2 class="h5">Online Reviews</h2>
               </div>
               <div class="unit-3-body">
-                <p>Lorem ipsum dolor sit amet consectetur is a nice adipisicing elita ssumenda a similique perferendis dolorem eos.</p>
+                <p>Your find candidate you can see his history in his profile.</p>
               </div>
             </div>
 

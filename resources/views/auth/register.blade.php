@@ -40,11 +40,14 @@
                         </div>
 
 
+
+
+
                         <div class="form-group row">
-                            <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('Location') }}</label>
+                            <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('location') }}</label>
 
                             <div class="col-md-6">
-                                <input id="location" type="location" class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" name="location" value="{{ old('location') }}" required>
+                                <input id="location" type="text" class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" name="location" value="{{ old('location') }}" required autofocus>
 
                                 @if ($errors->has('location'))
                                     <span class="invalid-feedback" role="alert">
@@ -54,13 +57,11 @@
                             </div>
                         </div>
 
-
-                        
                         <div class="form-group row">
-                            <label for="NIC_NO" class="col-md-4 col-form-label text-md-right">{{ __('NIC NO') }}</label>
+                            <label for="NIC_NO" class="col-md-4 col-form-label text-md-right">{{ __('NIC_NO') }}</label>
 
                             <div class="col-md-6">
-                                <input id="NIC_NO" type="NIC_NO" class="form-control{{ $errors->has('NIC_NO') ? ' is-invalid' : '' }}" name="NIC_NO" value="{{ old('NIC_NO') }}" required>
+                                <input id="NIC_NO" type="text" class="form-control{{ $errors->has('NIC_NO') ? ' is-invalid' : '' }}" name="NIC_NO" value="{{ old('NIC_NO') }}" required autofocus>
 
                                 @if ($errors->has('NIC_NO'))
                                     <span class="invalid-feedback" role="alert">
@@ -70,12 +71,11 @@
                             </div>
                         </div>
 
-
                         <div class="form-group row">
-                            <label for="Mobile_Number" class="col-md-4 col-form-label text-md-right">{{ __('Mobile Number') }}</label>
+                            <label for="Mobile_Number" class="col-md-4 col-form-label text-md-right">{{ __('Mobile_Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Mobile_Number" type="Mobile_Number" class="form-control{{ $errors->has('Mobile_Number') ? ' is-invalid' : '' }}" name="Mobile_Number" value="{{ old('Mobile_Number') }}" required>
+                                <input id="Mobile_Number" type="text" class="form-control{{ $errors->has('Mobile_Number') ? ' is-invalid' : '' }}" name="Mobile_Number" value="{{ old('Mobile_Number') }}" required autofocus>
 
                                 @if ($errors->has('Mobile_Number'))
                                     <span class="invalid-feedback" role="alert">
@@ -85,12 +85,11 @@
                             </div>
                         </div>
 
-
                         <div class="form-group row">
                             <label for="Sex" class="col-md-4 col-form-label text-md-right">{{ __('Sex') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Sex" type="Sex" class="form-control{{ $errors->has('Sex') ? ' is-invalid' : '' }}" name="Sex" value="{{ old('Sex') }}" required>
+                                <input id="Sex" type="text" class="form-control{{ $errors->has('Sex') ? ' is-invalid' : '' }}" name="Sex" value="{{ old('Sex') }}" required autofocus>
 
                                 @if ($errors->has('Sex'))
                                     <span class="invalid-feedback" role="alert">
@@ -99,6 +98,10 @@
                                 @endif
                             </div>
                         </div>
+
+
+
+
 
 
 
@@ -138,62 +141,3 @@
     </div>
 </div>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-<div class="form-group row">
-                            <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('Location') }}</label>
- 
-                        <div class="col-md-6">
-                                <select id="location" type="text"  name="location"  class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" value="{{ old('location') }}" required>
-
-                                <option value="">Location</option>
-                                <option>Ampara</option>
-                                <option>Anuradhapura</option>
-                                <option>Badulla</option>
-                                <option>Batticaloa</option>
-                                <option>Colombo</option>
-                                <option>Galle</option>
-                                <option>Gampaha</option>
-                                <option>Hambantota</option>
-                                <option>Jaffna</option>
-                                <option>Kalutara</option>
-                                <option>Kandy</option>
-                                <option>Kegalle</option>
-                                <option>Kilinochchi</option>
-                                <option>Kurunegala</option>
-                                <option>Mannar</option>
-                                <option>Matale</option>
-                                <option>Matara</option>
-                                <option>Monaragala</option>
-                                <option>Mullativu</option>
-                                <option>Nuwara Eliya</option>
-                                <option>Polonnaruwa</option>
-                                <option>Puttalam</option>
-                                <option>Ratnapura</option>
-                                <option>Trincomalee</option>
-                                <option>Vavuniya</option>
-
-                                @if ($errors->has('location'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('location') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div> -->
