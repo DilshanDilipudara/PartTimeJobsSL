@@ -189,7 +189,7 @@
                 <div class="col-md-12"><h3>Location</h3></div>
                 <div class="col-md-12 mb-3 mb-md-0">
                    <select  type="text" name = "location" class="form-control" placeholder="eg. Colombo">
-                      <option>Chose location</option>
+                      <option value="">Chose location</option>
                       <option>Ampara</option>
                       <option>Anuradhapura</option>
                       <option>Badulla</option>

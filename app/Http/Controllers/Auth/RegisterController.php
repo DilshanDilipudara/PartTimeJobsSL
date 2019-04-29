@@ -69,7 +69,7 @@ class RegisterController extends Controller
     {
         
         return User::create([
-            'remember_token' => $data['_token'],
+           
             'name' => $data['name'],
             'email' => $data['email'],
             'location' => $data['location'],
@@ -80,9 +80,9 @@ class RegisterController extends Controller
             
         ]);
     }
-    // protected function registered(Request $request,$user)
-    // {
-    //     $this->guard()->logout();
-    //     return redirect('/');
-    // }
+    protected function registered(Request $request,$user)
+    {
+        $this->guard()->logout();
+        return redirect('/');
+    }
 }

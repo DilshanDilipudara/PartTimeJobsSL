@@ -67,11 +67,21 @@
                 <li><a href="/About">About</a></li>
                 <li><a href="/Contact">Contact</a></li>
                 <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
-                 &nbsp 
-                 <li><a href="/profile" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Profile</span></a></li>
+                
+                @if(!auth()->guest())
+                 <li><a href="/Profile" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Profile</span></a></li>
+                 <li><a href="{{ route('logout') }}" class="rounded bg-primary py-2 px-3 text-white" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"><span class="h5 mr-2">Logout</span></a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              {{ csrf_field() }}
+                          </form>
+                     </li>
+                     
+                     @else
+
                  <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>
                 <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a></li> 
-              
+                @endif
               
              
               </ul>

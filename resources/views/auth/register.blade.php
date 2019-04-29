@@ -43,19 +43,7 @@
 
 
 
-                        <div class="form-group row">
-                            <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('location') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="location" type="text" class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" name="location" value="{{ old('location') }}" required autofocus>
-
-                                @if ($errors->has('location'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('location') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                        
 
                         <div class="form-group row">
                             <label for="NIC_NO" class="col-md-4 col-form-label text-md-right">{{ __('NIC_NO') }}</label>
@@ -85,12 +73,56 @@
                             </div>
                         </div>
 
+
                         <div class="form-group row">
-                            <label for="Sex" class="col-md-4 col-form-label text-md-right">{{ __('Sex') }}</label>
+                            <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('location') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Sex" type="text" class="form-control{{ $errors->has('Sex') ? ' is-invalid' : '' }}" name="Sex" value="{{ old('Sex') }}" required autofocus>
+                                <select name="location" id="location"   value="{{ old('location') }}"  required>
+                                    <option value="">location</option>
+                                    <option>Ampara</option>
+                                    <option>Anuradhapura</option>
+                                    <option>Badulla</option>
+                                    <option>Batticaloa</option>
+                                    <option>Colombo</option>
+                                    <option>Galle</option>
+                                    <option>Gampaha</option>
+                                    <option>Hambantota</option>
+                                    <option>Jaffna</option>
+                                    <option>Kalutara</option>
+                                    <option>Kandy</option>
+                                    <option>Kegalle</option>
+                                    <option>Kilinochchi</option>
+                                    <option>Kurunegala</option>
+                                    <option>Mannar</option>
+                                    <option>Matale</option>
+                                    <option>Matara</option>
+                                    <option>Monaragala</option>
+                                    <option>Mullativu</option>
+                                    <option>Nuwara Eliya</option>
+                                    <option>Polonnaruwa</option>
+                                    <option>Puttalam</option>
+                                    <option>Ratnapura</option>
+                                    <option>Trincomalee</option>
+                                    <option>Vavuniya</option>
+                                </select>
+                                @if ($errors->has('location'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('location') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
+                        <div class="form-group row">
+                            <label for="Sex" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
+
+                            <div class="col-md-6">
+                            <select name="Sex" id="Sex"   value="{{ old('Sex') }}"  required>
+                                    <option value="">Gender</option>
+                                    <option >Male</option>
+                                    <option >Female</option>
+                                </select>
                                 @if ($errors->has('Sex'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('Sex') }}</strong>

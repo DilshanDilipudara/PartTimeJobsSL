@@ -42,6 +42,10 @@ Route::get('/New_Post', function () {
     return view('New_Post');
 });
 
+Route::get('/Profile', function () {
+    return view('Profile');
+});
+
 
 Auth::routes();
 
