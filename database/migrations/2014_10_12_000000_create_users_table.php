@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table ->string('NIC_NO')->unique()->nullable(); 
             $table ->integer('Mobile_Number')->unique()->nullable();
             $table ->string('Sex')->nullable();
-            $table ->string('Positon')->default('User');
+            $table ->string('Position')->default('User');
             $table ->text('Description')->nullable();
             
          

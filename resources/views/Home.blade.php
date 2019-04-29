@@ -64,6 +64,7 @@
                   </ul>
                 </li> -->
                 <li><a href="/Candidates">Candidates</a></li>
+               
                 <li><a href="/About">About</a></li>
                 <li><a href="/Contact">Contact</a></li>
                 <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
@@ -76,7 +77,10 @@
                               {{ csrf_field() }}
                           </form>
                      </li>
-                     
+                     @if(Auth::user()->Position  =='Admin') 
+                     <li><a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
+                     @endif
+
                      @else
 
                  <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>

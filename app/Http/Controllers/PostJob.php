@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 
 class PostJob extends Controller
 {
+    
+
     public function post(Request $request){
            
-         $userID    = '003';
+         $userID = \Auth::user()->id;
          $event      = $request -> input('event');
          $startdate  = $request -> input('startdate');
          $enddate    = $request -> input('enddate');
