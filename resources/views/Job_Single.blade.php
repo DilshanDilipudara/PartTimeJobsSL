@@ -140,10 +140,24 @@
               </div>
              
                   <p>{{$value->Discription}}</p>
+                   
+             @if(!auth()->guest())
+                <div class="row form-group">
+                  <div class="col-md-12">
+                  <p class="mt-5"><a href="/applyjob/{{$value->ID}}" class="btn btn-primary  py-2 px-4">Apply Job</a></p>
+                  </div>
+                </div>
+              @else
+                  <div class="row form-group">
+                  <div class="col-md-12">
+                  <a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a>
+                  <a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a>
+                  </div>
+                </div>
+              @endif
+              </div>
+             </div>
 
-              <p class="mt-5"><a href="/applyjob/{{$value->ID}}" class="btn btn-primary  py-2 px-4">Apply Job</a></p>
-            </div>
-          </div>
 
           <div class="col-lg-4">
             

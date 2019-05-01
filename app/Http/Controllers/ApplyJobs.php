@@ -16,4 +16,8 @@ class ApplyJobs extends Controller
                return view('Job_Single',compact('data'));
 
      }
+
+     public function confirmuser($ID){
+         dd($ID);
+     }
 }
