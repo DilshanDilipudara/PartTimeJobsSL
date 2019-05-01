@@ -144,7 +144,7 @@
              @if(!auth()->guest())
                 <div class="row form-group">
                   <div class="col-md-12">
-                  <p class="mt-5"><a href="/applyjob/{{$value->ID}}" class="btn btn-primary  py-2 px-4">Apply Job</a></p>
+                  <p class="mt-5"><a href="/applyjob/{{$value->ID}}/{{$value->ApplyUser}}" class="btn btn-primary  py-2 px-4">Apply Job</a></p>
                   </div>
                 </div>
               @else

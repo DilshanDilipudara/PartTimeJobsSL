@@ -10,14 +10,24 @@ class ApplyJobs extends Controller
         
         $data = DB::table('Jobs')
                ->where('ID',$ID)
-               -> select('ID','Event','In_Date','Out_Date','Per_Day_Payment','quantity','Location','Discription')
+               -> select('ID','Event','In_Date','Out_Date','Per_Day_Payment','quantity','Location','Discription','ApplyUser')
                ->get();
              
                return view('Job_Single',compact('data'));
 
      }
 
-     public function confirmuser($ID){
-         dd($ID);
+     public function confirmuser($ID,$ApplyUser){
+         
+         DB::table('Jobs')
+        ->where('ID',$ID)
+        //->where('quantity','>',$ApplyUser)  
+        ->increment('ApplyUser');
+        
+       
+
+        return redirect()->back();
+
+
      }
 }
