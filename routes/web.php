@@ -31,6 +31,10 @@ Route::get('/About', function () {
     return view('About');
 });
 
+//show the user own his publish Jobs
+Route::get('/ApplyJobs','ConfirmJobs@publishjob');
+
+
 Route::get('/Candidates','Candidates@allcandidate');
 
 

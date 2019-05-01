@@ -225,8 +225,9 @@
           <div class="col-md-9" data-aos="fade">
             <h2 class="font-weight-bold text-black">Recent Jobs</h2>
           </div>
-          <div class="col-md-3" data-aos="fade" data-aos-delay="200">
+          <div class="col-md-3" data-aos="fade" data-aos-delay="200"> 
             <a href="/New_Post" class="btn btn-primary py-3 btn-block"><span class="h5">+</span> Post a Job</a>
+            <a href="/ApplyJobs" class="btn btn-primary py-3 btn-block"><span class="h5">+</span>Apply User</a>
           </div>
         </div>
 

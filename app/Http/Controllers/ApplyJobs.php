@@ -10,7 +10,7 @@ class ApplyJobs extends Controller
         
         $data = DB::table('Jobs')
                ->where('ID',$ID)
-               -> select('ID','Event','In_Date','Out_Date','Per_Day_Payment','quantity','Location','Discription','ApplyUser')
+               -> select('ID','Event','In_Date','Out_Date','Per_Day_Payment','quantity','Location','Discription','ApplyUser','ConfirmUser')
                ->get();
              
                return view('Job_Single',compact('data'));
@@ -25,10 +25,12 @@ class ApplyJobs extends Controller
         ->increment('ApplyUser');
      
         $userId =   \Auth::user()->id;
-        DB::insert('insert into JobApplyUsers(User_ID,Job_ID)values(?,?)',[$userId,$ID]);
+        DB::table('JobApplyUsers')
+        //check distinct userID and job ID
+       // ->where('User_ID','!=' ,$userId)
+       // ->where('Job_ID','!=',$ID)
+        ->insert(['User_ID' => $userId , 'Job_ID' => $ID ]);
 
         return redirect('/');
-
-
      }
 }

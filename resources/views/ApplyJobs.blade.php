@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Jobs &mdash; Sri Lanka</title>
+    <title>Job &mdash; Post</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -69,7 +69,7 @@
                 <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
                 
                 @if(!auth()->guest())
-                  
+              
                  <li><a href="{{ route('logout') }}" class="rounded bg-primary py-2 px-3 text-white" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();"><span class="h5 mr-2">Logout</span></a>
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -103,85 +103,68 @@
       </div>
       
     </header>
-    @foreach($data as $value)
+
     <div class="unit-5 overlay" style="background-image: url('images/hero_bg_2.jpg');">
       <div class="container text-center">
-        <h2 class="mb-0">{{$value->Event}}</h2>
-        <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep">></span> <span>Job Item</span></p>
+        <h2 class="mb-0">Post a Job</h2>
+        <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep">></span> <span>Post a Job</span></p>
       </div>
     </div>
 
-    
-    
     
     <div class="site-section bg-light">
       <div class="container">
-        <div class="row">
-       
-          <div class="col-md-12 col-lg-8 mb-5">
-          
-            
-          
-            <div class="p-5 bg-white">
 
-              <div class="mb-4 mb-md-5 mr-5">
+
+    @foreach($data as $value)
+        <div class="row" data-aos="fade">
+         <div class="col-md-12">
+
+           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
+
+              <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
                  <h2 class="mr-3 text-black h4">{{$value->Event}}</h2>
                  <div class="badge-wrap">
-                  <span class="bg-danger text-white badge py-2 px-4">Quentity : {{$value->quantity}}</span>
-                  <span class="bg-danger text-white badge py-2 px-4">Apply : {{$value->ApplyUser}}</span>
-                  <span class="bg-danger text-white badge py-2 px-4">Confirm : {{$value->ConfirmUser}}</span>
+                  
+                  <span class="bg-danger text-white badge py-2 px-4">To : {{$value->In_Date}}</span>
+                  <span class="bg-success text-white badge py-2 px-4">From : {{$value->Out_Date}}</span>
                  </div>
                </div>
-               <h2 class="mr-3 text-black h4"><span class="bg-success text-white badge py-2 px-4">Per day : {{$value->Per_Day_Payment}}</span></h2>
-               <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">To : {{$value->In_Date}}  &nbsp; From : {{$value->Out_Date}}</a></div>
-               
-                <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->Location}}</span></div>
-               </div>
-              </div>
-             
-                  <p>{{$value->Discription}}</p>
-                   
-             @if(!auth()->guest())
-                <div class="row form-group">
-                  <div class="col-md-12">
-                  <p class="mt-5"><a href="/applyjob/{{$value->ID}}/{{$value->ApplyUser}}" class="btn btn-primary  py-2 px-4">Apply Job</a></p>
-                  </div>
-                </div>
-              @else
-                  <div class="row form-group">
-                  <div class="col-md-12">
-                  <a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a>
-                  <a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a>
-                  </div>
-                </div>
-              @endif
-              </div>
-             </div>
 
+        
+              </div>
 
-          <div class="col-lg-4">
-            
-            
-            <div class="p-4 mb-3 bg-white">
-              <h3 class="h5 text-black mb-3">More Info</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur</p>
-              <p><a href="#" class="btn btn-primary  py-2 px-4">Apply Job</a></p>
-            </div>
-          </div>
+              <div class="ml-auto">
+                <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
+                <a href="{{('/Job_Single'.$value->ID)}}" class="btn btn-primary py-2">Apply user</a>
+              </div>
+           </div>
+
+         </div>
         </div>
-      </div>
-    </div>
-    @endforeach
-   
+      @endforeach
 
-    
+
+
+   </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="site-section">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-6" data-aos="fade" >
-         
             <h2>Frequently Ask Questions</h2>
           </div>
         </div>
@@ -241,9 +224,9 @@
       </div>
     </div>
 
-  
+    
 
-
+    
     <div class="py-5 bg-primary">
       <div class="container">
         <div class="row">
