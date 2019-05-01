@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Jobstart &mdash; Colorlib Website Template</title>
+    <title>Jobs &mdash; Sri Lanka</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -40,57 +40,80 @@
     
     <header class="site-navbar py-1" role="banner">
 
-<div class="container">
-  <div class="row align-items-center">
-    
-    <div class="col-6 col-xl-2">
-      <h1 class="mb-0"><a href="/" class="text-black h2 mb-0">Job <strong> SL </strong></a></h1>
-    </div>
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0"><a href="/" class="text-black h2 mb-0">Job <strong> SL </strong></a></h1>
+          </div>
 
-    <div class="col-10 col-xl-10 d-none d-xl-block">
-      <nav class="site-navigation text-right" role="navigation">
+          <div class="col-10 col-xl-10 d-none d-xl-block">
+            <nav class="site-navigation text-right" role="navigation">
 
-        <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-          <li class="active"><a href="/">Home</a></li>
-          <li class="has-children">
-            <a href="/Category">Category</a>
-            <ul class="dropdown">
-              <li><a href="#">Full Time</a></li>
-              <li><a href="#">Part Time</a></li>
-              <li><a href="#">Freelance</a></li>
-              <li><a href="#">Internship</a></li>
-              <li><a href="#">Termporary</a></li>
-            </ul>
-          </li>
-          <li><a href="/Blog">Blog</a></li>
-          <li><a href="/About">About</a></li>
-          <li><a href="/Contact">Contact</a></li>
-          <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
-        </ul>
-      </nav>
-    </div>
+              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active"><a href="/">Home</a></li>
+                <!-- <li class="has-children">
+                  <a href="/Candidate">Candidate</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Full Time</a></li>
+                    <li><a href="#">Part Time</a></li>
+                    <li><a href="#">Freelance</a></li>
+                    <li><a href="#">Internship</a></li>
+                    <li><a href="#">Termporary</a></li>
+                  </ul>
+                </li> -->
+                <li><a href="/Candidates">Candidates</a></li>
+               
+                <li><a href="/About">About</a></li>
+                <li><a href="/Contact">Contact</a></li>
+                <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
+                
+                @if(!auth()->guest())
+                  
+                 <li><a href="{{ route('logout') }}" class="rounded bg-primary py-2 px-3 text-white" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"><span class="h5 mr-2">Logout</span></a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              {{ csrf_field() }}
+                          </form>
+                     </li>
+                     @if(Auth::user()->Position  =='Admin') 
+                     <li><a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
+                     @endif
 
-    <div class="col-6 col-xl-2 text-right d-block">
+                     @else
+
+                 <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>
+                <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a></li> 
+                @endif
+              
+             
+              </ul>
+            
+              
+            </nav>
+          </div>
+
+          <div class="col-6 col-xl-2 text-right d-block">
+            
+            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+
+        </div>
+      </div>
       
-      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
-    </div>
-
-  </div>
-</div>
-
-</header>
-
+    </header>
+    @foreach($data as $value)
     <div class="unit-5 overlay" style="background-image: url('images/hero_bg_2.jpg');">
       <div class="container text-center">
-        <h2 class="mb-0">Full Stack Developer</h2>
+        <h2 class="mb-0">{{$value->Event}}</h2>
         <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep">></span> <span>Job Item</span></p>
       </div>
     </div>
 
     
     
-
+    
     <div class="site-section bg-light">
       <div class="container">
         <div class="row">
@@ -103,26 +126,22 @@
 
               <div class="mb-4 mb-md-5 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Full Stack Developer</h2>
+                 <h2 class="mr-3 text-black h4">{{$value->Event}}</h2>
                  <div class="badge-wrap">
-                  <span class="bg-danger text-white badge py-2 px-4">Temporary</span>
+                  <span class="bg-danger text-white badge py-2 px-4">Quentity : {{$value->quantity}}</span>
                  </div>
                </div>
+               <h2 class="mr-3 text-black h4"><span class="bg-success text-white badge py-2 px-4">Per day : {{$value->Per_Day_Payment}}</span></h2>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">New York Times</a></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>New York City, USA</span></div>
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">To : {{$value->In_Date}}  &nbsp; From : {{$value->Out_Date}}</a></div>
+               
+                <div><span class="fl-bigmug-line-big104"></span> <span>{{$value->Location}}</span></div>
                </div>
               </div>
-              
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, iure beatae! Voluptas tempora doloremque atque repudiandae maiores odio magni. Illo ut nihil officia numquam in. Deleniti pariatur at minima quaerat!</p>
-              <p>Qui corrupti animi, dignissimos veritatis, necessitatibus consequuntur nobis, placeat beatae dolorum ullam harum at atque dolor! Accusantium cupiditate ipsum placeat, vel voluptatibus non eaque, animi neque minima facere provident aspernatur!</p>
-              <p>Porro magni numquam ex natus repellat accusamus laborum blanditiis odit consequatur at veritatis nostrum provident recusandae dolores incidunt distinctio facere, nulla odio quo tempore libero! Voluptatum porro velit, qui optio.</p>
-              <p>Ducimus odio, fugiat pariatur. Corporis nobis perferendis voluptatum nostrum nesciunt, voluptates pariatur architecto consequatur! Praesentium dicta enim, laboriosam natus doloribus corrupti in sequi perferendis, cupiditate perspiciatis, porro animi sed impedit.</p>
-              <p>Illum possimus, enim eaque recusandae earum omnis tempore suscipit sapiente voluptas nam quia dicta, repellendus incidunt dolor dolores nemo laboriosam, quasi nulla deserunt neque est ipsam velit cumque. Quos, ipsum!</p>
-              <p>Dignissimos ipsa quibusdam id qui maiores magnam, nesciunt? Voluptatibus nulla quas itaque nostrum necessitatibus repudiandae quaerat facere, amet aperiam iste aspernatur ratione cupiditate est voluptates non. Suscipit corporis, soluta neque.</p>
-              <p>Pariatur itaque reiciendis consectetur, deserunt quam adipisci odio doloribus voluptatem laboriosam magni ut repellat tempore? Minus sit officia impedit veritatis reiciendis debitis iure, porro in quaerat inventore nisi sequi quos!</p>
+             
+                  <p>{{$value->Discription}}</p>
 
-              <p class="mt-5"><a href="#" class="btn btn-primary  py-2 px-4">Apply Job</a></p>
+              <p class="mt-5"><a href="/applyjob/{{$value->ID}}" class="btn btn-primary  py-2 px-4">Apply Job</a></p>
             </div>
           </div>
 
@@ -138,14 +157,15 @@
         </div>
       </div>
     </div>
-
+    @endforeach
    
 
-
+    
     <div class="site-section">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-6" data-aos="fade" >
+         
             <h2>Frequently Ask Questions</h2>
           </div>
         </div>
@@ -205,9 +225,9 @@
       </div>
     </div>
 
-    
+  
 
-    
+
     <div class="py-5 bg-primary">
       <div class="container">
         <div class="row">

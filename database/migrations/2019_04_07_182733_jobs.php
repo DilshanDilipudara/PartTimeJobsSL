@@ -22,6 +22,7 @@ class Jobs extends Migration
             $table ->date('Out_Date')->nullable();
             $table ->Integer('Per_Day_Payment');
             $table ->Integer('quantity');
+            $table ->Integer('ApplyUser');
             $table ->String('Location')->nullable();
             $table ->String('Discription');
             // $table -> foreign('User_ID')

@@ -260,7 +260,7 @@
 
               <div class="ml-auto">
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
-                <a href="job-single.html" class="btn btn-primary py-2">Apply Job</a>
+                <a href="{{('/Job_Single'.$value->ID)}}" class="btn btn-primary py-2">Apply Job</a>
               </div>
            </div>
 

@@ -21,23 +21,23 @@ Route::get('/searchjob','availablejobshow@serchjobs');
 //post the job
 Route::post('/jobpost','PostJob@post');
 
+//apply job 
+Route::get('/Job_Single{ID}','ApplyJobs@applyjobsforuser');
+
+//confirm apply job
+Route::get('/applyjob/{ID}','ApplyJobs@confirmuser');
+
 Route::get('/About', function () {
     return view('About');
 });
 
 Route::get('/Candidates','Candidates@allcandidate');
 
-Route::get('/Category', function () {
-    return view('Category');
-});
 
 Route::get('/Contact', function () {
     return view('Contact');
 });
 
-Route::get('/Job_Single', function () {
-    return view('Job_Single');
-});
 Route::get('/New_Post', function () {
     return view('New_Post');
 });
