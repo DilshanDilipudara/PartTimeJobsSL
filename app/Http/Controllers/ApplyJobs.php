@@ -23,10 +23,11 @@ class ApplyJobs extends Controller
         ->where('ID',$ID)
         //->where('quantity','>',$ApplyUser)  
         ->increment('ApplyUser');
-        
-       
+     
+        $userId =   \Auth::user()->id;
+        DB::insert('insert into JobApplyUsers(User_ID,Job_ID)values(?,?)',[$userId,$ID]);
 
-        return redirect()->back();
+        return redirect('/');
 
 
      }
