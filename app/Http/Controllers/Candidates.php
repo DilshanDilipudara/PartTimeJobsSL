@@ -13,8 +13,10 @@ class Candidates extends Controller
          
         $alluser = DB::table('JobApplyUsers')
                     ->where('JobApplyUsers.Job_ID','=',$ID)
+                    ->where('ConfirmJobs',0)
                     //->select('JobApplyUsers.User_ID')
                     ->join('users','users.id','=','JobApplyUsers.User_ID')
+                    ->distinct()
                     ->select('users.id','users.name','users.location','users.Mobile_Number','JobApplyUsers.Job_ID')
                     ->get();
                     

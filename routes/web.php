@@ -25,7 +25,7 @@ Route::post('/jobpost','PostJob@post');
 Route::get('/Job_Single{ID}','ApplyJobs@applyjobsforuser');
 
 //confirm apply job
-Route::get('/applyjob/{ID}/{ApplyUser}','ApplyJobs@confirmuser');
+Route::get('/applyjob/{ID}/{ApplyUser}','ApplyJobs@applyjobaccept');
 
 Route::get('/About', function () {
     return view('About');

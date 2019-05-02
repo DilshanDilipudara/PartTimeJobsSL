@@ -12,25 +12,24 @@ class ApplyJobs extends Controller
                ->where('ID',$ID)
                -> select('ID','Event','In_Date','Out_Date','Per_Day_Payment','quantity','Location','Discription','ApplyUser','ConfirmUser')
                ->get();
-             
+                 
+       
                return view('Job_Single',compact('data'));
 
      }
 
-     public function confirmuser($ID,$ApplyUser){
+     public function applyjobaccept($ID,$ApplyUser){
          
          DB::table('Jobs')
-        ->where('ID',$ID)
-        //->where('quantity','>',$ApplyUser)  
+        ->where('ID',$ID) 
         ->increment('ApplyUser');
      
-        $userId =   \Auth::user()->id;
-        DB::table('JobApplyUsers')
-        //check distinct userID and job ID
-       // ->where('User_ID','!=' ,$userId)
-       // ->where('Job_ID','!=',$ID)
-        ->insert(['User_ID' => $userId , 'Job_ID' => $ID ]);
 
+        $userId =   \Auth::user()->id;
+        
+        DB::table('JobApplyUsers') 
+        ->insert(['User_ID' => $userId , 'Job_ID' => $ID,'ApplyJobs' => 1 ]);
+        
         return redirect('/');
      }
 }

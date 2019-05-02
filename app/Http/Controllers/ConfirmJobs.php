@@ -24,15 +24,22 @@ class ConfirmJobs extends Controller
                       ->where('ID',$Job_ID)
                       ->select('ConfirmUser')
                      ->get();
-       // dd($ConfirmUser);
-        
-
+       
+        $data = 0;
+       foreach($ConfirmUser as $conuser){
+            $data = $conuser->ConfirmUser;
+       }
 
         DB::table('Jobs')
             ->where('ID',$Job_ID)
-            ->where('quantity','>',$ConfirmUser)  
+            ->where('quantity','>',$data)  
             ->increment('ConfirmUser');
 
-        return redirect('/');
+         DB::table('JobApplyUsers') 
+             ->where('User_ID',$userID) 
+             ->where('Job_ID',$Job_ID)
+             ->update(['ConfirmJobs' => 1 ]);
+        
+        return redirect()->back();
     }
 }
