@@ -17,6 +17,7 @@ class ApplyUser extends Migration
         $table->increments('ID');
         $table->integer('User_ID');
         $table->integer('Job_ID');
+        $table ->Integer('ConfirmJobs')->default(0);
         });
     }
 

@@ -137,7 +137,7 @@
 
               <div class="ml-auto">
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
-                <a href="{{('/Job_Single'.$value->ID)}}" class="btn btn-primary py-2">Apply user</a>
+                <a href="{{('/Candidates'.$value->ID)}}" class="btn btn-primary py-2">Confirm user</a>
               </div>
            </div>
 

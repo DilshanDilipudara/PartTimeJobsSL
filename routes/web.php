@@ -34,9 +34,11 @@ Route::get('/About', function () {
 //show the user own his publish Jobs
 Route::get('/ApplyJobs','ConfirmJobs@publishjob');
 
+//show job id not confirm user
+Route::get('/Candidates{ID}','Candidates@Joballcandidate');
 
-Route::get('/Candidates','Candidates@allcandidate');
-
+//confrim jobs
+Route::get('/Confirm{ID}{Job_ID}','ConfirmJobs@Confirmuser');
 
 Route::get('/Contact', function () {
     return view('Contact');

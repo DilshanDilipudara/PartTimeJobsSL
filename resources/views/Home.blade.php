@@ -227,7 +227,9 @@
           </div>
           <div class="col-md-3" data-aos="fade" data-aos-delay="200"> 
             <a href="/New_Post" class="btn btn-primary py-3 btn-block"><span class="h5">+</span> Post a Job</a>
+            @if(!auth()->guest())
             <a href="/ApplyJobs" class="btn btn-primary py-3 btn-block"><span class="h5">+</span>Apply User</a>
+            @endif
           </div>
         </div>
 

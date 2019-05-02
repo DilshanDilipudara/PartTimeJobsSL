@@ -8,12 +8,16 @@ use DB;
 class Candidates extends Controller
 {
     
-    public function allcandidate(){
+    public function Joballcandidate($ID){
 
-        $alluser = DB::table('users')
-        ->select('name','location','Description','Mobile_Number')
-        ->get();
-       
+         
+        $alluser = DB::table('JobApplyUsers')
+                    ->where('JobApplyUsers.Job_ID','=',$ID)
+                    //->select('JobApplyUsers.User_ID')
+                    ->join('users','users.id','=','JobApplyUsers.User_ID')
+                    ->select('users.id','users.name','users.location','users.Mobile_Number','JobApplyUsers.Job_ID')
+                    ->get();
+                    
         return view('Candidates',compact('alluser'));
     }
 }
