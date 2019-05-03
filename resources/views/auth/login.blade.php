@@ -15,8 +15,11 @@
 </head>
 
 <body>
+ 
+@extends('layouts.app')
 
-  <form>
+<form method="POST" action="{{ route('login') }}">
+   @csrf
 	<div class="svgContainer">
 		<div>
 			<svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
@@ -125,27 +128,57 @@
 	
 	<div class="inputGroup inputGroup1">
 		<label for="loginEmail" id="loginEmailLabel">Email</label>
-		<input type="email" id="loginEmail" maxlength="254" />
+		<input type="email" id="loginEmail" maxlength="254" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" />
 		<p class="helper helper1">example@gmail.com</p>
+        @if ($errors->has('email'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+       @endif
 	</div>
+
 	<div class="inputGroup inputGroup2">
-		<label for="loginPassword" id="loginPasswordLabel">Password</label>
-		<input type="password" id="loginPassword" />
-		<label id="showPasswordToggle" for="showPasswordCheck">Show
+		<label for="loginPassword" id="loginPasswordLabel" >Password</label>
+		<input type="password" id="loginPassword" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required/>
+        @if ($errors->has('password'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('password') }}</strong>
+            </span>
+        @endif
+        
+        <label id="showPasswordToggle" for="showPasswordCheck">Show
 			<input id="showPasswordCheck" type="checkbox"/>
 			<div class="indicator"></div>
 		</label>
 	</div>
+
+    <div class="form-group row">
+        <div class="col-md-6 offset-md-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                
+                <label class="form-check-label" for="remember">
+                    {{ __('Remember Me') }}
+                </label>
+            </div>
+        </div>
+    </div>
+
 	<div class="inputGroup inputGroup3">
 		<button id="login">Log in</button>
+        @if (Route::has('password.request'))
+            <a class="btn btn-link" href="{{ route('password.request') }}">
+                {{ __('Forgot Your Password?') }}
+            </a>
+        @endif
 	</div>	
 </form>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 
   
 
-    <script  src="loginstyle/js/index.js"></script>
+    <script  src="/loginstyle/js/index.js"></script>
 
 
 
