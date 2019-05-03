@@ -25,35 +25,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- banner -->
+ @foreach($data as $value)
 	<div class="w3-banner-top">
 	<div class="agileinfo-dot">
-			<div class="w3layouts_menu">
-				<nav class="cd-stretchy-nav edit-content">
-					<a class="cd-nav-trigger" href="#0"> Menu <span aria-hidden="true"></span> </a>
-					<ul>
-						<li><a href="#home" class="scroll"><span>Home</span></a></li>
-						<li><a href="#about" class="scroll"><span>About</span></a></li>
-						<li><a href="#experiences" class="scroll"><span>Experiences</span></a></li>
-						<li><a href="#skills" class="scroll"><span>Skills</span></a></li> 
-						<li><a href="#projects" class="scroll"><span>Projects</span></a></li>
-						<li><a href="#contact" class="scroll"><span>Contact</span></a></li>
-					</ul> 
-					<span aria-hidden="true" class="stretchy-nav-bg"></span>
-				</nav> 
-			</div>
+			
 
 		<div class="w3-banner-grids">
 			<div class="col-md-6 w3-banner-grid-left">
 				<div class="w3-banner-img">
 					<img src="profilestyle/images/ban661.jpg" alt="img">
-					<h3 class="test">Chris Adam</h3>
-					<p class="test" >Graphic designer</p>
+					<h3 class="test"> {{$value->name}} </h3>
+					<p class="test" >{{$value->name}}</p>
 				</div>
 			</div>
 			<div class="col-md-6 w3-banner-grid-right">
 			<div class="w3-banner-text">
-				<h3>Career Goal</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim velit sed nibh placerat, non aliquam purus pretium. Donec at justo dignissim, maximus elit et, vestibulum mi.</p>
+				<h3> {{$value->name}}</h3>
+				
 			</div>
 				<div class=" w3-right-addres-1">
 				<ul class="address">
@@ -66,25 +54,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>PHONE</b></li>
-										<li><span>:</span>(+000) 003 003 0052</li>
+										<li><span>:</span>{{$value-> Mobile_Number}}</li>
 									</ul>
 								</li>
 								<li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>ADDRESS</b></li>
-										<li><span>:</span>3030 New York, NY, USA</li>
+										<li><span>:</span>{{$value->location }}</li>
 									</ul>
 								</li>
 								<li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>E-MAIL</b></li>
-										<li><span>:</span><a href="mailto:example@mail.com"> info@example.com</a></li>
+										<li><span>:</span><a href="{{$value->email}}">{{$value->email}}</a></li>
 									</ul>
 								</li>
 								<li>
 									<ul class="agileits-address-text">
-										<li class="agile-it-adress-left"><b>WEBSITE</b></li>
-										<li><span>:</span><a href="#">www.myresume.com</a></li>
+										<li class="agile-it-adress-left"><b>Gender</b></li>
+										<li><span>:</span><a href="#">{{$value->Sex}}</a></li>
 									</ul>
 								</li>
 							</ul> 
@@ -115,496 +103,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<img src="profilestyle/images/ab5.jpg" alt="img1">
 		
 				</div>
-				<div class="col-md-6 w3-about-grid-right1">
-					<h3>Aliquam euismod at turpis eu egestas</h3>
-					<p> Nullam pulvinar nunc eget tortor elementum, sed vehicula massa vestibulum. Aenean gravida arcu viverra nisl euismod laoreet. Fusce accumsan vel arcu at tincidunt. Nulla non nulla ultrices, pharetra orci in, varius nunc.</p>
-					<h5>Lorem ipsum dolor sit amet, consectetur adipisci ask</h5>
+				<div class="col-md-4 w3-about-grid-right1">
+					<h3>Discription</h3>
+					<p> {{$value->Description}}</p>
+
+
+        @endforeach        
+					<h5>Participant</h5>
 					<div class= "w3-about-grid-small-border">
 					<div class="col-md-4 w3-about-grid-small">
-						<h3 class="w3-head-project">20</h3>
-						<h5>web projects</h5>
+						<h3 class="w3-head-project">{{$applyjob}}</h3>
+						<h5>Apply Projects</h5>
 					</div>
 					<div class="col-md-4 w3-about-grid-small">
-					<h3 class="w3-head-project">30</h3>
-						<h5>php projects</h5>
+					<h3 class="w3-head-project">{{$confirmjob}}</h3>
+						<h5>Confirm Project</h5>
 					</div>
-					<div class="col-md-4 w3-about-grid-small">
-						<h3 class="w3-head-project">50</h3>
-						<h5>java projects</h5>
-						<div class="clearfix"></div>
-					</div>
+					
 				<div class="clearfix"></div>
 				</div>
 				</div>
-				<div class="clearfix"></div>
-				<div class="w3-about-grids2">
-				<div class="col-md-6 w3-about-grid-left2">
-					<h3>Pellentesque sit amet ex at nisl posuere</h3>
-					<p> Nullam pulvinar nunc eget tortor elementum, sed vehicula massa vestibulum. Aenean gravida arcu viverra nisl euismod laoreet. Fusce accumsan vel arcu at tincidunt. Nulla non nulla ultrices, pharetra orci in, varius nunc.</p>
-					<h4><a href="#">Readmore</a></h4>
-		
-				</div>
-				<div class="col-md-6 w3-about-grid-right2">
-				<img src="images/ab7.jpg" alt="img1">
-		
-				</div>
-				<div class="clearfix"></div>
-				</div>
+				
 		</div>
 	</div>
 </div>
 </div>
 <!-- //about  -->
-<!--/ education -->
-	<div class="w3-edu-top" id="experiences">
-	<div class="container">
-		<div class="w3-edu-grids">
-			<div class="col-md-6 w3-edu-grid-left">
-				<div class="w3-edu-grid-header">
-				<h3>Experiences</h3>
-				</div>
-				<div class="col-md-4 w3-edu-info1">
-					<h3>2017</h3>
-					<h4>web developer</h4>
-			</div>
-			<div class="col-md-6 w3-edu-info2">
-				<h3>Ati software solution</h3>
-					<h4><i class="fa fa-users" aria-hidden="true"></i><span>Team leader</span></h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt a purus et vulputate </p>
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-md-4 w3-edu-info1">
-			<h3>2015</h3>
-					<h4>php developer</h4>
-					
-			</div>
-			<div class="col-md-6 w3-edu-info2">
-				<h3>Tcs software solution</h3>
-					<h4><i class="fa fa-code" aria-hidden="true"></i><span>programmer</span></h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt a purus et vulputate</p>
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-md-4 w3-edu-info1">
-			<h3>2014</h3>
-					<h4>Graphic designer</h4>
-					
-			</div>
-			<div class="col-md-6 w3-edu-info2">
-				<h3>Ntt software solution</h3>
-					<h4><i class="fa fa-laptop" aria-hidden="true"></i><span>trainer</span></h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt a purus et vulputate</p>
-			
-			</div>
-			<div class="clearfix"></div>		
-			</div>
-			<div class="col-md-6 w3-edu-grid-right">
-			<div class="w3-edu-grid-header">
-			<h3>Education</h3>
-			</div>
-				<div class="col-md-3 w3-edu-info-right1">
-					<h3>2009</h3>
-			</div>
-			<div class="col-md-9 w3-edu-info-right2">
-				<h3>iit kharagpur delhi</h3>
-					<h4>Computer science</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt a purus et vulputate Donec tincidunt a purus et vulputate</p>
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-md-3 w3-edu-info-right1">
-				<h3>2006</h3>
-			</div>
-			<div class="col-md-9 w3-edu-info-right2">
-				<h3>Board of intermediate</h3>
-					<h4>mathametics </h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt a purus et vulputate Donec tincidunt a purus et vulputate</p>
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-md-3 w3-edu-info-right1">
-			<h3>2004</h3>
-			</div>
-			<div class="col-md-9 w3-edu-info-right2">
-				<h3>international school</h3>
-					<h4>iit certified</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt a purus et vulputate Donec tincidunt a purus et vulputate</p>
-			
-			</div>
-			<div class="clearfix"></div>		
-		</div>
-		<div class="clearfix"></div>	
-	</div>
-	</div>
-	</div>
-<!-- //education -->
-<!-- skills -->
-<div class="skills" id="skills">
-	<div class="container">
-	<div class="title-w3ls">
-		<h4>My Skills</h4>
-		</div>
-		<div class="skills-bar">
-		<div class="col-md-6 w3-agile-skills-grid">
-			<section class='bar'>
-				<section class='wrap'>
-					<div class='wrap_right'>
-					  <div class='bar_group'>
-						<div class='bar_group__bar thin' label='jQuery' show_values='true' tooltip='true' value='343'></div>
-						<div class='bar_group__bar thin' label='AJAX' show_values='true' tooltip='true' value='235'></div>
-						<div class='bar_group__bar thin' label='PHP' show_values='true' tooltip='true' value='675'></div>
-						<div class='bar_group__bar thin' label='SASS' show_values='true' tooltip='true' value='456'></div>
-						<div class='bar_group__bar thin' label='HTML' show_values='true' tooltip='true' value='245'></div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</section>
-			</section>
-		</div>
-		<div class="col-md-6 w3-agile-skills-grid">
-			<section class='bar'>
-				<section class='wrap'>
-					<div class='wrap_right'>
-					  <div class='bar_group'>
-						<div class='bar_group__bar thin' label='Java' show_values='true' tooltip='true' value='350'></div>
-						<div class='bar_group__bar thin' label='Angualr js' show_values='true' tooltip='true' value='200'></div>
-						<div class='bar_group__bar thin' label='Sql' show_values='true' tooltip='true' value='400'></div>
-						<div class='bar_group__bar thin' label='Mysql' show_values='true' tooltip='true' value='395'></div>
-						<div class='bar_group__bar thin' label='Hadoop' show_values='true' tooltip='true' value='200'></div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</section>
-			</section>
-		</div>
-		<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!-- //skills -->
-
-<!-- main-content -->
-	<div class="main-content">
-		<!-- gallery -->
-	<div class="gallery" id="projects">
-		<div class="w3-gallery-head">
-			<h3>My projects</h3>
-		</div>
-	<div class="container">
-		<div class="gallery_gds">
-			<ul class="simplefilter ">
-                <li class="active" data-filter="all">All</li>
-                <li data-filter="1">php</li>
-                <li data-filter="2">Java</li>
-                <li data-filter="3">Web development</li>
-            </ul>   
-            <div class="filtr-container " style="padding: 0px; position: relative; height: 858px;">
-				<div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 5" data-sort="Busy streets" style="opacity: 1; transform: scale(1) translate3d(0px, 0px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-					<div class="jm-item-wrapper">
-						<div class="jm-item-image">
-							<img src="profilestyle/images/g1.jpg" alt="property" />
-							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#"  data-toggle="modal" data-target="#myModal1">View Details</a></div>
-						</div>	
-						
-					</div>
-				</div>
-				<div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="2, 5" data-sort="Luminous night" style="opacity: 1; transform: scale(1) translate3d(380px, 0px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-					<div class="jm-item-wrapper">
-						<div class="jm-item-image">
-							<img src="profilestyle/images/g2.jpg" alt="property" />
-							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#"  data-toggle="modal" data-target="#myModal2">View Details</a></div>
-						</div>	
-						
-					</div>
-				</div>
-				<div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 4" data-sort="City wonders" style="opacity: 1; transform: scale(1) translate3d(760px, 0px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-					<div class="jm-item-wrapper">
-						<div class="jm-item-image">
-							<img src="profilestyle/images/g31.jpg" alt="property" />
-							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#"  data-toggle="modal" data-target="#myModal3">View Details</a></div>
-						</div>	
-						
-					</div>
-				</div>
-				<div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 3" data-sort="In production" style="opacity: 1; transform: scale(1) translate3d(0px, 286px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-					<div class="jm-item-wrapper">
-						<div class="jm-item-image">
-							<img src="profilestyle/images/g4.jpg" alt="property" />
-							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#"  data-toggle="modal" data-target="#myModal4">View Details</a></div>
-						</div>	
-					</div>
-				</div>
-				<div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="3, 4" data-sort="Industrial site" style="opacity: 1; transform: scale(1) translate3d(380px, 286px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-					<div class="jm-item-wrapper">
-						<div class="jm-item-image">
-							<img src="profilestyle/images/g5.jpg" alt="property" />
-							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#"  data-toggle="modal" data-target="#myModal5">View Details</a></div>
-						</div>	
-					</div>
-				</div>
-				<div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="3, 4" data-sort="Industrial site" style="opacity: 1; transform: scale(1) translate3d(380px, 286px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-					<div class="jm-item-wrapper">
-						<div class="jm-item-image">
-							<img src="profilestyle/images/g6.jpg" alt="property" />
-							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#"  data-toggle="modal" data-target="#myModal5">View Details</a></div>
-						</div>
-						
-					</div>
-				</div>
-				<div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 3" data-sort="City lights" style="opacity: 1; transform: scale(1) translate3d(0px, 572px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-					<div class="jm-item-wrapper">
-						<div class="jm-item-image">
-							<img src="profilestyle/images/g7.jpg" alt="property" />
-							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#"  data-toggle="modal" data-target="#myModal7">View Details</a></div>
-						</div>	
-						
-					</div>
-				</div>
-				<div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="2, 4" data-sort="Dreamhouse" style="opacity: 1; transform: scale(1) translate3d(380px, 572px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-					<div class="jm-item-wrapper">
-						<div class="jm-item-image">
-							<img src="profilestyle/images/g8.jpg" alt="property" />
-							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#"  data-toggle="modal" data-target="#myModal8">View Details</a></div>
-						</div>	
-						
-					</div>
-				</div>
-				<div class="col-md-4 col-ms-6 jm-item first filtr-item" data-category="1, 3, 4" data-sort="Dreamhouse" style="opacity: 1; transform: scale(1) translate3d(760px, 572px, 0px); backface-visibility: hidden; perspective: 1000px; transform-style: preserve-3d; position: absolute; transition: all 0.5s ease-out 0ms;">
-					<div class="jm-item-wrapper">
-						<div class="jm-item-image">
-							<img src="profilestyle/images/g9.jpg" alt="property" />
-							<span class="jm-item-overlay"> </span>
-							<div class="jm-item-button"><a href="#"  data-toggle="modal" data-target="#myModal9">View Details</a></div>
-						</div>	
-						
-					</div>
-				</div>
-               <div class="clearfix"> </div>
-            </div>
-		</div>
-	</div>	
-	</div>
-	<!--//gallery-->
-	</div>
-<!-- //main-content -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class="w3ls-property-images w3-pop1-img">
-							</div>
-					
-						<div class="ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>
-					 
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class="w3ls-property-images">
-								<img src="profilestyle/images/gal11.jpg" alt="image">
-							</div>
-					
-						<div class="ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>
-					 
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class=" w3ls-property-images w3-pop1-img2">
-							<img src="profilestyle/images/gal22.jpg" alt="image">
-							</div>
-					
-						<div class=" ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-								
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>
-					 
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class="w3ls-property-images w3-pop1-img3">
-							<img src="profilestyle/images/gal33.jpg" alt="image">
-							</div>
-					
-						<div class="ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-								
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>
-					 
-<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class=" w3ls-property-images w3-pop1-img4">
-							<img src="profilestyle/images/gal44.jpg" alt="image">
-							</div>
-					
-						<div class=" ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-								
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>
-					 
-<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class=" w3ls-property-images w3-pop1-img5">
-							<img src="profilestyle/images/gal66.jpg" alt="image">
-							</div>
-					
-						<div class=" ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-								
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>
-					 
-<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class=" w3ls-property-images w3-pop1-img6">
-								<img src="profilestyle/images/gal61.jpg" alt="image">
-							</div>
-					
-						<div class=" ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>
-					 
-<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class=" w3ls-property-images w3-pop1-img7">
-								<img src="profilestyle/images/gal77.jpg" alt="image">
-							</div>
-					
-						<div class="ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-								
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>
-<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class=" w3ls-property-images w3-pop1-img8">
-								<img src="profilestyle/images/gal88.jpg" alt="image">
-							</div>
-					
-						<div class=" ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-								
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>
-<div class="modal fade" id="myModal9" tabindex="-1" role="dialog" >
-				<div class="modal-dialog">
-							<!-- Modal content-->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class=" w3ls-property-images w3-pop1-img9">
-							<img src="profilestyle/images/gal99.jpg" alt="image">
-							</div>
-					
-						<div class="ins-details">
-							<div class="ins-name">
-								<h3>voluptatem accusantium doloremque</h3>
-								
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-								
-							</div>
-							
-						</div>
-						<div class="clearfix"></div>			
-			     </div>
-	</div>				 					
- <script src="profilestyle/js/jquery.filterizr.js"></script>
-    
-    <!-- Kick off Filterizr -->
-    <script type="text/javascript">
-        $(function() {
-            //Initialize filterizr with default options
-            $('.filtr-container').filterizr();
-        });
-    </script>
 
 <!-- contact -->
 	 <div class="contact" id="contact">
@@ -632,6 +156,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //contact -->
 <!-- footer -->
+
+ @foreach($data as $val)
 	<div class="w3l_footer">
 		<div class="container">
 			
@@ -644,7 +170,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="w3ls_footer_grid_leftr">
 							<h4>Location</h4>
-							<p>3030 New York, NY, USA</p>
+							<p>{{$val->location }}</p>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -654,7 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="w3ls_footer_grid_leftr">
 							<h4>Email</h4>
-							<a href="mailto:info@example.com">info@example.com</a>
+							<a href="mailto:{{$value->email}}">{{$val->email}}</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -664,7 +190,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="w3ls_footer_grid_leftr">
 							<h4>Call Me</h4>
-							<p>(+000) 003 003 0052</p>
+							<p>{{$val-> Mobile_Number}}</p>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -673,9 +199,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="w3l_footer_pos">
-			<p>© 2017 C-Resume. All Rights Reserved | Design by <a href="https://w3layouts.com/">W3layouts</a></p>
+			<p>© 2019 Part Time Jobs Sri Lanka.</p>
 		</div>
 	</div>
+    @endforeach
 <!-- //footer -->
 <script src="js/bars.js"></script>
 <!-- start-smoth-scrolling -->
@@ -727,6 +254,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 	</script>
 
-
+ 
 </body>
 </html>

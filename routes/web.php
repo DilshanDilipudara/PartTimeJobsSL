@@ -40,6 +40,12 @@ Route::get('/Candidates{ID}','Candidates@Joballcandidate');
 //confrim jobs
 Route::get('/Confirm{ID}{Job_ID}','ConfirmJobs@Confirmuser');
 
+
+//profile route get avalable data and show
+Route::get('/Profile','profileController@showavailabledetails');
+
+
+
 Route::get('/Contact', function () {
     return view('Contact');
 });
@@ -48,9 +54,6 @@ Route::get('/New_Post', function () {
     return view('New_Post');
 });
 
-Route::get('/Profile', function () {
-    return view('Profile');
-});
 
 
 Auth::routes();

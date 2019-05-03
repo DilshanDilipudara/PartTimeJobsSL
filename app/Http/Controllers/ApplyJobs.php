@@ -12,8 +12,7 @@ class ApplyJobs extends Controller
                ->where('ID',$ID)
                -> select('ID','Event','In_Date','Out_Date','Per_Day_Payment','quantity','Location','Discription','ApplyUser','ConfirmUser')
                ->get();
-                 
-       
+               
                return view('Job_Single',compact('data'));
 
      }
