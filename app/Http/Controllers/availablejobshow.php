@@ -25,9 +25,6 @@ class availablejobshow extends Controller
         $enddate = $request -> input('enddate');
         $location = $request -> input('location');
 
-        $userId =   \Auth::user()->id;
-
-
         $searchdata = DB::table('Jobs')
                     ->wheredate('In_Date','>=',$startdate)
                     ->wheredate('Out_Date','<=',$enddate)
