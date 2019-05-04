@@ -12,7 +12,7 @@ class profileController extends Controller
         $userId =   \Auth::user()->id;
         $data = DB::table('users')
                 ->where('id',  $userId)
-                ->select('name','email','location','Mobile_Number','Sex','Description')
+                ->select('id','name','email','location','Mobile_Number','Sex','Description')
                 ->get();
 
         $applyjob = DB::table('JobApplyUsers')
@@ -26,5 +26,15 @@ class profileController extends Controller
                         ->count('Job_ID') ;
            
                 return view('Profile',compact('data','applyjob','confirmjob'));
+    }
+
+    public function showdetailseditprofile($userID){
+              
+        $data = DB::table('users')
+        ->where('id',  $userID)
+        ->select('id','name','email','location','Mobile_Number','Sex','Description','NIC_NO')
+        ->get();
+        
+        return view('editprofile',compact('data'));
     }
 }

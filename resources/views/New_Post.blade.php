@@ -257,7 +257,7 @@
                   <div class="col-md-12">
                     <input type="submit" value="Post" class="btn btn-primary  py-2 px-5">
                   </div>
-                </div>
+                </div>  
               @else
               <div class="row form-group">
               <div class="col-md-12">
