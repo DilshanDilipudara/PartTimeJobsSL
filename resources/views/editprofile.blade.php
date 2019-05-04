@@ -31,63 +31,109 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="w3-banner-top">
 	<div class="agileinfo-dot">
 			
-
+       <form action="/editdetails" method = "POST">
+         {{csrf_field()}}  
 		<div class="w3-banner-grids">
 			<div class="col-md-6 w3-banner-grid-left">
 				<div class="w3-banner-img">
-					<img src="profilestyle/images/ban661.jpg" alt="img">
-					<h3 class="test"> {{$value->name}} </h3>
-					<p class="test" >{{$value->name}}</p>
+					<img src="images/{{$value->ProfilePicture }}" alt="img">
+					<h3 class="test">  </h3>
+                    
+					<h3 class="test" >{{$value->name}}</h3>
 				</div>
 			</div>
 			<div class="col-md-6 w3-banner-grid-right">
 			<div class="w3-banner-text">
-				<h3> {{$value->name}}</h3>
+				
 				
 			</div>
 				<div class=" w3-right-addres-1">
 				<ul class="address">
+
+                                  <li>
+									<ul class="agileits-address-text ">
+										<li class="agile-it-adress-left"><b>Name</b></li>
+                                        <li> <input id="name" type="text" class="form-control" name="name" value="{{$value-> name}}" required autofocus  ></li>
+									</ul>
+								</li>
+
 								<li>
 									<ul class="agileits-address-text ">
 										<li class="agile-it-adress-left"><b>D.O.B</b></li>
-										<li><span>:</span>21-08-1987</li>
+                                        <li> <input id="dob" type="date" class="form-control" name="dob" value="01/01/2019" required autofocus ></li>
 									</ul>
 								</li>
 								<li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>PHONE</b></li>
-										<li><span>:</span>{{$value-> Mobile_Number}}</li>
+                                        <li> <input id="phone" type="number" class="form-control" name="mobile" value="{{$value-> Mobile_Number}}" required autofocus  ></li>
 									</ul>
 								</li>
 								<li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>ADDRESS</b></li>
-										<li><span>:</span>{{$value->location }}</li>
+                                        <li> <input id="phone" type="text" class="form-control" name="address" value="{{$value->Address}}" placeholder = "No.03,colombo." required autofocus  ></li>
 									</ul>
 								</li>
                                 <li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>CURRENT LOCATION</b></li>
-										<li><span>:</span>{{$value->location }}</li>
+										<li> 
+                                        <select id="phone" type="text" class="form-control" name="location" value="{{$value->location}}" required autofocus>
+                                                <option value="">{{$value->location}}</option>
+                                                <option>Ampara</option>
+                                                <option>Anuradhapura</option>
+                                                <option>Badulla</option>
+                                                <option>Batticaloa</option>
+                                                <option>Colombo</option>
+                                                <option>Galle</option>
+                                                <option>Gampaha</option>
+                                                <option>Hambantota</option>
+                                                <option>Jaffna</option>
+                                                <option>Kalutara</option>
+                                                <option>Kandy</option>
+                                                <option>Kegalle</option>
+                                                <option>Kilinochchi</option>
+                                                <option>Kurunegala</option>
+                                                <option>Mannar</option>
+                                                <option>Matale</option>
+                                                <option>Matara</option>
+                                                <option>Monaragala</option>
+                                                <option>Mullativu</option>
+                                                <option>Nuwara Eliya</option>
+                                                <option>Polonnaruwa</option>
+                                                <option>Puttalam</option>
+                                                <option>Ratnapura</option>
+                                                <option>Trincomalee</option>
+                                                <option>Vavuniya</option>
+                                            </select>
+                                        
+                                        </li>
+									</ul>
+								</li>
+                                <li>
+									<ul class="agileits-address-text">
+										<li class="agile-it-adress-left"><b>NIC</b></li>
+                                        <li> <input id="NIC" type="text" class="form-control" name="NIC"  value="{{$value->NIC_NO}}"  required autofocus  ></li>
+										
 									</ul>
 								</li>
 								<li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>E-MAIL</b></li>
-										<li><span>:</span><a href="{{$value->email}}">{{$value->email}}</a></li>
+                                        <li> <input id="email" type="email" class="form-control" name="mobile" readonly="readonly" value="{{$value->email}}"  required autofocus  ></li>
+										
 									</ul>
 								</li>
 								<li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>Gender</b></li>
-										<li><span>:</span><a href="#">{{$value->Sex}}</a></li>
+                                        <li> <input id="gender" type="text" class="form-control" name="gender" readonly="readonly" value="{{$value->Sex}}"  required autofocus  ></li>
+										
 									</ul>
 								</li>
 							</ul> 
-							
-							<div class="ml-auto">
-                <a href="{{('/editprofile'.$value->id)}}" class="btn btn-success py-2">Edit Profile</a>
-						  </div>
+						
 
 				</div>
 			</div>
@@ -112,246 +158,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="w3-about-grids">
 		<div class=" w3-about-grids1">
 				<div class="col-md-6 w3-about-grid-left1">
-					<img src="profilestyle/images/ab5.jpg" alt="img1">
+					<img src="images/{{$value->Jobphoto}}" alt="img1">
 		
 				</div>
 				<div class="col-md-4 w3-about-grid-right1">
 					<h3>Discription</h3>
-					<p> {{$value->Description}}</p>
-
-
-        @endforeach        
-					<h5>Participant</h5>
-					<div class= "w3-about-grid-small-border">
-					<div class="col-md-6 w3-about-grid-small">
-						<h3 class="w3-head-project"></h3>
-						<h5>Apply Jobs</h5>
-					</div>
-					<div class="col-md-6 w3-about-grid-small">
-					<h3 class="w3-head-project"></h3>
-						<h5>Confirm Jobs</h5>
-					</div>
+							
+                  <input id="discription" type="text" class="form-control" name="discription" placeholder = "I am works at prattime.lk"  required autofocus  >
+										
+                   &nbsp;
+                   
 					
 				<div class="clearfix"></div>
-				</div>
-				</div>
-				
-		</div>
-	</div>
-</div>
-</div>
-<!-- //about  -->
-
-<!-- contact -->
-	 <div class="contact" id="contact">
-	<div class="container">
-		<div class="w3ls-heading">
-			<h3>Contact me</h3>
-		</div>
-			<div class="contact-w3ls">
-				<form action="#" method="post">
-					<div class="col-md-7 col-sm-7 contact-left agileits-w3layouts">
-						<input type="text" name="First Name" placeholder="Name" required="">
-						<input type="email"  class="email" name="Email" placeholder="Email" required="">
-						<input type="text" name="Number" placeholder="Mobile Number" required="">
-						<!-- <input type="text" class="email" name="Last Name" placeholder="Last Name" required=""> -->
-					</div> 
-					<div class="col-md-5 col-sm-5 contact-right agileits-w3layouts">
-						<textarea name="Message" placeholder="Message" required=""></textarea>
-						<input type="submit" value="Submit">
-					</div>
-					<div class="clearfix"> </div> 
-				</form>
-			</div>  
-
-	</div>
-</div>
-<!-- //contact -->
-<!-- footer -->
-
- @foreach($data as $val)
-	<div class="w3l_footer">
-		<div class="container">
-			
-			<div class="w3ls_footer_grids">
-				
-				<div class="w3ls_footer_grid">
-					<div class="col-md-4 w3ls_footer_grid_left">
-						<div class="w3ls_footer_grid_leftl">
-							<i class="fa fa-map-marker" aria-hidden="true"></i>
-						</div>
-						<div class="w3ls_footer_grid_leftr">
-							<h4>Location</h4>
-							<p>{{$val->location }}</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="col-md-4 w3ls_footer_grid_left">
-						<div class="w3ls_footer_grid_leftl">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</div>
-						<div class="w3ls_footer_grid_leftr">
-							<h4>Email</h4>
-							<a href="mailto:{{$value->email}}">{{$val->email}}</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="col-md-4 w3ls_footer_grid_left">
-						<div class="w3ls_footer_grid_leftl">
-							<i class="fa fa-phone" aria-hidden="true"></i>
-						</div>
-						<div class="w3ls_footer_grid_leftr">
-							<h4>Call Me</h4>
-							<p>{{$val-> Mobile_Number}}</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
+                    <div class="ml-auto">
+                         <a href="" class="btn btn-success py-2">Submit</a>
+                    </div>
+				 </div>	  
 			</div>
-		</div>
-		<div class="w3l_footer_pos">
-			<p>© 2019 Part Time Jobs Sri Lanka.</p>
+				
 		</div>
 	</div>
-    @endforeach
-<!-- //footer -->
-<script src="js/bars.js"></script>
-<!-- start-smoth-scrolling -->
-<script src="js/SmoothScroll.min.js"></script>
-<!-- text-effect -->
-		<script type="text/javascript" src="js/jquery.transit.js"></script> 
-		<script type="text/javascript" src="js/jquery.textFx.js"></script> 
-		<script type="text/javascript">
-			$(document).ready(function() {
-					$('.test').textFx({
-						type: 'fadeIn',
-						iChar: 100,
-						iAnim: 1000
-					});
-			});
-		</script>
-<!-- //text-effect -->
-<!-- menu-js --> 	
-	<script src="profilestyle/js/modernizr.js"></script>	
-	<script src="profilestyle/js/menu.js"></script>
-<!-- //menu-js --> 	
+    </form>
+</div>
+</div>
+@endforeach
 
-
-<script type="text/javascript" src="profilestyle/js/move-top.js"></script>
-
-<script type="text/javascript" src="profilestyle/js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<!-- start-smoth-scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/aos.js"></script>
-  
-  <script>
-      // This example displays an address form, using the autocomplete feature
-      // of the Google Places API to help users fill in the information.
-
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-      var placeSearch, autocomplete;
-      var componentForm = {
-        street_number: 'short_name',
-        route: 'long_name',
-        locality: 'long_name',
-        administrative_area_level_1: 'short_name',
-        country: 'long_name',
-        postal_code: 'short_name'
-      };
-
-      function initAutocomplete() {
-        // Create the autocomplete object, restricting the search to geographical
-        // location types.
-        autocomplete = new google.maps.places.Autocomplete(
-            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-            {types: ['geocode']});
-
-        // When the user selects an address from the dropdown, populate the address
-        // fields in the form.
-        autocomplete.addListener('place_changed', fillInAddress);
-      }
-
-      function fillInAddress() {
-        // Get the place details from the autocomplete object.
-        var place = autocomplete.getPlace();
-
-        for (var component in componentForm) {
-          document.getElementById(component).value = '';
-          document.getElementById(component).disabled = false;
-        }
-
-        // Get each component of the address from the place details
-        // and fill the corresponding field on the form.
-        for (var i = 0; i < place.address_components.length; i++) {
-          var addressType = place.address_components[i].types[0];
-          if (componentForm[addressType]) {
-            var val = place.address_components[i][componentForm[addressType]];
-            document.getElementById(addressType).value = val;
-          }
-        }
-      }
-
-      // Bias the autocomplete object to the user's geographical location,
-      // as supplied by the browser's 'navigator.geolocation' object.
-      function geolocate() {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var geolocation = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-            var circle = new google.maps.Circle({
-              center: geolocation,
-              radius: position.coords.accuracy
-            });
-            autocomplete.setBounds(circle.getBounds());
-          });
-        }
-      }
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
-        async defer></script>
-
-  <script src="js/main.js"></script>
-
- 
 </body>
 </html>

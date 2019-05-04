@@ -32,8 +32,9 @@ class profileController extends Controller
               
         $data = DB::table('users')
         ->where('id',  $userID)
-        ->select('id','name','email','location','Mobile_Number','Sex','Description','NIC_NO')
+        ->select('id','name','email','location','Mobile_Number','Sex','Description','NIC_NO','Address','DOB','ProfilePicture','Jobphoto')
         ->get();
+        
         
         return view('editprofile',compact('data'));
     }

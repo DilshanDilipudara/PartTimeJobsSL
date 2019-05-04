@@ -127,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="w3-banner-img">
 					<img src="profilestyle/images/ban661.jpg" alt="img">
 					<h3 class="test"> {{$value->name}} </h3>
-					<p class="test" >{{$value->name}}</p>
+					<p class="test" >{{$value->location}}</p>
 				</div>
 			</div>
 			<div class="col-md-6 w3-banner-grid-right">
