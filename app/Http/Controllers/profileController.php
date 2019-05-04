@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use DB;
+use App\User;
+use Auth;
+use Image;
 
 class profileController extends Controller
 {
@@ -12,7 +18,7 @@ class profileController extends Controller
         $userId =   \Auth::user()->id;
         $data = DB::table('users')
                 ->where('id',  $userId)
-                ->select('id','name','email','location','Mobile_Number','Sex','Description')
+                ->select('id','name','email','location','Mobile_Number','Sex','Description','Address','ProfilePicture','Jobphoto','DOB')
                 ->get();
 
         $applyjob = DB::table('JobApplyUsers')
@@ -38,4 +44,22 @@ class profileController extends Controller
         
         return view('editprofile',compact('data'));
     }
+
+   public function inserteditdetails(Request $request){
+          
+             
+            $userId =   \Auth::user()->id;
+             
+            $user = User::find( $userId );
+            $user->name = $request->name;
+            $user->DOB = $request->dob;
+            $user->Address = $request->address;
+            $user->location  = $request->location;
+            $user->NIC_NO = $request->NIC;
+            $user->Description  = $request->description;
+            $user->update();
+            return redirect('/Profile');
+            
+   }
+
 }

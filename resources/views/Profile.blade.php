@@ -4,6 +4,10 @@
 <!-- Head -->
 <head>
 <title>Profile</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+    
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <meta name="keywords" content="C-Resume a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -21,26 +25,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script type="text/javascript" src="profilestyle/js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="profilestyle/js/bootstrap.min.js"></script>
 <!-- //Default-JavaScript-File -->
-
-
-  
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    
-    
-    <link rel="stylesheet" href="css/fl-bigmug-line.css">
-  
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/style.css">
-    
-
 
 
 </head>
@@ -126,8 +110,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-6 w3-banner-grid-left">
 				<div class="w3-banner-img">
 					<img src="profilestyle/images/ban661.jpg" alt="img">
-					<h3 class="test"> {{$value->name}} </h3>
-					<p class="test" >{{$value->location}}</p>
+					<h3 class="test"> </h3> &nbsp;
+					<p class="test" >{{$value->name}}</p>
 				</div>
 			</div>
 			<div class="col-md-6 w3-banner-grid-right">
@@ -140,7 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li>
 									<ul class="agileits-address-text ">
 										<li class="agile-it-adress-left"><b>D.O.B</b></li>
-										<li><span>:</span>21-08-1987</li>
+										<li><span>:</span>{{$value->DOB}}</li>
 									</ul>
 								</li>
 								<li>
@@ -156,7 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>ADDRESS</b></li>
-										<li><span>:</span>{{$value->location }}</li>
+										<li><span>:</span>{{$value->Address }}</li>
 									</ul>
 								</li>
 

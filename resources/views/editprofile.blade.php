@@ -39,7 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<img src="images/{{$value->ProfilePicture }}" alt="img">
 					<h3 class="test">  </h3>
                     
-					<h3 class="test" >{{$value->name}}</h3>
+					
 				</div>
 			</div>
 			<div class="col-md-6 w3-banner-grid-right">
@@ -80,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li class="agile-it-adress-left"><b>CURRENT LOCATION</b></li>
 										<li> 
                                         <select id="phone" type="text" class="form-control" name="location" value="{{$value->location}}" required autofocus>
-                                                <option value="">{{$value->location}}</option>
+                                                <option value="{{$value->location}}">{{$value->location}}</option>
                                                 <option>Ampara</option>
                                                 <option>Anuradhapura</option>
                                                 <option>Badulla</option>
@@ -121,7 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>E-MAIL</b></li>
-                                        <li> <input id="email" type="email" class="form-control" name="mobile" readonly="readonly" value="{{$value->email}}"  required autofocus  ></li>
+                                        <li> <input id="email" type="email" class="form-control" name="email" readonly="readonly" value="{{$value->email}}"  required autofocus  ></li>
 										
 									</ul>
 								</li>
@@ -164,14 +164,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 w3-about-grid-right1">
 					<h3>Discription</h3>
 							
-                  <input id="discription" type="text" class="form-control" name="discription" placeholder = "I am works at prattime.lk"  required autofocus  >
-										
-                   &nbsp;
-                   
-					
+                  <input id="description" type="text" class="form-control" name="description" value="{{$value->Description}}" placeholder = "I am works at prattime.lk"  required autofocus  >				
+                   &nbsp;	
 				<div class="clearfix"></div>
                     <div class="ml-auto">
-                         <a href="" class="btn btn-success py-2">Submit</a>
+                         <input type="submit" value="Post" class="btn btn-success py-2 px-5">
                     </div>
 				 </div>	  
 			</div>
