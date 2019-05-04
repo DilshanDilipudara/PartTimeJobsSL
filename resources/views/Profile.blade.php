@@ -22,8 +22,104 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script type="text/javascript" src="profilestyle/js/bootstrap.min.js"></script>
 <!-- //Default-JavaScript-File -->
 
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/fl-bigmug-line.css">
+  
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+
+
+
 </head>
 <body>
+
+         
+    <header class="site-navbar py-1" role="banner">
+
+<div class="container">
+  <div class="row align-items-center">
+    
+    <div class="col-6 col-xl-2">
+      <h1 class="mb-0"><a href="/" class="text-black h2 mb-0">Job <strong> SL </strong></a></h1>
+    </div>
+
+    <div class="col-10 col-xl-10 d-none d-xl-block">
+      <nav class="site-navigation text-right" role="navigation">
+
+        <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+          <li class="active"><a href="/">Home</a></li>
+          <!-- <li class="has-children">
+            <a href="/Candidate">Candidate</a>
+            <ul class="dropdown">
+              <li><a href="#">Full Time</a></li>
+              <li><a href="#">Part Time</a></li>
+              <li><a href="#">Freelance</a></li>
+              <li><a href="#">Internship</a></li>
+              <li><a href="#">Termporary</a></li>
+            </ul>
+          </li> -->
+          <li><a href="/Candidates">Candidates</a></li>
+         
+          <li><a href="/About">About</a></li>
+          <li><a href="/Contact">Contact</a></li>
+          <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
+          
+          @if(!auth()->guest())
+           <li><a href="/Profile" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Profile</span></a></li>
+           <li><a href="{{ route('logout') }}" class="rounded bg-primary py-2 px-3 text-white" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();"><span class="h5 mr-2">Logout</span></a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+               </li>
+               @if(Auth::user()->Position  =='Admin') 
+               <li><a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
+               @endif
+
+               @else
+
+           <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>
+          <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a></li> 
+          @endif
+        
+       
+        </ul>
+      
+        
+      </nav>
+    </div>
+
+    <div class="col-6 col-xl-2 text-right d-block">
+      
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+    </div>
+
+  </div>
+</div>
+
+</header>
+
+
+
+
 <!-- banner -->
  @foreach($data as $value)
 	<div class="w3-banner-top">
@@ -111,13 +207,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         @endforeach        
 					<h5>Participant</h5>
 					<div class= "w3-about-grid-small-border">
-					<div class="col-md-4 w3-about-grid-small">
+					<div class="col-md-6 w3-about-grid-small">
 						<h3 class="w3-head-project">{{$applyjob}}</h3>
-						<h5>Apply Projects</h5>
+						<h5>Apply Jobs</h5>
 					</div>
-					<div class="col-md-4 w3-about-grid-small">
+					<div class="col-md-6 w3-about-grid-small">
 					<h3 class="w3-head-project">{{$confirmjob}}</h3>
-						<h5>Confirm Project</h5>
+						<h5>Confirm Jobs</h5>
 					</div>
 					
 				<div class="clearfix"></div>
@@ -253,6 +349,92 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								
 			});
 	</script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  
+  <script>
+      // This example displays an address form, using the autocomplete feature
+      // of the Google Places API to help users fill in the information.
+
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var placeSearch, autocomplete;
+      var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+      };
+
+      function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
+
+      function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+
+        for (var component in componentForm) {
+          document.getElementById(component).value = '';
+          document.getElementById(component).disabled = false;
+        }
+
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+          var addressType = place.address_components[i].types[0];
+          if (componentForm[addressType]) {
+            var val = place.address_components[i][componentForm[addressType]];
+            document.getElementById(addressType).value = val;
+          }
+        }
+      }
+
+      // Bias the autocomplete object to the user's geographical location,
+      // as supplied by the browser's 'navigator.geolocation' object.
+      function geolocate() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+          });
+        }
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+  <script src="js/main.js"></script>
 
  
 </body>
