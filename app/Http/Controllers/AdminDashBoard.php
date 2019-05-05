@@ -26,4 +26,16 @@ class AdminDashBoard extends Controller
                
              return view('adminshowalluser',compact('userdata'));
     }
+
+
+    public function adminshowjobs(){
+        
+        $jobdata = DB::table('Jobs')
+                ->select('id','User_ID','Event','In_Date','Out_Date','Location','ApplyUser','ConfirmUser')
+                ->get();
+        
+        
+        return view('adminshowalljobs',compact('jobdata'));
+
+    }
 }

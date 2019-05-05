@@ -183,8 +183,7 @@
                                                 <td>{{$value->Mobile_Number}}</td>
                                                 <td><button class="btn btn-success">Admin</button></td>
                                                 <td><button class="btn btn-success">Block</button></td>
-                                                <td><span class="round"><img src="{{$value->ProfilePicture}}" alt="User" width="50"></span></td>
-                                             
+                                                <td><span class="round"><img src="{{$value->ProfilePicture}}" alt="User" width="50"></span></td>    
                                             </tr>
                                          @endforeach
                                         </tbody>
@@ -198,30 +197,12 @@
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer">
-                © 2018 Adminwrap by wrappixel.com
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    <script src="../assets/node_modules/jquery/jquery.min.js"></script>
+ <script src="../assets/node_modules/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
     <script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>

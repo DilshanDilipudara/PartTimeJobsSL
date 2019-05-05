@@ -56,6 +56,9 @@ Route::get('/Admindashboard','AdminDashBoard@admindetails');
 //admin show all the user in DB
 Route::get('/adminshowalluser','AdminDashBoard@adminshowuser');
 
+//admin show all the user in DB
+Route::get('/adminshowalljobs','AdminDashBoard@adminshowjobs');
+
 
 
 Route::get('/Contact', function () {
@@ -72,10 +75,6 @@ Route::get('/New_Post', function () {
 Route::get('/adminshowprofileuser', function () {
     return view('adminshowprofileuser');
 });
-Route::get('/adminshowalljobs', function () {
-    return view('adminshowalljobs');
-});
-
 
 
 Auth::routes();
