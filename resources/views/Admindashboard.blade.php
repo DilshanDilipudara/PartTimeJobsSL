@@ -171,7 +171,7 @@
                     <!-- Column -->
                     <div class="col-lg-8">
                         <div class="card">
-                            <div class="card-body">
+                        <div class="card-body">
                                 
                                 <div class="table-responsive m-t-20 no-wrap">
                                     <table class="table vm no-th-brd pro-of-month">
@@ -181,6 +181,7 @@
                                                 <th>Name</th>
                                                 <th>Location</th>
                                                 <th>Mobile Number</th>
+                                                <th>NIC</th>
                                                 <th>Gmail</th>
                                             </tr>
                                         </thead>
@@ -192,6 +193,7 @@
                                                 <td>{{$value->name}}</td>
                                                 <td>{{$value->location}}</td>
                                                 <td>{{$value->Mobile_Number}}</td>
+                                                <td>{{$value->NIC_NO}}</td>
                                                 <td>{{$value->email}}</td>
                                             </tr>
                                         

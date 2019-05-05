@@ -138,13 +138,11 @@
                     <div class="col-md-5 align-self-center">
                         <h3 class="text-themecolor">Table Basic</h3>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Table Basic</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active">All User</li>
                         </ol>
                     </div>
-                    <div class="col-md-7 align-self-center">
-                        <a href="https://wrappixel.com/templates/adminwrap/" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down"> Upgrade to Pro</a>
-                    </div>
+                   
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
@@ -157,55 +155,38 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Basic Table</h4>
-                                <h6 class="card-subtitle">Add class <code>.table</code></h6>
+                                
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
+                                               
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Location</th>
+                                                <th>NIC</th>
+                                                <th>Mobile</th>
+                                                <th>Admin</th>
+                                                <th>Block</th>
+                                                <th colspan="2">Profile</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                         @foreach($userdata as $value)
                                             <tr>
-                                                <td>1</td>
-                                                <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
+                                               <td>{{$value->id}}</td>
+                                                <td>{{$value->name}}</td>
+                                                <td>{{$value->email}}</td>
+                                                <td>{{$value->location}}</td>
+                                                <td>{{$value->NIC_NO}}</td>
+                                                <td>{{$value->Mobile_Number}}</td>
+                                                <td><button class="btn btn-success">Admin</button></td>
+                                                <td><button class="btn btn-success">Block</button></td>
+                                                <td><span class="round"><img src="{{$value->ProfilePicture}}" alt="User" width="50"></span></td>
+                                             
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Sanghani</td>
-                                                <td>Gusikowski</td>
-                                                <td>@Govinda</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Roshan</td>
-                                                <td>Rogahn</td>
-                                                <td>@Hritik</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Joshi</td>
-                                                <td>Hickle</td>
-                                                <td>@Maruti</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Nigam</td>
-                                                <td>Eichmann</td>
-                                                <td>@Sonu</td>
-                                            </tr>
+                                         @endforeach
                                         </tbody>
                                     </table>
                                 </div>

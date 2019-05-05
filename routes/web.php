@@ -53,6 +53,9 @@ Route::post('/editdetails','profileController@inserteditdetails');
 //admin dashboad show who is admin in the site
 Route::get('/Admindashboard','AdminDashBoard@admindetails');
 
+//admin show all the user in DB
+Route::get('/adminshowalluser','AdminDashBoard@adminshowuser');
+
 
 
 Route::get('/Contact', function () {
@@ -64,9 +67,7 @@ Route::get('/New_Post', function () {
 });
 
 
-Route::get('/adminshowalluser', function () {
-    return view('adminshowalluser');
-});
+
 
 Route::get('/adminshowprofileuser', function () {
     return view('adminshowprofileuser');
