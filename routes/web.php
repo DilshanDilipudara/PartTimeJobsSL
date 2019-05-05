@@ -54,14 +54,26 @@ Route::post('/editdetails','profileController@inserteditdetails');
 
 
 
-
-
 Route::get('/Contact', function () {
     return view('Contact');
 });
 
 Route::get('/New_Post', function () {
     return view('New_Post');
+});
+
+Route::get('/Admindashboard', function () {
+    return view('Admindashboard');
+});
+Route::get('/adminshowalluser', function () {
+    return view('adminshowalluser');
+});
+
+Route::get('/adminshowprofileuser', function () {
+    return view('adminshowprofileuser');
+});
+Route::get('/adminshowalljobs', function () {
+    return view('adminshowalljobs');
 });
 
 

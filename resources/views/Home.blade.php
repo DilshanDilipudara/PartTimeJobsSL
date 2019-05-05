@@ -78,7 +78,7 @@
                           </form>
                      </li>
                      @if(Auth::user()->Position  =='Admin') 
-                     <li><a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
+                     <li><a href="Admindashboard" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
                      @endif
 
                      @else

@@ -34,9 +34,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
        <form action="/editdetails" method = "POST">
          {{csrf_field()}}  
 		<div class="w3-banner-grids">
-			<div class="col-md-6 w3-banner-grid-left">
+			<div class="col-md-6 w3-banner-grid-left">	
 				<div class="w3-banner-img">
 					<img src="images/{{$value->ProfilePicture }}" alt="img">
+                     
+				
 					<h3 class="test">  </h3>
                     
 					

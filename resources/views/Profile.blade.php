@@ -109,7 +109,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="w3-banner-grids">
 			<div class="col-md-6 w3-banner-grid-left">
 				<div class="w3-banner-img">
-					<img src="profilestyle/images/ban661.jpg" alt="img">
+					
+					<img src="images/{{$value->ProfilePicture }}" alt="img">
+				
 					<h3 class="test"> </h3> &nbsp;
 					<p class="test" >{{$value->name}}</p>
 				</div>
@@ -192,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="w3-about-grids">
 		<div class=" w3-about-grids1">
 				<div class="col-md-6 w3-about-grid-left1">
-					<img src="profilestyle/images/ab5.jpg" alt="img1">
+					<img src="images/{{$value->Jobphoto}}" alt="img1">
 		
 				</div>
 				<div class="col-md-4 w3-about-grid-right1">
