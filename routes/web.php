@@ -50,7 +50,8 @@ Route::get('/editprofile{id}','profileController@showdetailseditprofile');
 //edit profile send value in DB
 Route::post('/editdetails','profileController@inserteditdetails');
 
-
+//admin dashboad show who is admin in the site
+Route::get('/Admindashboard','AdminDashBoard@admindetails');
 
 
 
@@ -62,9 +63,7 @@ Route::get('/New_Post', function () {
     return view('New_Post');
 });
 
-Route::get('/Admindashboard', function () {
-    return view('Admindashboard');
-});
+
 Route::get('/adminshowalluser', function () {
     return view('adminshowalluser');
 });
