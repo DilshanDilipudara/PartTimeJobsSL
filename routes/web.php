@@ -67,7 +67,10 @@ Route::get('/adminshowalljobs','AdminDashBoard@adminshowjobs');
 Route::get('/makeadmin{id}','AdminDashBoard@makeadmin');
 
 //block user
-Route::get('/blockuser{id}','AdminDashBoard@makeadmin');
+Route::get('/blockuser{id}','AdminDashBoard@blockuser');
+
+//Unblock user
+Route::get('/unblockuser{id}','AdminDashBoard@unblockuser');
 
 
 Route::get('/Contact', function () {

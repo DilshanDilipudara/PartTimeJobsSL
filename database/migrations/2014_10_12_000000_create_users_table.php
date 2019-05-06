@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table ->integer('Mobile_Number')->unique()->nullable();
             $table ->string('Sex')->nullable();
             $table ->string('Position')->default('User');
+            $table ->string('Block')->default(0);
             $table ->text('Description')->nullable();
             $table ->date('DOB')->nullable();
             $table ->text('Address')->nullable();

@@ -184,7 +184,11 @@
                                                 <td>{{$value->Mobile_Number}}</td>
                                                 
                                                 <td><a href="{{('/makeadmin'.$value->id)}}" class="btn btn-success">Admin</a></td>
+                                              @if($value->Block == 0)
                                                 <td><a href="{{('/blockuser'.$value->id)}}" class="btn btn-success">Block</a></td>
+                                               @else
+                                               <td><a href="{{('/unblockuser'.$value->id)}}" class="btn btn-danger">UnBlock</a></td>
+                                               @endif
                                                 <td><a href="{{('/adminshowprofileuser'.$value->id)}}"><span class="round"><img src="{{$value->ProfilePicture}}" alt="User" width="50"></span></a></td>    
                                                    </tr>
                                          @endforeach

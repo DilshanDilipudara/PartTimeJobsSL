@@ -21,7 +21,7 @@ class AdminDashBoard extends Controller
 
         $userdata = DB::table('users')
                 ->where('Position','=','User')
-                ->select('id','name','email','location','Mobile_Number','NIC_NO','ProfilePicture')
+                ->select('id','name','email','location','Mobile_Number','NIC_NO','ProfilePicture','Block')
                 ->get();
                
              return view('adminshowalluser',compact('userdata'));
@@ -48,4 +48,20 @@ class AdminDashBoard extends Controller
         return redirect()->back();
 
     }
+    
+    public function blockuser($userID){
+        DB::table('users')
+        ->where('id',$userID)
+        ->update(['Block'=> 1 ]);
+        return redirect()->back();
+    }
+
+    public function unblockuser($userID){
+        DB::table('users')
+        ->where('id',$userID)
+        ->update(['Block'=> 0 ]);
+        return redirect()->back();
+    }
+
+
 }
