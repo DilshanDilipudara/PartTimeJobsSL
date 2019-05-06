@@ -43,6 +43,8 @@ Route::get('/Confirm{ID}{Job_ID}','ConfirmJobs@Confirmuser');
 
 //profile route get avalable data and show
 Route::get('/Profile','profileController@showavailabledetails');
+
+//admin show user profile
 Route::get('/adminshowprofileuser{id}','profileController@showavailabledetailsadmin');
 
 
@@ -61,6 +63,11 @@ Route::get('/adminshowalluser','AdminDashBoard@adminshowuser');
 //admin show all the user in DB
 Route::get('/adminshowalljobs','AdminDashBoard@adminshowjobs');
 
+//make admin
+Route::get('/makeadmin{id}','AdminDashBoard@makeadmin');
+
+//block user
+Route::get('/blockuser{id}','AdminDashBoard@makeadmin');
 
 
 Route::get('/Contact', function () {

@@ -182,8 +182,9 @@
                                                 <td>{{$value->location}}</td>
                                                 <td>{{$value->NIC_NO}}</td>
                                                 <td>{{$value->Mobile_Number}}</td>
-                                                <td><button class="btn btn-success">Admin</button></td>
-                                                <td><button class="btn btn-success">Block</button></td>
+                                                
+                                                <td><a href="{{('/makeadmin'.$value->id)}}" class="btn btn-success">Admin</a></td>
+                                                <td><a href="{{('/blockuser'.$value->id)}}" class="btn btn-success">Block</a></td>
                                                 <td><a href="{{('/adminshowprofileuser'.$value->id)}}"><span class="round"><img src="{{$value->ProfilePicture}}" alt="User" width="50"></span></a></td>    
                                                    </tr>
                                          @endforeach

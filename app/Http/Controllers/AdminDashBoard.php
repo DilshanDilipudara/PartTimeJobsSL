@@ -39,4 +39,13 @@ class AdminDashBoard extends Controller
         return view('adminshowalljobs',compact('jobdata'));
 
     }
+
+    public function makeadmin($userID){
+        
+        DB::table('users')
+        ->where('id',$userID)
+        ->update(['Position'=>'Admin']);
+        return redirect()->back();
+
+    }
 }
