@@ -1,274 +1,436 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Head -->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>AdminWrap - Easy to Customize Bootstrap 4 Admin Template</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="admin/css/style.css" rel="stylesheet">
-    <!-- You can change the theme colors from here -->
-    <link href="admin/css/colors/default.css" id="theme" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+<title>Profile</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="C-Resume a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!-- css -->
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="profilestyle/css/font-awesome.min.css" />
+<!-- //font-awesome icons -->
+<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" href="profilestyle/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="profilestyle/css/bootstrap.min.css" type="text/css" media="all" />
+<!-- Default-JavaScript-File -->
+	<script type="text/javascript" src="profilestyle/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="profilestyle/js/bootstrap.min.js"></script>
+<!-- //Default-JavaScript-File -->
+
+
 </head>
+<body>
 
-<body class="fix-header card-no-border fix-sidebar">
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="loader__figure"></div>
-            <p class="loader__label">Admin Wrap</p>
-        </div>
+         
+    <header class="site-navbar py-1" role="banner">
+
+<div class="container">
+  <div class="row align-items-center">
+    
+    <div class="col-6 col-xl-2">
+      <h1 class="mb-0"><a href="/" class="text-black h2 mb-0">Job <strong> SL </strong></a></h1>
     </div>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
-    <div id="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
-        <header class="topbar">
-            <nav class="navbar top-navbar navbar-expand-md navbar-light">
-                <!-- ============================================================== -->
-                <!-- Logo -->
-                <!-- ============================================================== -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
-                        <!-- Logo icon --><b>
-                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                            <!-- Dark Logo icon -->
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                            <!-- Light Logo icon -->
-                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
-                        </b>
-                        <!--End Logo icon -->
-                        <!-- Logo text --><span>
-                         <!-- dark Logo text -->
-                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                         <!-- Light Logo text -->    
-                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
-                <div class="navbar-collapse">
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="fa fa-bars"></i></a> </li>
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="fa fa-search"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="fa fa-times"></i></a> </form>
-                        </li>
-                    </ul>
-                    <!-- ============================================================== -->
-                    <!-- User profile and search -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav my-lg-0">
-                        <!-- ============================================================== -->
-                        <!-- Profile -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Mark Sanders &nbsp;</span> </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- ============================================================== -->
-        <!-- End Topbar header -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <aside class="left-sidebar">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="/Admindashboard" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Admin</span></a>
-                        </li>
-                        <li> <a class="waves-effect waves-dark" href="/adminshowalluser" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">User</span></a>
-                        </li>
-                        <li> <a class="waves-effect waves-dark" href="/adminshowalljobs" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Jobs</span></a>
-                        </li>
-                        <li> <a class="waves-effect waves-dark" href="/adminshowprofileuser" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Profile</span></a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </aside>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
-        <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <div class="row page-titles">
-                    <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Profile</h3>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Profile</li>
-                        </ol>
-                    </div>
-                    <div class="col-md-7 align-self-center">
-                        <a href="https://wrappixel.com/templates/adminwrap/" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down"> Upgrade to Pro</a>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <!-- Row -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-4 col-xlg-3 col-md-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <center class="m-t-30"> <img src="../assets/images/users/5.jpg" class="img-circle" width="150" />
-                                    <h4 class="card-title m-t-10">Hanna Gover</h4>
-                                    <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
-                                    <div class="row text-center justify-content-md-center">
-                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium">254</font></a></div>
-                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium">54</font></a></div>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-8 col-xlg-9 col-md-7">
-                        <div class="card">
-                            <!-- Tab panes -->
-                            <div class="card-body">
-                                <form class="form-horizontal form-material">
-                                    <div class="form-group">
-                                        <label class="col-md-12">Full Name</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="example-email" class="col-md-12">Email</label>
-                                        <div class="col-md-12">
-                                            <input type="email" placeholder="johnathan@admin.com" class="form-control form-control-line" name="example-email" id="example-email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Password</label>
-                                        <div class="col-md-12">
-                                            <input type="password" value="password" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Phone No</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Message</label>
-                                        <div class="col-md-12">
-                                            <textarea rows="5" class="form-control form-control-line"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Select Country</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line">
-                                                <option>London</option>
-                                                <option>India</option>
-                                                <option>Usa</option>
-                                                <option>Canada</option>
-                                                <option>Thailand</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success">Update Profile</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                </div>
-                <!-- Row -->
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-            </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer">
-                © 2018 Adminwrap by wrappixel.com
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
+
+    <div class="col-10 col-xl-10 d-none d-xl-block">
+      <nav class="site-navigation text-right" role="navigation">
+
+        <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+          <li class="active"><a href="/">Home</a></li>
+          <!-- <li class="has-children">
+            <a href="/Candidate">Candidate</a>
+            <ul class="dropdown">
+              <li><a href="#">Full Time</a></li>
+              <li><a href="#">Part Time</a></li>
+              <li><a href="#">Freelance</a></li>
+              <li><a href="#">Internship</a></li>
+              <li><a href="#">Termporary</a></li>
+            </ul>
+          </li> -->
+          <li><a href="/Candidates">Candidates</a></li>
+         
+          <li><a href="/About">About</a></li>
+          <li><a href="/Contact">Contact</a></li>
+          <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
+          
+          @if(!auth()->guest())
+           <li><a href="/Profile" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Profile</span></a></li>
+           <li><a href="{{ route('logout') }}" class="rounded bg-primary py-2 px-3 text-white" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();"><span class="h5 mr-2">Logout</span></a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+               </li>
+               @if(Auth::user()->Position  =='Admin') 
+               <li><a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
+               @endif
+
+               @else
+
+           <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>
+          <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a></li> 
+          @endif
+        
+       
+        </ul>
+      
+        
+      </nav>
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    <script src="../assets/node_modules/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
-    <script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="admin/js/perfect-scrollbar.jquery.min.js"></script>
-    <!--Wave Effects -->
-    <script src="admin/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="admin/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="admin/js/custom.min.js"></script>
+
+    <div class="col-6 col-xl-2 text-right d-block">
+      
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+    </div>
+
+  </div>
+</div>
+
+</header>
+
+
+
+
+<!-- banner -->
+ @foreach($data as $value)
+	<div class="w3-banner-top">
+	<div class="agileinfo-dot">
+			
+
+		<div class="w3-banner-grids">
+			<div class="col-md-6 w3-banner-grid-left">
+				<div class="w3-banner-img">
+					
+					<img src="images/{{$value->ProfilePicture }}" alt="img">
+				
+					<h3 class="test"> </h3> &nbsp;
+					<p class="test" >{{$value->name}}</p>
+				</div>
+			</div>
+			<div class="col-md-6 w3-banner-grid-right">
+			<div class="w3-banner-text">
+				<h3> {{$value->name}}</h3>
+				
+			</div>
+				<div class=" w3-right-addres-1">
+				<ul class="address">
+								<li>
+									<ul class="agileits-address-text ">
+										<li class="agile-it-adress-left"><b>D.O.B</b></li>
+										<li><span>:</span>{{$value->DOB}}</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="agileits-address-text">
+										<li class="agile-it-adress-left"><b>PHONE</b></li>
+										<li><span>:</span>{{$value-> Mobile_Number}}</li>
+									</ul>
+								</li>
+
+								
+
+
+								<li>
+									<ul class="agileits-address-text">
+										<li class="agile-it-adress-left"><b>ADDRESS</b></li>
+										<li><span>:</span>{{$value->Address }}</li>
+									</ul>
+								</li>
+
+								<li>
+									<ul class="agileits-address-text">
+										<li class="agile-it-adress-left"><b>CURRENT LOCATION</b></li>
+										<li><span>:</span>{{$value->location }}</li>
+									</ul>
+								</li>
+
+								<li>
+									<ul class="agileits-address-text">
+										<li class="agile-it-adress-left"><b>E-MAIL</b></li>
+										<li><span>:</span><a href="{{$value->email}}">{{$value->email}}</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul class="agileits-address-text">
+										<li class="agile-it-adress-left"><b>Gender</b></li>
+										<li><span>:</span><a href="#">{{$value->Sex}}</a></li>
+									</ul>
+								</li>
+							</ul> 
+							
+             
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</div>
+		<div class="thim-click-to-bottom">
+				<a href="#about" class="scroll">
+					<i class="fa  fa-chevron-down"></i>
+				</a>
+			</div>
+
+	</div>
+<!-- banner -->
+<!-- /about -->
+
+<div class="w3-about" id="about">
+	<div class="container">
+		<div class="w3-about-head">
+			<h3>About me</h3>
+		</div>
+		<div class="w3-about-grids">
+		<div class=" w3-about-grids1">
+				<div class="col-md-6 w3-about-grid-left1">
+					<img src="images/{{$value->Jobphoto}}" alt="img1">
+		
+				</div>
+				<div class="col-md-4 w3-about-grid-right1">
+					<h3>Discription</h3>
+					<p> {{$value->Description}}</p>
+
+
+        @endforeach        
+					<h5>Participant</h5>
+					<div class= "w3-about-grid-small-border">
+					<div class="col-md-6 w3-about-grid-small">
+						<h3 class="w3-head-project">{{$applyjob}}</h3>
+						<h5>Apply Jobs</h5>
+					</div>
+					<div class="col-md-6 w3-about-grid-small">
+					<h3 class="w3-head-project">{{$confirmjob}}</h3>
+						<h5>Confirm Jobs</h5>
+					</div>
+					
+				<div class="clearfix"></div>
+				</div>
+				</div>
+				
+		</div>
+	</div>
+</div>
+</div>
+<!-- //about  -->
+
+<!-- contact -->
+	 <div class="contact" id="contact">
+	<div class="container">
+		<div class="w3ls-heading">
+			<h3>Contact me</h3>
+		</div>
+			<div class="contact-w3ls">
+				<form action="#" method="post">
+					<div class="col-md-7 col-sm-7 contact-left agileits-w3layouts">
+						<input type="text" name="First Name" placeholder="Name" required="">
+						<input type="email"  class="email" name="Email" placeholder="Email" required="">
+						<input type="text" name="Number" placeholder="Mobile Number" required="">
+						<!-- <input type="text" class="email" name="Last Name" placeholder="Last Name" required=""> -->
+					</div> 
+					<div class="col-md-5 col-sm-5 contact-right agileits-w3layouts">
+						<textarea name="Message" placeholder="Message" required=""></textarea>
+						<input type="submit" value="Submit">
+					</div>
+					<div class="clearfix"> </div> 
+				</form>
+			</div>  
+
+	</div>
+</div>
+<!-- //contact -->
+<!-- footer -->
+
+ @foreach($data as $val)
+	<div class="w3l_footer">
+		<div class="container">
+			
+			<div class="w3ls_footer_grids">
+				
+				<div class="w3ls_footer_grid">
+					<div class="col-md-4 w3ls_footer_grid_left">
+						<div class="w3ls_footer_grid_leftl">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+						</div>
+						<div class="w3ls_footer_grid_leftr">
+							<h4>Location</h4>
+							<p>{{$val->location }}</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+						<div class="w3ls_footer_grid_leftl">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</div>
+						<div class="w3ls_footer_grid_leftr">
+							<h4>Email</h4>
+							<a href="mailto:{{$value->email}}">{{$val->email}}</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+						<div class="w3ls_footer_grid_leftl">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+						</div>
+						<div class="w3ls_footer_grid_leftr">
+							<h4>Call Me</h4>
+							<p>{{$val-> Mobile_Number}}</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="w3l_footer_pos">
+			<p>© 2019 Part Time Jobs Sri Lanka.</p>
+		</div>
+	</div>
+    @endforeach
+<!-- //footer -->
+<script src="js/bars.js"></script>
+<!-- start-smoth-scrolling -->
+<script src="js/SmoothScroll.min.js"></script>
+<!-- text-effect -->
+		<script type="text/javascript" src="js/jquery.transit.js"></script> 
+		<script type="text/javascript" src="js/jquery.textFx.js"></script> 
+		<script type="text/javascript">
+			$(document).ready(function() {
+					$('.test').textFx({
+						type: 'fadeIn',
+						iChar: 100,
+						iAnim: 1000
+					});
+			});
+		</script>
+<!-- //text-effect -->
+<!-- menu-js --> 	
+	<script src="profilestyle/js/modernizr.js"></script>	
+	<script src="profilestyle/js/menu.js"></script>
+<!-- //menu-js --> 	
+
+
+<script type="text/javascript" src="profilestyle/js/move-top.js"></script>
+
+<script type="text/javascript" src="profilestyle/js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  
+  <script>
+      // This example displays an address form, using the autocomplete feature
+      // of the Google Places API to help users fill in the information.
+
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var placeSearch, autocomplete;
+      var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+      };
+
+      function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
+
+      function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+
+        for (var component in componentForm) {
+          document.getElementById(component).value = '';
+          document.getElementById(component).disabled = false;
+        }
+
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+          var addressType = place.address_components[i].types[0];
+          if (componentForm[addressType]) {
+            var val = place.address_components[i][componentForm[addressType]];
+            document.getElementById(addressType).value = val;
+          }
+        }
+      }
+
+      // Bias the autocomplete object to the user's geographical location,
+      // as supplied by the browser's 'navigator.geolocation' object.
+      function geolocate() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+          });
+        }
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+  <script src="js/main.js"></script>
+
+ 
 </body>
-
 </html>

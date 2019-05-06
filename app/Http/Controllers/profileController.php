@@ -34,6 +34,29 @@ class profileController extends Controller
                 return view('Profile',compact('data','applyjob','confirmjob'));
     }
 
+    public function showavailabledetailsadmin($ID){
+
+         $userId = $ID;
+        $data = DB::table('users')
+                ->where('id',  $userId)
+                ->select('id','name','email','location','Mobile_Number','Sex','Description','Address','ProfilePicture','Jobphoto','DOB')
+                ->get();
+
+        $applyjob = DB::table('JobApplyUsers')
+                         ->where('User_ID',$userId)  
+                         ->where('ApplyJobs',1)
+                         ->count('Job_ID') ;
+                             
+        $confirmjob =  DB::table('JobApplyUsers')
+                        ->where('User_ID',$userId)  
+                        ->where('ConfirmJobs',1)
+                        ->count('Job_ID') ;
+           
+                return view('adminshowprofileuser',compact('data','applyjob','confirmjob'));
+    }
+
+
+
     public function showdetailseditprofile($userID){
               
         $data = DB::table('users')

@@ -31,7 +31,8 @@ class AdminDashBoard extends Controller
     public function adminshowjobs(){
         
         $jobdata = DB::table('Jobs')
-                ->select('id','User_ID','Event','In_Date','Out_Date','Location','ApplyUser','ConfirmUser')
+                ->join('users','users.id','=','Jobs.User_ID')
+                ->select('Jobs.id','Jobs.User_ID','Jobs.Event','Jobs.In_Date','Jobs.Out_Date','Jobs.Location','Jobs.ApplyUser','Jobs.ConfirmUser','users.name')
                 ->get();
         
         

@@ -43,6 +43,8 @@ Route::get('/Confirm{ID}{Job_ID}','ConfirmJobs@Confirmuser');
 
 //profile route get avalable data and show
 Route::get('/Profile','profileController@showavailabledetails');
+Route::get('/adminshowprofileuser{id}','profileController@showavailabledetailsadmin');
+
 
 //edit profile get value in DB
 Route::get('/editprofile{id}','profileController@showdetailseditprofile');

@@ -175,6 +175,7 @@
                                         <tbody>
                                          @foreach($userdata as $value)
                                             <tr>
+                                            
                                                <td>{{$value->id}}</td>
                                                 <td>{{$value->name}}</td>
                                                 <td>{{$value->email}}</td>
@@ -183,8 +184,8 @@
                                                 <td>{{$value->Mobile_Number}}</td>
                                                 <td><button class="btn btn-success">Admin</button></td>
                                                 <td><button class="btn btn-success">Block</button></td>
-                                                <td><span class="round"><img src="{{$value->ProfilePicture}}" alt="User" width="50"></span></td>    
-                                            </tr>
+                                                <td><a href="{{('/adminshowprofileuser'.$value->id)}}"><span class="round"><img src="{{$value->ProfilePicture}}" alt="User" width="50"></span></a></td>    
+                                                   </tr>
                                          @endforeach
                                         </tbody>
                                     </table>

@@ -172,7 +172,7 @@
                                         @foreach($jobdata as $value)
                                             <tr>
                                                 <td>{{$value->id}}</td>
-                                                <td>{{$value->User_ID}}</td>
+                                                <td>{{$value->name}}</td>
                                                 <td>{{$value->Event}}</td>
                                                 <td>{{$value->In_Date}}</td>
                                                 <td>{{$value->Out_Date}}</td>
