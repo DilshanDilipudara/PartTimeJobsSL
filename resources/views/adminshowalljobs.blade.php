@@ -165,7 +165,7 @@
                                                 <th>Apply User</th>
                                                 <th>Confirm User</th>
                                                 <th>Block</th>
-                                                <th>Unblock</th>
+                                             
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -179,9 +179,11 @@
                                                 <th>{{$value->Location}}</th>
                                                 <th>{{$value->ApplyUser}}</th>
                                                 <th>{{$value->ConfirmUser}}</th>
-                                                <td><button class="btn btn-success">Block</button></td>
-                                                <td><button class="btn btn-success">Unblock</button></td>
-
+                                                @if($value->Block == 0)
+                                                <td><a href="{{('/blockjob'.$value->id)}}" class="btn btn-success">Block</a></td>
+                                                @else
+                                                <td><a href="{{('/unblockjob'.$value->id)}}" class="btn btn-danger">UnBlock</a></td>
+                                                @endif
                                             </tr>
                                         @endforeach
                                         </tbody>

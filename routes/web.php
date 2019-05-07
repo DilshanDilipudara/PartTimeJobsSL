@@ -72,6 +72,12 @@ Route::get('/blockuser{id}','AdminDashBoard@blockuser');
 //Unblock user
 Route::get('/unblockuser{id}','AdminDashBoard@unblockuser');
 
+//block Jobs
+Route::get('/blockjob{id}','AdminDashBoard@blockjob');
+
+//unblock Jobs
+Route::get('/unblockjob{id}','AdminDashBoard@unblockjob');
+
 
 Route::get('/Contact', function () {
     return view('Contact');
