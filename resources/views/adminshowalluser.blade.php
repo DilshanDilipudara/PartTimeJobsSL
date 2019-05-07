@@ -88,7 +88,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Mark Sanders &nbsp;</span> </a>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ Auth::user()->ProfilePicture }}" alt="user" class="" /> <span class="hidden-md-down">{{ Auth::user()->name }} &nbsp;</span> </a>
                         </li>
                     </ul>
                 </div>
@@ -106,13 +106,15 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="/Admindashboard" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Admin</span></a>
+                    <li> <a class="waves-effect waves-dark" href="/Admindashboard" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Admin</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="/adminshowalluser" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">User</span></a>
+                        <li> <a class="waves-effect waves-dark" href="/adminshowalluser" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Users</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="/adminshowalljobs" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Jobs</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="/adminshowprofileuser" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Profile</span></a>
+                        @if( Auth::user()->Position  =='SuperAdmin')
+                        <li> <a class="waves-effect waves-dark" href="/superadminshowprofile" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Super Admin</span></a>
+                        @endif
                         </li>
                     </ul>
                 </nav>

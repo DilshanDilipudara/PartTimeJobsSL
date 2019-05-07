@@ -12,9 +12,18 @@ class AdminDashBoard extends Controller
 
         $data = DB::table('users')
                 ->where('Position','=','Admin')
-                ->select('id','name','email','location','Mobile_Number','ProfilePicture','NIC_NO')
+                ->select('id','name','email','location','Mobile_Number','ProfilePicture','NIC_NO','Sex','DOB')
                 ->get();
               return view('Admindashboard',compact('data'));
+    }
+
+    public function superadmindetails(){
+
+        $data = DB::table('users')
+                ->where('Position','=','SuperAdmin')
+                ->select('id','name','email','location','Mobile_Number','ProfilePicture','NIC_NO','Sex','DOB')
+                ->get();
+              return view('superadminshowprofile',compact('data'));
     }
 
     public function adminshowuser(){
@@ -75,6 +84,15 @@ class AdminDashBoard extends Controller
         ->where('id',$JobID)
         ->update(['Block'=> 0]);
         return redirect()->back();
+    }
+
+    public function blockadmin($userID){
+        
+        DB::table('users')
+        ->where('id',$userID)
+        ->update(['Position'=>'User']);
+        return redirect()->back();
+
     }
 
 

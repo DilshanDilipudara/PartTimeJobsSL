@@ -57,6 +57,11 @@ Route::post('/editdetails','profileController@inserteditdetails');
 //admin dashboad show who is admin in the site
 Route::get('/Admindashboard','AdminDashBoard@admindetails');
 
+
+//Super admin dashboad show who is super admin in the site
+Route::get('/superadminshowprofile','AdminDashBoard@superadmindetails');
+
+
 //admin show all the user in DB
 Route::get('/adminshowalluser','AdminDashBoard@adminshowuser');
 
@@ -78,6 +83,8 @@ Route::get('/blockjob{id}','AdminDashBoard@blockjob');
 //unblock Jobs
 Route::get('/unblockjob{id}','AdminDashBoard@unblockjob');
 
+//block admin
+Route::get('/blockadmin{id}','AdminDashBoard@blockadmin');
 
 Route::get('/Contact', function () {
     return view('Contact');

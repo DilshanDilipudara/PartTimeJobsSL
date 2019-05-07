@@ -96,7 +96,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Mark Sanders &nbsp;</span> </a>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ Auth::user()->ProfilePicture }}" alt="user" class="" /> <span class="hidden-md-down">{{ Auth::user()->name }} &nbsp;</span> </a>
                         </li>
                     </ul>
                 </div>
@@ -116,11 +116,13 @@
                     <ul id="sidebarnav">
                         <li> <a class="waves-effect waves-dark" href="/Admindashboard" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Admin</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="/adminshowalluser" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">User</span></a>
+                        <li> <a class="waves-effect waves-dark" href="/adminshowalluser" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Users</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="/adminshowalljobs" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Jobs</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="/adminshowprofileuser" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Profile</span></a>
+                        @if( Auth::user()->Position  =='SuperAdmin')
+                        <li> <a class="waves-effect waves-dark" href="/superadminshowprofile" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Super Admin</span></a>
+                        @endif
                         </li>
                     </ul>
                 </nav>
@@ -169,7 +171,7 @@
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-lg-8">
+                   
                         <div class="card">
                         <div class="card-body">
                                 
@@ -183,6 +185,11 @@
                                                 <th>Mobile Number</th>
                                                 <th>NIC</th>
                                                 <th>Gmail</th>
+                                                <th>Gender</th>
+                                                 <th>Date of Birth</th>
+                                                @if( Auth::user()->Position  =='SuperAdmin') 
+                                                <th>Admin</th>
+                                                @endif
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -195,6 +202,11 @@
                                                 <td>{{$value->Mobile_Number}}</td>
                                                 <td>{{$value->NIC_NO}}</td>
                                                 <td>{{$value->email}}</td>
+                                                <td>{{$value->Sex}}</td>
+                                                <td>{{$value->DOB}}</td>
+                                                @if( Auth::user()->Position  =='SuperAdmin') 
+                                                <td><a href="{{('/blockadmin'.$value->id)}}" class="btn btn-success">Block Admin</a></td>
+                                                @endif
                                             </tr>
                                         
                                        @endforeach
@@ -206,23 +218,7 @@
                     </div>
                     <!-- Column -->
                     <!-- Column -->
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="up-img" style="background-image:url(../assets/images/big/img1.jpg)"></div>
-                            <div class="card-body">
-                                <h5 class=" card-title">Business development of rules</h5>
-                                <span class="label label-info label-rounded">Technology</span>
-                                <p class="m-b-0 m-t-20">Titudin venenatis ipsum aciat. Vestibu ullamer quam. nenatis ipsum ac feugiat. Ibulum ullamcorper.</p>
-                                <div class="d-flex m-t-20">
-                                    <a class="link" href="javascript:void(0)">Read more</a>
-                                    <div class="ml-auto align-self-center">
-                                        <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart-o"></i></a>
-                                        <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-share-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

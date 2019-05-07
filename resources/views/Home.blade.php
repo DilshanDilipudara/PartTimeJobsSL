@@ -77,12 +77,11 @@
                               {{ csrf_field() }}
                           </form>
                      </li>
-                     @if(Auth::user()->Position  =='Admin') 
+                     @if(Auth::user()->Position  =='Admin' || Auth::user()->Position  =='SuperAdmin' ) 
                      <li><a href="Admindashboard" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
-                     @endif
+                    @endif
 
                      @else
-
                  <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>
                 <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a></li> 
                 @endif

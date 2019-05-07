@@ -13,16 +13,27 @@
     <title>AdminWrap - Easy to Customize Bootstrap 4 Admin Template</title>
     <!-- Bootstrap Core CSS -->
     <link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--c3 CSS -->
+    <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="admin/css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="admin/css/pages/dashboard1.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="admin/css/colors/default.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-   
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
-<body class="fix-header card-no-border fix-sidebar">
+<body class="fix-header fix-sidebar card-no-border">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -74,7 +85,7 @@
                         <!-- ============================================================== -->
                         <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="fa fa-search"></i></a>
                             <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="fa fa-times"></i></a> </form>
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="fa fa-times"></i></a></form>
                         </li>
                     </ul>
                     <!-- ============================================================== -->
@@ -135,72 +146,89 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Table Basic</h3>
+                        <h3 class="text-themecolor">Dashboard</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Jobs</li>
+                            <li class="breadcrumb-item active">All Super Admin</li>
                         </ol>
                     </div>
-                   
+                    
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
-                <!-- Start Page Content -->
+                <!-- Sales Chart and browser state-->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <!-- column -->
-                    <div class="col-12">
+                    
+                  
+                <!-- ============================================================== -->
+                <!-- End Sales Chart -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Projects of the Month -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- Column -->
+                   
                         <div class="card">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
+                        <div class="card-body">
+                                
+                                <div class="table-responsive m-t-20 no-wrap">
+                                    <table class="table vm no-th-brd pro-of-month">
                                         <thead>
                                             <tr>
-                                                <th>Job ID</th>
-                                                <th>User</th>
-                                                <th>event</th>
-                                                <th>Start Date</th>
-                                                <th>Finish Date</th>
+                                                <th colspan="2">Assigned</th>
+                                                <th>Name</th>
                                                 <th>Location</th>
-                                                <th>Apply User</th>
-                                                <th>Confirm User</th>
-                                                <th>Block</th>
-                                             
+                                                <th>Mobile Number</th>
+                                                <th>NIC</th>
+                                                <th>Gmail</th>
+                                                <th>Gender</th>
+                                                 <th>Date of Birth</th>
+                                               
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($jobdata as $value)
-                                            <tr>
-                                                <td>{{$value->id}}</td>
+                                        @foreach($data as $value)
+                                            <tr class="active" >
+                                                <td><a href="{{('/superadminshowprofileuser'.$value->id)}}"><span class="round"><img src="{{$value->ProfilePicture}}" alt="Admin" width="50"></span></a></td>
+                                                <td>
                                                 <td>{{$value->name}}</td>
-                                                <td>{{$value->Event}}</td>
-                                                <td>{{$value->In_Date}}</td>
-                                                <td>{{$value->Out_Date}}</td>
-                                                <th>{{$value->Location}}</th>
-                                                <th>{{$value->ApplyUser}}</th>
-                                                <th>{{$value->ConfirmUser}}</th>
-                                                @if($value->Block == 0)
-                                                <td><a href="{{('/blockjob'.$value->id)}}" class="btn btn-success">Block</a></td>
-                                                @else
-                                                <td><a href="{{('/unblockjob'.$value->id)}}" class="btn btn-danger">UnBlock</a></td>
-                                                @endif
+                                                <td>{{$value->location}}</td>
+                                                <td>{{$value->Mobile_Number}}</td>
+                                                <td>{{$value->NIC_NO}}</td>
+                                                <td>{{$value->email}}</td>
+                                                <td>{{$value->Sex}}</td>
+                                                <td>{{$value->DOB}}</td>
                                             </tr>
-                                        @endforeach
+                                        
+                                       @endforeach
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    
                 </div>
             </div>
         </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
     </div>
-
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
     <script src="../assets/node_modules/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
+    <!-- Bootstrap popper Core JavaScript -->
     <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
     <script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
@@ -211,9 +239,17 @@
     <script src="admin/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="admin/js/custom.min.js"></script>
-    <!-- jQuery peity -->
-    <script src="../assets/node_modules/peity/jquery.peity.min.js"></script>
-    <script src="../assets/node_modules/peity/jquery.peity.init.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="../assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+    <!--c3 JavaScript -->
+    <script src="../assets/node_modules/d3/d3.min.js"></script>
+    <script src="../assets/node_modules/c3-master/c3.min.js"></script>
+    <!-- Chart JS -->
+    <script src="admin/js/dashboard1.js"></script>
 </body>
 
 </html>
