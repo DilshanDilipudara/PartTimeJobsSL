@@ -97,8 +97,8 @@ Route::get('/New_Post', function () {
 
 
 
-Route::get('/adminshowprofileuser', function () {
-    return view('adminshowprofileuser');
+Route::get('/AccountSetting', function () {
+    return view('AccountSetting');
 });
 
 
