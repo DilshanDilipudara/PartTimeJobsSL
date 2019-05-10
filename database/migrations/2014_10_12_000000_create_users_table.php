@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration
             $table ->text('Description')->nullable();
             $table ->date('DOB')->nullable();
             $table ->text('Address')->nullable();
-            $table ->string('ProfilePicture')->default('person_4.jpg');
+            $table ->string('ProfilePicture')->default('/upload/default.png');
             $table ->string('Jobphoto')->default('person_3.jpg');
          
             $table->timestamps();

@@ -88,7 +88,7 @@ class profileController extends Controller
    function profileimageupload(Request $request){
 
      $this->validate($request, [
-        'select_file'  => 'required|image|mimes:jpg,png,gif|max:5120'
+        'select_file'  => 'required|image|mimes:jpg,png,gif|max:102400'
        ]);
   
        $image = $request->file('select_file');
@@ -101,7 +101,7 @@ class profileController extends Controller
        $user->ProfilePicture =$new_name;
        $user->save();
 
-       return back()->with('success', 'Image Uploaded Successfully')->with('path', $new_name);
+       return back()->with('path', $new_name);
    }
  
 

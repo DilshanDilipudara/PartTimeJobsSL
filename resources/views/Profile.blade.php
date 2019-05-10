@@ -35,80 +35,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
          
      
-<header class="site-navbar py-1" role="banner">
-
-<div class="container">
-	<div class="row align-items-center">
-		
-		<div class="col-6 col-xl-2">
-			<h1 class="mb-0"><a href="/" class="text-black h2 mb-0">Job <strong> SL </strong></a></h1>
-		</div>
-
-		<div class="col-10 col-xl-10 d-none d-xl-block">
-			<nav class="site-navigation text-right" role="navigation">
-
-				<ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-					<li class="active"><a href="/">Home</a></li>
-					<!-- <li class="has-children">
-						<a href="/Candidate">Candidate</a>
-						<ul class="dropdown">
-							<li><a href="#">Full Time</a></li>
-							<li><a href="#">Part Time</a></li>
-							<li><a href="#">Freelance</a></li>
-							<li><a href="#">Internship</a></li>
-							<li><a href="#">Termporary</a></li>
-						</ul>
-					</li> -->
-					<li><a href="/ApplyJobs">Apply User</a></li>
-				 
-					<li><a href="/About">About</a></li>
-					<li><a href="/Contact">Contact</a></li>
-					<li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
-					
-					@if(!auth()->guest())
-					 
-				 <li class="has-children">
-						<a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Setting</span></a>
-						<ul class="dropdown">
-							<li><a href="/Profile">Profile</a></li>
-							<li><a href="/AccountSetting">Account Setting</a></li>
-						</ul>
-					</li> 
-
-
-					 <li><a href="{{ route('logout') }}" class="rounded bg-primary py-2 px-3 text-white" onclick="event.preventDefault();
-							document.getElementById('logout-form').submit();"><span class="h5 mr-2">Logout</span></a>
-										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-												{{ csrf_field() }}
-										</form>
-							 </li>
-							 @if(Auth::user()->Position  =='Admin' || Auth::user()->Position  =='SuperAdmin' ) 
-							 <li><a href="Admindashboard" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
-							@endif
-
-							 @else
-					 <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>
-					<li><a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a></li> 
-					@endif
-				
-			 
-				</ul>
-			
-				
-			</nav>
-		</div>
-
-		<div class="col-6 col-xl-2 text-right d-block">
-			
-			<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
-		</div>
-
-	</div>
-</div>
-
-</header>
-
 
 
 <!-- banner -->
@@ -138,16 +64,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					
            @endif
-					 <img src="/upload/{{$value->ProfilePicture}}"  alt="img" >
+					 <img src="/upload/{{$value->ProfilePicture}}"  alt="img"  style="width:200px; height:200px; float:left; border-radius:50%; margin-right:25px; backgroudcolor:white" class="rounded-circle">
 				
 					<form method="post" action="{{url('/uploadfile')}}" enctype="multipart/form-data">
 					
 					{{ csrf_field() }}
 					<div class="form-group">
-          &nbsp; <p>Select File for Upload</p>
+          &nbsp; 
 					  <input type="file" name="select_file" />
             <input type="submit" name="upload" class="btn btn-primary" value="Upload">
-          <p> jpg, png, gif</p>
+       
         </div>		
 			</form>
 				
@@ -427,50 +353,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         // fields in the form.
         autocomplete.addListener('place_changed', fillInAddress);
       }
-
-      function fillInAddress() {
-        // Get the place details from the autocomplete object.
-        var place = autocomplete.getPlace();
-
-        for (var component in componentForm) {
-          document.getElementById(component).value = '';
-          document.getElementById(component).disabled = false;
-        }
-
-        // Get each component of the address from the place details
-        // and fill the corresponding field on the form.
-        for (var i = 0; i < place.address_components.length; i++) {
-          var addressType = place.address_components[i].types[0];
-          if (componentForm[addressType]) {
-            var val = place.address_components[i][componentForm[addressType]];
-            document.getElementById(addressType).value = val;
-          }
-        }
-      }
-
-      // Bias the autocomplete object to the user's geographical location,
-      // as supplied by the browser's 'navigator.geolocation' object.
-      function geolocate() {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var geolocation = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-            var circle = new google.maps.Circle({
-              center: geolocation,
-              radius: position.coords.accuracy
-            });
-            autocomplete.setBounds(circle.getBounds());
-          });
-        }
-      }
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
-        async defer></script>
-
-  <script src="js/main.js"></script>
 
  
 </body>
