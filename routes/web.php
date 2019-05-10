@@ -54,6 +54,11 @@ Route::get('/editprofile{id}','profileController@showdetailseditprofile');
 //edit profile send value in DB
 Route::post('/editdetails','profileController@inserteditdetails');
 
+//profile photo upload
+Route::post('/uploadfile','profileController@profileimageupload');
+
+
+
 //admin dashboad show who is admin in the site
 Route::get('/Admindashboard','AdminDashBoard@admindetails');
 
@@ -85,6 +90,12 @@ Route::get('/unblockjob{id}','AdminDashBoard@unblockjob');
 
 //block admin
 Route::get('/blockadmin{id}','AdminDashBoard@blockadmin');
+
+//change Password
+Route::post('/ChangePassword','AccountSetting@ChangePassword');
+
+
+
 
 Route::get('/Contact', function () {
     return view('Contact');

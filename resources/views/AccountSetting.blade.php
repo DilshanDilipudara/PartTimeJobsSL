@@ -57,7 +57,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Account Setting</h3>
+                        <h3 class="text-themecolor">Change Password</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/">Home</a></li>
                             <li class="breadcrumb-item active">Account Setting</li>
@@ -65,27 +65,12 @@
                     </div>
                     
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <!-- Row -->
+             
                 <div class="row">
                     <!-- Column -->
                     <div class="col-lg-4 col-xlg-3 col-md-5">
                         <div class="card">
-                            <div class="card-body">
-                                <center class="m-t-30"> <img src="../assets/images/users/5.jpg" class="img-circle" width="150" />
-                                    <h4 class="card-title m-t-10">Hanna Gover</h4>
-                                    <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
-                                    <div class="row text-center justify-content-md-center">
-                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium">254</font></a></div>
-                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium">54</font></a></div>
-                                    </div>
-                                </center>
-                            </div>
+                          
                         </div>
                     </div>
                     <!-- Column -->
@@ -94,44 +79,33 @@
                         <div class="card">
                             <!-- Tab panes -->
                             <div class="card-body">
-                                <form class="form-horizontal form-material">
+                                <form class="form-horizontal form-material" method ="POST" action ="/ChangePassword">
+                                {{csrf_field()}}
                                     <div class="form-group">
-                                        <label class="col-md-12">Full Name</label>
+                                        <label class="col-md-12">Old Password</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="example-email" class="col-md-12">Email</label>
-                                        <div class="col-md-12">
-                                            <input type="email" placeholder="johnathan@admin.com" class="form-control form-control-line" name="example-email" id="example-email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Current Password</label>
-                                        <div class="col-md-12">
-                                            <input type="password" value="" class="form-control form-control-line">
+                                            <input type="password" value="" name ="oldpassword" class="form-control form-control-line">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-md-12">New Password</label>
                                         <div class="col-md-12">
-                                            <input type="password" value="" class="form-control form-control-line">
+                                            <input type="password" name="newpassword" value="" class="form-control form-control-line">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-md-12">Confirm Password</label>
+                                        <label class="col-md-12">Confirm New Password</label>
                                         <div class="col-md-12">
-                                            <input type="password" value="" class="form-control form-control-line">
+                                            <input type="password" value="" name = "confirmnewpassword" class="form-control form-control-line">
                                         </div>
                                     </div>
                                    
-                                    
+                                    <p>Make sure it's at least 15 characters OR at least 8 characters including a number and a lowercase letter. </p>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success">Confirm</button>
+                                            <button type="submit" value="Post"  class="btn btn-success">Update Password</button>
                                         </div>
                                     </div>
                                 </form>
@@ -140,34 +114,10 @@
                     </div>
                     <!-- Column -->
                 </div>
-                <!-- Row -->
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer">
-                © 2018 Adminwrap by wrappixel.com
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
+           
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
     <script src="../assets/node_modules/jquery/jquery.min.js"></script>
     <!-- Bootstrap popper Core JavaScript -->
     <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
@@ -180,10 +130,7 @@
     <script src="admin/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="admin/js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!--morris JavaScript -->
+ 
     <script src="../assets/node_modules/raphael/raphael-min.js"></script>
     <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
     <!--c3 JavaScript -->

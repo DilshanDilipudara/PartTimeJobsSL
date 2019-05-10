@@ -85,6 +85,24 @@ class profileController extends Controller
             
    }
 
+   function profileimageupload(Request $request){
+
+     $this->validate($request, [
+        'select_file'  => 'required|image|mimes:jpg,png,gif|max:5120'
+       ]);
+  
+       $image = $request->file('select_file');
+  
+       $new_name = rand() . '.' . $image->getClientOriginalExtension();
+       
+       Image::make($image)->resize(300,300)->save(public_path('/upload/'.  $new_name));
+  
+       $user=Auth::user();
+       $user->ProfilePicture =$new_name;
+       $user->save();
+
+       return back()->with('success', 'Image Uploaded Successfully')->with('path', $new_name);
+   }
  
 
 }

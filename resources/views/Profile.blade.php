@@ -25,6 +25,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script type="text/javascript" src="profilestyle/js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="profilestyle/js/bootstrap.min.js"></script>
 <!-- //Default-JavaScript-File -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 </head>
@@ -118,10 +121,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-6 w3-banner-grid-left">
 				<div class="w3-banner-img">
 					
-					<img src="images/{{$value->ProfilePicture }}" alt="img">
+					@if (count($errors) > 0)
+						<div class="alert alert-danger">
+							Upload Validation Error<br><br>
+							<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+							@endforeach
+							</ul>
+						</div>
+						@endif
+						@if ($message = Session::get('success'))
+						<div class="alert alert-success alert-block">
+						<button type="button" class="close" data-dismiss="alert">×</button>
+										<strong>{{ $message }}</strong>
+						</div>
+					
+           @endif
+					 <img src="/upload/{{$value->ProfilePicture}}"  alt="img" >
+				
+					<form method="post" action="{{url('/uploadfile')}}" enctype="multipart/form-data">
+					
+					{{ csrf_field() }}
+					<div class="form-group">
+          &nbsp; <p>Select File for Upload</p>
+					  <input type="file" name="select_file" />
+            <input type="submit" name="upload" class="btn btn-primary" value="Upload">
+          <p> jpg, png, gif</p>
+        </div>		
+			</form>
 				
 					<h3 class="test"> </h3> &nbsp;
-					<p class="test" >{{$value->name}}</p>
+				
 				</div>
 			</div>
 			<div class="col-md-6 w3-banner-grid-right">
