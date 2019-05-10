@@ -52,7 +52,7 @@ class profileController extends Controller
                         ->where('ConfirmJobs',1)
                         ->count('Job_ID') ;
            
-                return view('adminshowprofileuser',compact('data','applyjob','confirmjob'));
+                return view('Profile',compact('data','applyjob','confirmjob'));
     }
 
 

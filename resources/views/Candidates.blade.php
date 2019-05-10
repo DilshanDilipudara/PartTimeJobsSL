@@ -108,7 +108,7 @@
     <div class="unit-5 overlay" style="background-image: url('images/hero_bg_2.jpg');">
       <div class="container text-center">
         <h2 class="mb-0">Candidates</h2>
-        <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep">></span> <span>Candidates</span></p>
+        <p class="mb-0 unit-6"><a href="/">Home</a> <span class="sep">></span> <span>Candidates</span></p>
       </div>
     </div>
 
@@ -122,7 +122,7 @@
          @foreach($alluser as $value)
           <div class="col-md-6 mb-5 mb-lg-4 col-lg-3" data-aos="fade">
             <div class="position-relative unit-8">
-            <a href="#" class="mb-3 d-block img-a"><img src="images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
+            <a href="#" class="mb-3 d-block img-a"><img src="/upload/{{$value->ProfilePicture}}" alt="Image" class="img-fluid rounded"></a>
             <span class="d-block text-gray-500 text-normal small mb-3"> <a href="#">{{$value->Mobile_Number}}</a> <span class="mx-2">&bullet;</span>{{$value->location}}</span>
             <h2 class="h5 font-weihgt-normal line-height-sm mb-3"><a href="#" class="text-black">{{$value->name}}</a></h2>
              <a href="/Profile" class="rounded bg-secondary py-2 px-3 text-white"><span class="h5 mr-2"> View Profile</span></a>

@@ -195,7 +195,7 @@
                                         <tbody>
                                         @foreach($data as $value)
                                             <tr class="active" >
-                                                <td><a href="{{('/adminshowprofileuser'.$value->id)}}"><span class="round"><img src="{{$value->ProfilePicture}}" alt="Admin" width="50"></span></a></td>
+                                                <td><a href="{{('/adminshowprofileuser'.$value->id)}}"><span class="round"><img src="/upload/{{$value->ProfilePicture}}" alt="Admin" width="50"></span></a></td>
                                                 <td>
                                                 <td>{{$value->name}}</td>
                                                 <td>{{$value->location}}</td>

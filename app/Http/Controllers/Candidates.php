@@ -17,7 +17,7 @@ class Candidates extends Controller
                     //->select('JobApplyUsers.User_ID')
                     ->join('users','users.id','=','JobApplyUsers.User_ID')
                     ->distinct()
-                    ->select('users.id','users.name','users.location','users.Mobile_Number','JobApplyUsers.Job_ID')
+                    ->select('users.id','users.name','users.location','users.Mobile_Number','JobApplyUsers.Job_ID','users.ProfilePicture')
                     ->get();
                     
         return view('Candidates',compact('alluser'));

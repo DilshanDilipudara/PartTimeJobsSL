@@ -191,7 +191,7 @@
                                                @else
                                                <td><a href="{{('/unblockuser'.$value->id)}}" class="btn btn-danger">UnBlock</a></td>
                                                @endif
-                                                <td><a href="{{('/adminshowprofileuser'.$value->id)}}"><span class="round"><img src="{{$value->ProfilePicture}}" alt="User" width="50"></span></a></td>    
+                                                <td><a href="{{('/adminshowprofileuser'.$value->id)}}"><span class="round"><img src="/upload/{{$value->ProfilePicture}}" alt="User" width="50"></span></a></td>    
                                                    </tr>
                                          @endforeach
                                         </tbody>
