@@ -57,6 +57,8 @@ Route::post('/editdetails','profileController@inserteditdetails');
 //profile photo upload
 Route::post('/uploadfile','profileController@profileimageupload');
 
+//profile picture 02  upload
+Route::post('/uploadJobfile','profileController@profileJobimageupload');
 
 
 //admin dashboad show who is admin in the site

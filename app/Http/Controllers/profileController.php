@@ -105,4 +105,26 @@ class profileController extends Controller
    }
  
 
+   function profileJobimageupload(Request $request){
+
+        $this->validate($request, [
+           'select_file'  => 'required|image'
+          ]);
+     
+          $image = $request->file('select_file');
+     
+          $new_name = rand() . '.' . $image->getClientOriginalExtension();
+          
+          Image::make($image)->resize(300,300)->save(public_path('/profileJobimage/'.  $new_name));
+     
+          $user=Auth::user();
+          $user->Jobphoto  =$new_name;
+          $user->save();
+   
+          return back()->with('path', $new_name);
+      }
+
+
+
+
 }

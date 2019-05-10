@@ -47,7 +47,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-6 w3-banner-grid-left">
 				<div class="w3-banner-img">
 					
-					@if (count($errors) > 0)
+					
+					 <img src="/upload/{{$value->ProfilePicture}}"  alt="img"  style="width:290px; height:300px; float:left; border-radius:50%; margin-right:25px; backgroudcolor:white" class="rounded-circle">
+				
+					<form method="post" action="{{url('/uploadfile')}}" enctype="multipart/form-data">
+					
+					{{ csrf_field() }}
+					<div class="form-group">
+          &nbsp; 
+					  <input type="file" name="select_file" />
+            <input type="submit" name="upload" class="btn btn-primary" value="Upload">
+       
+        </div>		
+			</form>
+			@if (count($errors) > 0)
 						<div class="alert alert-danger">
 							Upload Validation Error<br><br>
 							<ul>
@@ -64,19 +77,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					
            @endif
-					 <img src="/upload/{{$value->ProfilePicture}}"  alt="img"  style="width:200px; height:200px; float:left; border-radius:50%; margin-right:25px; backgroudcolor:white" class="rounded-circle">
-				
-					<form method="post" action="{{url('/uploadfile')}}" enctype="multipart/form-data">
-					
-					{{ csrf_field() }}
-					<div class="form-group">
-          &nbsp; 
-					  <input type="file" name="select_file" />
-            <input type="submit" name="upload" class="btn btn-primary" value="Upload">
-       
-        </div>		
-			</form>
-				
 					<h3 class="test"> </h3> &nbsp;
 				
 				</div>
@@ -158,8 +158,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="w3-about-grids">
 		<div class=" w3-about-grids1">
 				<div class="col-md-6 w3-about-grid-left1">
-					<img src="images/{{$value->Jobphoto}}" alt="img1">
-		
+				
+					<img src="/profileJobimage/{{$value->Jobphoto}}" alt="img" style="width:400px; height:400px;" >
+		      
+					<form method="post" action="{{url('/uploadJobfile')}}" enctype="multipart/form-data">
+							
+							{{ csrf_field() }}
+							<div class="form-group">
+							&nbsp; 
+								<input type="file" name="select_file" />
+								<input type="submit" name="upload" class="btn btn-primary" value="Upload">
+					
+						</div>		
+		    	</form>
+          
+					@if (count($errors) > 0)
+						<div class="alert alert-danger">
+							Upload Validation Error<br><br>
+							<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+							@endforeach
+							</ul>
+						</div>
+						@endif
+						@if ($message = Session::get('success'))
+						<div class="alert alert-success alert-block">
+						<button type="button" class="close" data-dismiss="alert">×</button>
+										<strong>{{ $message }}</strong>
+						</div>
+					
+           @endif
+
+
+
+
+
 				</div>
 				<div class="col-md-4 w3-about-grid-right1">
 					<h3>Discription</h3>
