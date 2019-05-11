@@ -50,6 +50,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					 <img src="/upload/{{$value->ProfilePicture}}"  alt="img"  style="width:290px; height:300px; float:left; border-radius:50%; margin-right:25px; backgroudcolor:white" class="rounded-circle">
 				
+
+				   &nbsp;
 					<form method="post" action="{{url('/uploadfile')}}" enctype="multipart/form-data">
 					
 					{{ csrf_field() }}
@@ -86,6 +88,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h3> {{$value->name}}</h3>
 				
 			</div>
+
+        
+
+
 				<div class=" w3-right-addres-1">
 				<ul class="address">
 								<li>
@@ -212,6 +218,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h5>Confirm Jobs</h5>
 					</div>
 					
+					
 				<div class="clearfix"></div>
 				</div>
 				</div>
@@ -313,14 +320,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</script>
 <!-- //text-effect -->
 <!-- menu-js --> 	
-	<script src="profilestyle/js/modernizr.js"></script>	
-	<script src="profilestyle/js/menu.js"></script>
+	<script src="js/modernizr.js"></script>	
+	<script src="js/menu.js"></script>
 <!-- //menu-js --> 	
 
 
-<script type="text/javascript" src="profilestyle/js/move-top.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
 
-<script type="text/javascript" src="profilestyle/js/easing.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -345,49 +352,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								
 			});
 	</script>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/aos.js"></script>
-  
-  <script>
-      // This example displays an address form, using the autocomplete feature
-      // of the Google Places API to help users fill in the information.
-
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-      var placeSearch, autocomplete;
-      var componentForm = {
-        street_number: 'short_name',
-        route: 'long_name',
-        locality: 'long_name',
-        administrative_area_level_1: 'short_name',
-        country: 'long_name',
-        postal_code: 'short_name'
-      };
-
-      function initAutocomplete() {
-        // Create the autocomplete object, restricting the search to geographical
-        // location types.
-        autocomplete = new google.maps.places.Autocomplete(
-            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-            {types: ['geocode']});
-
-        // When the user selects an address from the dropdown, populate the address
-        // fields in the form.
-        autocomplete.addListener('place_changed', fillInAddress);
-      }
-
  
 </body>
 </html>

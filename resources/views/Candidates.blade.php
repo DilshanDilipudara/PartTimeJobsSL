@@ -125,7 +125,7 @@
             <a href="#" class="mb-3 d-block img-a"><img src="/upload/{{$value->ProfilePicture}}" alt="Image" class="img-fluid rounded"></a>
             <span class="d-block text-gray-500 text-normal small mb-3"> <a href="#">{{$value->Mobile_Number}}</a> <span class="mx-2">&bullet;</span>{{$value->location}}</span>
             <h2 class="h5 font-weihgt-normal line-height-sm mb-3"><a href="#" class="text-black">{{$value->name}}</a></h2>
-             <a href="/Profile" class="rounded bg-secondary py-2 px-3 text-white"><span class="h5 mr-2"> View Profile</span></a>
+             <a href="{{('/adminshowprofileuser'.$value->id)}}" class="rounded bg-secondary py-2 px-3 text-white"><span class="h5 mr-2"> View Profile</span></a>
              <br><br> 
             <a href="{{('/Confirm'.$value->id.$value->Job_ID)}}" class="rounded bg-success py-2 px-3 text-white"><span class="h5 mr-2">Confirm</span></a>
 

@@ -638,7 +638,7 @@
               </li>
               <li>
                 <span class="d-block text-white">Email</span>
-                gunawardhanaudara@gmail.com
+                 parttimelk71@gmail.com
               </li>
             </ul>
             

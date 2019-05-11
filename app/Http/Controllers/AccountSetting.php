@@ -6,6 +6,9 @@ use DB;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\CanResetPassword;
+
 
 class AccountSetting extends Controller
 {
@@ -21,7 +24,8 @@ class AccountSetting extends Controller
     ]);
 
     if (Hash::check($request->newpassword, $user->password)) { 
-       $user->fill([
+        dd('succuss');
+        $user->fill([
         'password' => Hash::make($request->newpassword)
         ])->save();
 
