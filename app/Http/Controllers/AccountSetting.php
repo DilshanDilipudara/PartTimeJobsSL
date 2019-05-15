@@ -16,7 +16,12 @@ class AccountSetting extends Controller
     public function ChangePassword(Request $request){
 
 
-   
+      
+    $this->validate($request, [
+        'oldpassword' => 'required',
+        'newpassword' => 'required|min:8',
+        'confirmnewpassword' => 'required|min:8|same:newpassword',
+    ]);
 
     if(Hash::check($request->oldpassword, Auth::user()->password)) {
         //Change the password
