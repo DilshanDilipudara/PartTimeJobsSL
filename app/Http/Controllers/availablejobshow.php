@@ -14,6 +14,7 @@ class availablejobshow extends Controller
        
       
         $data = DB::table('Jobs')
+        ->where('Block',0)
         ->select('Jobs.ID','Jobs.Event','Jobs.In_Date','Jobs.Out_Date','Jobs.Per_Day_Payment','Jobs.quantity','Jobs.Location','Jobs.Discription')
         ->get();
         return view('Home',compact('data'));
@@ -26,6 +27,7 @@ class availablejobshow extends Controller
         $location = $request -> input('location');
 
         $searchdata = DB::table('Jobs')
+                    ->where('Block',0)
                     ->wheredate('In_Date','>=',$startdate)
                     ->wheredate('Out_Date','<=',$enddate)
                     //  ->orwhere('In_Date','<=',$startdate)

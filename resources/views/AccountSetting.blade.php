@@ -81,12 +81,7 @@
                             <div class="card-body">
                                 <form class="form-horizontal form-material" method ="POST" action ="/ChangePassword">
                                 {{csrf_field()}}
-                                    <div class="form-group">
-                                        <label class="col-md-12">Old Password</label>
-                                        <div class="col-md-12">
-                                            <input type="password" value="" name ="oldpassword" class="form-control form-control-line">
-                                        </div>
-                                    </div>
+                                    
 
                                     <div class="form-group">
                                         <label class="col-md-12">New Password</label>
