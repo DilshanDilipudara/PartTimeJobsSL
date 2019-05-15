@@ -81,19 +81,24 @@
                             <div class="card-body">
                                 <form class="form-horizontal form-material" method ="POST" action ="/ChangePassword">
                                 {{csrf_field()}}
-                                    
+                                    <div class="form-group">
+                                        <label class="col-md-12">Old Password</label>
+                                        <div class="col-md-12">
+                                            <input type="password" value="" name ="oldpassword" class="form-control form-control-line" required>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-md-12">New Password</label>
                                         <div class="col-md-12">
-                                            <input type="password" name="newpassword" value="" class="form-control form-control-line">
+                                            <input type="password" name="newpassword" value="" class="form-control form-control-line" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-md-12">Confirm New Password</label>
                                         <div class="col-md-12">
-                                            <input type="password" value="" name = "confirmnewpassword" class="form-control form-control-line">
+                                            <input type="password" value="" name = "confirmnewpassword" class="form-control form-control-line" required>
                                         </div>
                                     </div>
                                    
@@ -106,16 +111,7 @@
                                 </form>
 
 
-                    @if (count($errors) > 0)
-						<div class="alert alert-danger">
-							Upload Validation Error<br><br>
-							<ul>
-							@foreach ($errors->all() as $error)
-								<li>{{ $error }}</li>
-							@endforeach
-							</ul>
-						</div>
-						@endif
+                 
                             </div>
                         </div>
                     </div>

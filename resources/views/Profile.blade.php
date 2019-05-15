@@ -194,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<strong>{{ $message }}</strong>
 						</div>
 					
-           @endif
+                        @endif
 
 
 
