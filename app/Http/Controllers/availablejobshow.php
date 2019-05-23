@@ -28,17 +28,14 @@ class availablejobshow extends Controller
         $startdate = $request->input('startdate');
         $enddate = $request -> input('enddate');
         $location = $request -> input('location');
+        $now = date("Y-m-d");
 
         $searchdata = DB::table('Jobs')
                     ->where('Block',0)
+                    ->where('In_Date','>=', $now)
                     ->wheredate('In_Date','>=',$startdate)
                     ->wheredate('Out_Date','<=',$enddate)
-                    //  ->orwhere('In_Date','<=',$startdate)
-                    //      ->where('Out_Date','>=',$startdate)
-                    //  ->orwhere('In_Date','<=',$enddate)
-                    //      ->where('Out_Date','>=',$enddate)
-
-                     ->where('Location',$location)    
+                    ->where('Location',$location)    
                     ->select('Jobs.ID','Jobs.Event','Jobs.In_Date','Jobs.Out_Date','Jobs.Per_Day_Payment','Jobs.quantity','Jobs.Location','Jobs.Discription')
                     ->get();
         
