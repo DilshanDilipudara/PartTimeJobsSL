@@ -12,12 +12,15 @@ class availablejobshow extends Controller
     public function availablejobs(){
        
        
-      
+        $now = date("Y-m-d");
+       
         $data = DB::table('Jobs')
-        ->where('Block',0)
-        ->select('Jobs.ID','Jobs.Event','Jobs.In_Date','Jobs.Out_Date','Jobs.Per_Day_Payment','Jobs.quantity','Jobs.Location','Jobs.Discription')
-        ->get();
-        return view('Home',compact('data'));
+               ->where('In_Date','>=', $now)
+               ->where('Block',0)
+               ->select('Jobs.ID','Jobs.Event','Jobs.In_Date','Jobs.Out_Date','Jobs.Per_Day_Payment','Jobs.quantity','Jobs.Location','Jobs.Discription')
+               ->get();
+
+      return view('Home',compact('data'));
     }
 
     public function serchjobs(Request $request){
