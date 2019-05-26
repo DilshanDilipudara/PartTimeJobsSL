@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 
+
 class PostJob extends Controller
 {
     
@@ -24,7 +25,7 @@ class PostJob extends Controller
          DB::insert('insert into Jobs(User_ID,Event,In_Date,Out_Date,Per_Day_Payment,quantity,Location,Discription) 
          values(?,?,?,?,?,?,?,?)',[$userID,$event,$startdate,$enddate,$perdaypayment,$quantity,$location,$discription]);
           
-         
+         app('App\Http\Controllers\MailController')->JobsAddMail($userID);
 
          return redirect('/');
 

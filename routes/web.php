@@ -96,7 +96,8 @@ Route::get('/blockadmin{id}','AdminDashBoard@blockadmin');
 //change Password
 Route::post('/ChangePassword','AccountSetting@ChangePassword');
 
-
+//send mail to post jobs
+Route::get('/PostNewJobsSendMail','MailController@JobsAddMail');
 
 
 Route::get('/Contact', function () {
@@ -106,8 +107,6 @@ Route::get('/Contact', function () {
 Route::get('/New_Post', function () {
     return view('New_Post');
 });
-
-
 
 
 Route::get('/AccountSetting', function () {
