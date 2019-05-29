@@ -136,19 +136,19 @@
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="fullname">Full Name</label>
-                  <input type="text" id="fullname" class="form-control" placeholder="Full Name">
+                  <input type="text" id="fullname" class="form-control" placeholder="Full Name" required>
                 </div>
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="email">Email</label>
-                  <input type="email" id="email" class="form-control" placeholder="Email Address">
+                  <input type="email" id="email" class="form-control" placeholder="Email Address" required>
                 </div>
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="email">Subject</label>
-                  <input type="text" id="subject" class="form-control" placeholder="Enter Subject">
+                  <input type="text" id="subject" class="form-control" placeholder="Enter Subject" required>
                 </div>
               </div>
               
@@ -156,7 +156,7 @@
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="message">Message</label> 
-                  <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Say hello to us"></textarea>
+                  <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Say hello to us" required></textarea>
                 </div>
               </div>
 
@@ -180,7 +180,7 @@
               <p class="mb-4"><a href="#">+94 71 73 78 668</a></p>
 
               <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">gunawardhanaudara@gmail.com</a></p>
+              <p class="mb-0"><a href="#">parttimelk71@gmail.com </a></p>
 
             </div>
             
