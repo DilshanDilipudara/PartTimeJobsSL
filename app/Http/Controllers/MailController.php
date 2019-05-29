@@ -11,23 +11,29 @@ use DB;
 
 class MailController extends Controller
 {
-   public function JobsAddMail($UserID){
+   public function JobsAddMail(){
        
-        $jobadduserID = $UserID;
+        // $jobadduserID = $UserID;
         
         $alluser = DB::table('users')
                    // ->where($jobadduserID,'!=','id')
                    ->select('id','email')
                    ->get();
        
-
-    Mail::send('PostNewJobsSendMail',['alluser'=>$alluser],function($message)use($alluser){
+    
+       
+   
+      Mail::send('PostNewJobsSendMail',['alluser'=>$alluser],function($message)use($alluser){
+        
+  
+          $message ->to($alluser[0]->email)
+                  ->subject('Post New Jobs');
+          $message ->from('parttimelk71@gmail.com','Part Time Jobs SL Mail');
+     
+      });
       
-        $message ->to($alluser[0]->email)
-                 ->subject('Post New Jobs');
-        $message ->from('parttimelk71@gmail.com','Part Time Jobs SL Mail');
-
-    });
-
-  }   
+  }
+ 
+  
+ 
 }
