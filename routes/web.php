@@ -99,6 +99,8 @@ Route::post('/ChangePassword','AccountSetting@ChangePassword');
 //send mail to post jobs
 Route::get('/PostNewJobsSendMail','MailController@JobsAddMail');
 
+//show the admin in the about page
+Route::get('/About','AboutController@showadmin');
 
 Route::get('/Contact', function () {
     return view('Contact');

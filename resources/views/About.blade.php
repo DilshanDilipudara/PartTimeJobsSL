@@ -185,14 +185,15 @@
         
         <div class="row top-destination">
          
+        @foreach($jobadmin as $value)
         <div class="col-lg-2 col-md-4 col-sm-6 col-12" data-aos="fade">
             <a href="#" class="place">
-              <img src="images/person_1.jpg" alt="Image placeholder">
-              <h2>Michelle Megan</h2>
-              <p>CEO, Co-founder</p>
+              <img src="/upload/{{$value->ProfilePicture}}" alt="Image placeholder">
+              <h2>{{$value->name}}</h2>
+             
             </a>
           </div>
-         
+         @endforeach
         
         </div>
         <div class="row justify-content-center mb-5">
