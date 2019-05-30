@@ -190,34 +190,54 @@
                       </div>
                     </div>
                   </form>
-
-
-
-
                 </div>
+
+              <!--find candidate-->  
                 <div class="tab-pane fade" id="pills-candidate" role="tabpanel" aria-labelledby="pills-candidate-tab">
                   <form action="#" method="post">
                     <div class="row">
-                      <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                        <input type="text" class="form-control" placeholder="eg. Carl Smith">
-                      </div>
+                     
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                         <div class="select-wrap">
-                          <span class="icon-keyboard_arrow_down arrow-down"></span>
-                          <select name="" id="" class="form-control">
-                            <option value="">Category</option>
-                            <option value="fulltime">Full Time</option>
-                            <option value="fulltime">Part Time</option>
-                            <option value="freelance">Freelance</option>
-                            <option value="internship">Internship</option>
-                            <option value="internship">Termporary</option>
-                          </select>
+                        <label class="font-weight-bold" for="stratdate">Location</label>  
+                         <select  type="text" name = "location" class="form-control" placeholder="eg. Colombo">
+                            <option>Chose location</option>
+                            <option>Ampara</option>
+                            <option>Anuradhapura</option>
+                            <option>Badulla</option>
+                            <option>Batticaloa</option>
+                            <option>Colombo</option>
+                            <option>Galle</option>
+                            <option>Gampaha</option>
+                            <option>Hambantota</option>
+                            <option>Jaffna</option>
+                            <option>Kalutara</option>
+                            <option>Kandy</option>
+                            <option>Kegalle</option>
+                            <option>Kilinochchi</option>
+                            <option>Kurunegala</option>
+                            <option>Mannar</option>
+                            <option>Matale</option>
+                            <option>Matara</option>
+                            <option>Monaragala</option>
+                            <option>Mullativu</option>
+                            <option>Nuwara Eliya</option>
+                            <option>Polonnaruwa</option>
+                            <option>Puttalam</option>
+                            <option>Ratnapura</option>
+                            <option>Trincomalee</option>
+                            <option>Vavuniya</option>
+                        </select>
+                 
+
+                         
                         </div>
                       </div>
+
+                    
+
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                        <input type="text" class="form-control form-control-block search-input" id="autocomplete" placeholder="Location" onFocus="geolocate()">
-                      </div>
-                      <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                      <label class="font-weight-bold" for="stratdate">. </label> 
                         <input type="submit" class="btn btn-primary btn-block" value="Search">
                       </div>
                     </div>
@@ -272,7 +292,7 @@
 
               <div class="ml-auto">
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
-                <a href="job-single.html" class="btn btn-primary py-2">Apply Job</a>
+                <a href="{{('/Job_Single'.$value->ID)}}" class="btn btn-primary py-2">Apply Job</a>
               </div>
            </div>
 
