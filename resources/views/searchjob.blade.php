@@ -42,77 +42,78 @@
      
     <header class="site-navbar py-1" role="banner">
 
-      <div class="container">
-        <div class="row align-items-center">
+<div class="container">
+  <div class="row align-items-center">
+    
+    <div class="col-6 col-xl-2">
+      <h1 class="mb-0"><a href="/" class="text-black h2 mb-0">Job <strong> SL </strong></a></h1>
+    </div>
+
+    <div class="col-10 col-xl-10 d-none d-xl-block">
+      <nav class="site-navigation text-right" role="navigation">
+
+        <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+          <li class="active"><a href="/">Home</a></li>
+          <!-- <li class="has-children">
+            <a href="/Candidate">Candidate</a>
+            <ul class="dropdown">
+              <li><a href="#">Full Time</a></li>
+              <li><a href="#">Part Time</a></li>
+              <li><a href="#">Freelance</a></li>
+              <li><a href="#">Internship</a></li>
+              <li><a href="#">Termporary</a></li>
+            </ul>
+          </li> -->
+          @if(!auth()->guest())
+          <li><a href="/ApplyJobs">Apply User</a></li>
+         @endif
+          <li><a href="/About">About</a></li>
+          <li><a href="/Contact">Contact</a></li>
+          <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
           
-          <div class="col-6 col-xl-2">
-            <h1 class="mb-0"><a href="/" class="text-black h2 mb-0">Job <strong> SL </strong></a></h1>
-          </div>
-
-          <div class="col-10 col-xl-10 d-none d-xl-block">
-            <nav class="site-navigation text-right" role="navigation">
-
-              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class="active"><a href="/">Home</a></li>
-                <!-- <li class="has-children">
-                  <a href="/Candidate">Candidate</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Full Time</a></li>
-                    <li><a href="#">Part Time</a></li>
-                    <li><a href="#">Freelance</a></li>
-                    <li><a href="#">Internship</a></li>
-                    <li><a href="#">Termporary</a></li>
-                  </ul>
-                </li> -->
-                <li><a href="/ApplyJobs">Apply User</a></li>
-               
-                <li><a href="/About">About</a></li>
-                <li><a href="/Contact">Contact</a></li>
-                <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
-                
-                @if(!auth()->guest())
-                 
-               <li class="has-children">
-                  <a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Setting</span></a>
-                  <ul class="dropdown">
-                    <li><a href="/Profile">Profile</a></li>
-                    <li><a href="/AccountSetting">Account Setting</a></li>
-                  </ul>
-                </li> 
+          @if(!auth()->guest())
+           
+         <li class="has-children">
+            <a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Setting</span></a>
+            <ul class="dropdown">
+              <li><a href="/Profile">Profile</a></li>
+              <li><a href="/AccountSetting">Account Setting</a></li>
+            </ul>
+          </li> 
 
 
-                 <li><a href="{{ route('logout') }}" class="rounded bg-primary py-2 px-3 text-white" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();"><span class="h5 mr-2">Logout</span></a>
-                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                              {{ csrf_field() }}
-                          </form>
-                     </li>
-                     @if(Auth::user()->Position  =='Admin' || Auth::user()->Position  =='SuperAdmin' ) 
-                     <li><a href="Admindashboard" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
-                    @endif
+           <li><a href="{{ route('logout') }}" class="rounded bg-primary py-2 px-3 text-white" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();"><span class="h5 mr-2">Logout</span></a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+               </li>
+               @if(Auth::user()->Position  =='Admin' || Auth::user()->Position  =='SuperAdmin' ) 
+               <li><a href="Admindashboard" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Admin</span></a></li>
+              @endif
 
-                     @else
-                 <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>
-                <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a></li> 
-                @endif
-              
-             
-              </ul>
-            
-              
-            </nav>
-          </div>
-
-          <div class="col-6 col-xl-2 text-right d-block">
-            
-            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
-          </div>
-
-        </div>
-      </div>
+               @else
+           <li><a href="/login" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Login</span></a></li>
+          <li><a href="/register" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Register</span></a></li> 
+          @endif
+        
+       
+        </ul>
       
-    </header>
+        
+      </nav>
+    </div>
+
+    <div class="col-6 col-xl-2 text-right d-block">
+      
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+    </div>
+
+  </div>
+</div>
+
+</header>
 
     <div class="site-blocks-cover" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">

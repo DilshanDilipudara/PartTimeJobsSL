@@ -18,6 +18,12 @@ Route::get('/','availablejobshow@availablejobs');
 Route::post('/serchjobs','availablejobshow@serchjobs');
 Route::get('/searchjob','availablejobshow@serchjobs');
 
+//serach jobs in start date
+Route::post('/serchjobwithoutend','availablejobshow@serchjobswithoutend');
+Route::get('/searchjob','availablejobshow@serchjobs');
+
+
+
 //post the job
 Route::post('/jobpost','PostJob@post');
 

@@ -133,7 +133,7 @@
                   
                   <!-- Search Jobs -->
 
-                  <form action="/serchjobs" method="post">
+                  <form action="/serchjobwithoutend" method="post">
                      {{csrf_field()}}
                     <div class="row">
                      
@@ -144,12 +144,7 @@
                       <input type="date" id="checkin_date" name ="startdate" class="form-control"  placeholder="Check In" >
               
                   </div>
-                <!------ cheeck out date--------->
-                  <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                     <label class="font-weight-bold" for="stratdate">End Date</label>
-                      <input type="date" id="checkout_date" name ="enddate" class="form-control" placeholder="Check Out" >
-            
-                  </div>  
+                 
 
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                       <label class="font-weight-bold" for="stratdate">Location</label>  

@@ -64,8 +64,9 @@
                     <li><a href="#">Termporary</a></li>
                   </ul>
                 </li> -->
+                @if(!auth()->guest())
                 <li><a href="/ApplyJobs">Apply User</a></li>
-               
+               @endif
                 <li><a href="/About">About</a></li>
                 <li><a href="/Contact">Contact</a></li>
                 <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>

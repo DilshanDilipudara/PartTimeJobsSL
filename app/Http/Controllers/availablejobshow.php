@@ -43,5 +43,25 @@ class availablejobshow extends Controller
         return view('searchjob',compact('searchdata'));
     }
 
+    public function serchjobswithoutend(Request $request){
+
+        $startdate = $request->input('startdate');
+  
+        $location = $request -> input('location');
+        $now = date("Y-m-d");
+
+        $searchdata = DB::table('Jobs')
+                    ->where('Block',0)
+                    ->where('In_Date','>=', $now)
+                    ->wheredate('In_Date','>=',$startdate)
+                    
+                    ->where('Location',$location)    
+                    ->select('Jobs.ID','Jobs.Event','Jobs.In_Date','Jobs.Out_Date','Jobs.Per_Day_Payment','Jobs.quantity','Jobs.Location','Jobs.Discription')
+                    ->get();
+        
+                    
+        return view('searchjob',compact('searchdata'));
+    }
+
 
 }
