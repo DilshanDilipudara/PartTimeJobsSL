@@ -63,5 +63,15 @@ class availablejobshow extends Controller
         return view('searchjob',compact('searchdata'));
     }
 
+    public function serchprovincecandidate(Request $request){
+        $location = $request -> input('location');
+        
+        $searchdata = DB::table('users')
+                      ->where('location',$location)
+                      ->select('name','Mobile_Number','Sex','Description','DOB','ProfilePicture','Address')
+                      ->get();
+                    
+    }
+
 
 }

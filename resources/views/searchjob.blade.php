@@ -194,13 +194,14 @@
 
               <!--find candidate-->  
                 <div class="tab-pane fade" id="pills-candidate" role="tabpanel" aria-labelledby="pills-candidate-tab">
-                  <form action="#" method="post">
+                  <form action="/findprovincecandidate" method="post">
+                  {{csrf_field()}}
                     <div class="row">
                      
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                         <div class="select-wrap">
                         <label class="font-weight-bold" for="stratdate">Location</label>  
-                         <select  type="text" name = "location" class="form-control" placeholder="eg. Colombo">
+                         <select  type="text" name = "location" class="form-control">
                             <option>Chose location</option>
                             <option>Ampara</option>
                             <option>Anuradhapura</option>
@@ -227,15 +228,9 @@
                             <option>Ratnapura</option>
                             <option>Trincomalee</option>
                             <option>Vavuniya</option>
-                        </select>
-                 
-
-                         
+                        </select>  
                         </div>
                       </div>
-
-                    
-
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                       <label class="font-weight-bold" for="stratdate">. </label> 
                         <input type="submit" class="btn btn-primary btn-block" value="Search">

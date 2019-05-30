@@ -22,6 +22,11 @@ Route::get('/searchjob','availablejobshow@serchjobs');
 Route::post('/serchjobwithoutend','availablejobshow@serchjobswithoutend');
 Route::get('/searchjob','availablejobshow@serchjobs');
 
+//find provice candidate
+Route::post('/findprovincecandidate','availablejobshow@serchprovincecandidate');
+Route::get('/searchjob','availablejobshow@serchjobs');
+
+
 //post the job
 Route::post('/jobpost','PostJob@post');
 
