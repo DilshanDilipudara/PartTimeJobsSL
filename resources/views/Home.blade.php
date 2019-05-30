@@ -124,9 +124,9 @@
                 <li class="nav-item">
                   <a class="nav-link active py-3" id="pills-job-tab" data-toggle="pill" href="#pills-job" role="tab" aria-controls="pills-job" aria-selected="true">Find A Job</a>
                 </li>
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                   <a class="nav-link py-3" id="pills-candidate-tab" data-toggle="pill" href="#pills-candidate" role="tab" aria-controls="pills-candidate" aria-selected="false">Find A Candidate</a>
-                </li> -->
+                </li>
               </ul>
               <div class="tab-content bg-white p-4 rounded" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-job" role="tabpanel" aria-labelledby="pills-job-tab">
@@ -447,7 +447,8 @@
       </div>
     </div>
 
-    <div class="site-section block-4 bg-light">
+
+    <!-- <div class="site-section block-4 bg-light">
 
       <div class="container">
 
@@ -522,11 +523,11 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
     
 
-    <div class="site-section">
+    <!-- <div class="site-section">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-6" data-aos="fade" >
@@ -587,7 +588,9 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> -->
+
+
     <footer class="site-footer">
       <div class="container">
         
@@ -598,43 +601,34 @@
               <div class="col-6 col-md-3 col-lg-3 mb-5 mb-lg-0">
                 <h3 class="footer-heading mb-4">For Candidates</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">Register</a></li>
-                  <li><a href="#">Find Jobs</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Search Jobs</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Careers</a></li>
+                  <li><a href="/register">Register</a></li>
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/">Find Jobs</a></li>
+                  <li><a href="/">Search Jobs</a></li>
+                  <li><a href="/Contact">Contact</a></li>
+                  <li><a href="/">Careers</a></li>
                 </ul>
               </div>
               <div class="col-6 col-md-3 col-lg-3 mb-5 mb-lg-0">
                 <h3 class="footer-heading mb-4">For Employers</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">Employer Account</a></li>
-                  <li><a href="#">Clients</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Find Candidates</a></li>
-                  <li><a href="#">Terms &amp; Policies</a></li>
-                  <li><a href="#">Careers</a></li>
+                @if(!auth()->guest())
+                  <li><a href="/Profile">Employer Account</a></li>
+                  @endif
+                  
+                  <li><a href="/">Clients</a></li>               
+                  <li><a href="/">Find Candidates</a></li>                  
+                  <li><a href="/">Careers</a></li>
                 </ul>
               </div>
-              <div class="col-6 col-md-3 col-lg-3 mb-5 mb-lg-0">
-                <h3 class="footer-heading mb-4">Archives</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">January 2018</a></li>
-                  <li><a href="#">February 2018</a></li>
-                  <li><a href="#">March 2018</a></li>
-                  <li><a href="#">April 2018</a></li>
-                  <li><a href="#">May 2018</a></li>
-                  <li><a href="#">June 2918</a></li>
-                </ul>
-              </div>
+             
               <div class="col-6 col-md-3 col-lg-3 mb-5 mb-lg-0">
                 <h3 class="footer-heading mb-4">Company</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Team</a></li>
+                  <li><a href="/About">About</a></li>
+                  <li><a href="/About">Team</a></li>
                   <li><a href="#">Terms &amp; Policies</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="/Contact">Contact Us</a></li>
                 </ul>
               </div>
             </div>
@@ -644,7 +638,7 @@
             <ul class="list-unstyled">
               <li>
                 <span class="d-block text-white">Address</span>
-                NO 346, 6 canel, Moraketiya, Embilipitiya, SriLanka.
+                 Embilipitiya, SriLanka.
               </li>
               <li>
                 <span class="d-block text-white">Telephone</span>
@@ -658,16 +652,7 @@
             
           </div>
         </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-          
-        </div>
+        
       </div>
     </footer>
   </div>
