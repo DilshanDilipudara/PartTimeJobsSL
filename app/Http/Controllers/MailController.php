@@ -11,9 +11,9 @@ use DB;
 
 class MailController extends Controller
 {
-   public function JobsAddMail(){
+   public function JobsAddMail($UserID){
        
-        // $jobadduserID = $UserID;
+         $jobadduserID = $UserID;
         
         $alluser = DB::table('users')
                    // ->where($jobadduserID,'!=','id')
