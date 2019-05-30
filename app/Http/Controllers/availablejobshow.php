@@ -68,9 +68,9 @@ class availablejobshow extends Controller
         
         $searchdata = DB::table('users')
                       ->where('location',$location)
-                      ->select('name','Mobile_Number','Sex','Description','DOB','ProfilePicture','Address')
+                      ->select('id','name','Mobile_Number','ProfilePicture')
                       ->get();
-                    
+         return view('ShowSearchCandidate',compact('searchdata'));
     }
 
 
