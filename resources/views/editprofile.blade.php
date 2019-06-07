@@ -116,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li>
 									<ul class="agileits-address-text">
 										<li class="agile-it-adress-left"><b>NIC</b></li>
-                                        <li> <input id="NIC" type="text" class="form-control" name="NIC"  value="{{$value->NIC_NO}}"  required autofocus  ></li>
+                                        <li> <input id="NIC" type="text" class="form-control" name="NIC" pattern="[0-9]+v" title="please end with v"  value="{{$value->NIC_NO}}"  required autofocus  ></li>
 										
 									</ul>
 								</li>

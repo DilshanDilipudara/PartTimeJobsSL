@@ -49,7 +49,7 @@
                             <label for="NIC_NO" class="col-md-4 col-form-label text-md-right">{{ __('NIC_NO') }}</label>
 
                             <div class="col-md-6">
-                                <input id="NIC_NO" type="text" pattern="[0-9]+V" class="form-control{{ $errors->has('NIC_NO') ? ' is-invalid' : '' }}" name="NIC_NO" value="{{ old('NIC_NO') }}"  title="please end with V " required autofocus>
+                                <input id="NIC_NO" type="text" pattern="[0-9]+v" class="form-control{{ $errors->has('NIC_NO') ? ' is-invalid' : '' }}" name="NIC_NO" value="{{ old('NIC_NO') }}"  title="please end with v" required autofocus>
 
                                 @if ($errors->has('NIC_NO'))
                                     <span class="invalid-feedback" role="alert">
