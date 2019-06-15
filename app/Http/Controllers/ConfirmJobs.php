@@ -24,6 +24,7 @@ class ConfirmJobs extends Controller
                       ->where('ID',$Job_ID)
                       ->select('ConfirmUser')
                      ->get();
+                     dd($userID);
        
         $data = 0;
        foreach($ConfirmUser as $conuser){
