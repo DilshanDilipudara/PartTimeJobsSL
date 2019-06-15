@@ -53,12 +53,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				   &nbsp;
 					<form method="post" action="{{url('/uploadfile')}}" enctype="multipart/form-data">
-					
 					{{ csrf_field() }}
-					<div class="form-group">
-          &nbsp; 
-					  <input type="file" name="select_file" />
-            <input type="submit" name="upload" class="btn btn-primary" value="Upload">
+					
+					 <div class="form-group">
+                      &nbsp; 
+					  <i class="fa fa-photo" style="font-size:40px;color:red"></i>
+					 
+                      <input type="file" name="select_file" />
+                    <input type="submit" name="upload" class="btn btn-primary" value="Upload">
        
         </div>		
 			</form>
