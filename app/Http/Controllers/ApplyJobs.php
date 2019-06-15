@@ -20,15 +20,15 @@ class ApplyJobs extends Controller
      public function applyjobaccept($ID,$ApplyUser){
          
       $userId =   \Auth::user()->id;
-      
+
          DB::table('Jobs')
            ->join('JobApplyUsers','JobApplyUsers.Job_ID','=','Jobs.ID')
            ->where('JobApplyUsers.User_ID','!=', $userId)
-            ->where('JobApplyUsers.Job_ID','!=',$ID)
+           ->where('JobApplyUsers.Job_ID','!=',$ID)
            ->where('Jobs.ID',$ID) 
            ->increment('Jobs.ApplyUser');
      
-
+         
       
 
 
@@ -36,6 +36,8 @@ class ApplyJobs extends Controller
                           ->where('Job_ID',$ID)
                           ->select('User_ID')
                           ->get();
+        
+      app('App\Http\Controllers\MailController')->JobsApplymail($JobIDforUserID);
         
           $flag = false;                
          foreach($JobIDforUserID as $value){

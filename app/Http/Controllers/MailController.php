@@ -33,6 +33,26 @@ class MailController extends Controller
       });
       
   }
+
+  public function JobsApplymail($JobIDforUserID){
+   
+    $UserID = $JobIDforUserID[0]->User_ID;
+  
+    $User_ID = DB::table('users')
+                   ->where('id',$UserID)
+                   ->select('email')
+                   ->get();
+     
+    Mail::send('ApplyjobsSendMail',['user_ID'=>$User_ID ],function($message)use($User_ID ){
+
+
+    $message ->to($User_ID[0]->email)
+            ->subject('Apply jobs');
+    $message ->from('parttimelk71@gmail.com','Part Time Jobs SL Mail');
+
+      });               
+
+  }
  
   
  
