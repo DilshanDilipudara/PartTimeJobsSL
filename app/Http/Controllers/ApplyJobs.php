@@ -19,12 +19,13 @@ class ApplyJobs extends Controller
 
      public function applyjobaccept($ID,$ApplyUser){
          
+  
       $userId =   \Auth::user()->id;
 
          DB::table('Jobs')
            ->join('JobApplyUsers','JobApplyUsers.Job_ID','=','Jobs.ID')
-           ->where('JobApplyUsers.User_ID','!=', $userId)
-           ->where('JobApplyUsers.Job_ID','!=',$ID)
+           //->where('JobApplyUsers.User_ID','!=', $userId)
+           //->where('JobApplyUsers.Job_ID','!=',$ID)
            ->where('Jobs.ID',$ID) 
            ->increment('Jobs.ApplyUser');
      
@@ -50,15 +51,14 @@ class ApplyJobs extends Controller
          
          if($flag == false){
             DB::table('JobApplyUsers') 
-              ->where('User_ID','!=', $userId)
-              ->where('Job_ID','!=',$ID)
+             
               ->insert(['User_ID' => $userId , 'Job_ID' => $ID,'ApplyJobs' => 1 ]);
          
          return redirect('/');
          }
          else{
             //show error in the page
-            return redirect()->back();
+            return redirect('/');
          }
 
         

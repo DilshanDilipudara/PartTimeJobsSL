@@ -24,7 +24,7 @@ class ConfirmJobs extends Controller
                       ->where('ID',$Job_ID)
                       ->select('ConfirmUser')
                      ->get();
-                     dd($userID);
+                   
        
         $data = 0;
        foreach($ConfirmUser as $conuser){
@@ -40,6 +40,8 @@ class ConfirmJobs extends Controller
              ->where('User_ID',$userID) 
              ->where('Job_ID',$Job_ID)
              ->update(['ConfirmJobs' => 1 ]);
+                 
+      app('App\Http\Controllers\MailController')->confirmUser($userID);
         
         return redirect()->back();
     }

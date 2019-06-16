@@ -54,10 +54,10 @@ class MailController extends Controller
 
   }
  
-  public function confirmUser(){
+  public function confirmUser($userID){
 
     $User_ID = DB::table('users')
-                   ->where('id',$UserID)
+                   ->where('id',$userID)
                    ->select('email')
                    ->get();
 

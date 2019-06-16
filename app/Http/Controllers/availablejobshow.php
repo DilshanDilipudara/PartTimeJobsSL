@@ -13,10 +13,14 @@ class availablejobshow extends Controller
        
        
         $now = date("Y-m-d");
-       
+        $userId =   \Auth::user()->id;
+
         $data = DB::table('Jobs')
-               ->where('In_Date','>=', $now)
-               ->where('Block',0)
+               //->join('JobApplyUsers','JobApplyUsers.Job_ID','=','Jobs.ID')
+               //->where('JobApplyUsers.Job_ID','!=','Jobs.ID')
+               //->where('JobApplyUsers.User_ID','!=',$userId)
+               ->where('Jobs.In_Date','>=', $now)
+               ->where('Jobs.Block',0)
                ->select('Jobs.ID','Jobs.Event','Jobs.In_Date','Jobs.Out_Date','Jobs.Per_Day_Payment','Jobs.quantity','Jobs.Location','Jobs.Discription')
                ->get();
 
@@ -29,6 +33,7 @@ class availablejobshow extends Controller
         $enddate = $request -> input('enddate');
         $location = $request -> input('location');
         $now = date("Y-m-d");
+        
 
         $searchdata = DB::table('Jobs')
                     ->where('Block',0)
