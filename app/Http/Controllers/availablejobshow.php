@@ -29,6 +29,12 @@ class availablejobshow extends Controller
 
     public function serchjobs(Request $request){
 
+        $this->validate($request, [
+            'startdate' => 'required',
+            'enddate' =>'required',
+            'location' => 'required',
+        ]);
+
         $startdate = $request->input('startdate');
         $enddate = $request -> input('enddate');
         $location = $request -> input('location');
@@ -49,7 +55,11 @@ class availablejobshow extends Controller
     }
 
     public function serchjobswithoutend(Request $request){
-
+       
+        $this->validate($request, [
+            'startdate' => 'required',
+            'location' =>'required',
+        ]);
         $startdate = $request->input('startdate');
   
         $location = $request -> input('location');
@@ -69,6 +79,7 @@ class availablejobshow extends Controller
     }
 
     public function serchprovincecandidate(Request $request){
+         
         $location = $request -> input('location');
         
         $searchdata = DB::table('users')
