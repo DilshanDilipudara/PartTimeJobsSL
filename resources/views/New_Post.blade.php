@@ -129,7 +129,24 @@
         <div class="row">
        
           <div class="col-md-12 col-lg-8 mb-5">
-          
+          @if (count($errors) > 0)
+						<div class="alert alert-danger">
+							Upload Validation Error<br><br>
+							<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+							@endforeach
+							</ul>
+						</div>
+						@endif
+						@if ($message = Session::get('success'))
+						<div class="alert alert-success alert-block">
+						<button type="button" class="close" data-dismiss="alert">×</button>
+										<strong>{{ $message }}</strong>
+						</div>
+					
+           @endif
+				
             
           
             <form action="/jobpost" method = "POST" class="p-5 bg-white">
@@ -280,6 +297,11 @@
               @endif
   
             </form>
+
+  
+
+
+
           </div>
 
           <div class="col-lg-4">

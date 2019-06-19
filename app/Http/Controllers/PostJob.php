@@ -13,6 +13,16 @@ class PostJob extends Controller
 
     public function post(Request $request){
            
+        $this->validate($request, [
+            'startdate' => 'required|date|after:yesterday',
+            'enddate' =>'required|date|after:yesterday',
+            'location' => 'required',
+            'event' => 'required',
+            'perdaypayment' => 'required|numeric',
+            'quantity' => 'required|numeric',
+            'discription' => 'required',
+        ]);
+
          $userID = \Auth::user()->id;
          $event      = $request -> input('event');
          $startdate  = $request -> input('startdate');
