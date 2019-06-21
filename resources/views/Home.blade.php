@@ -75,7 +75,7 @@
                <li class="has-children">
                   <a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Setting</span></a>
                   <ul class="dropdown">
-                    <li><a href="/Profile">Profile</a></li>
+                    <li><a href="/userprofile">Profile</a></li>
                     <li><a href="/AccountSetting">Account Setting</a></li>
                   </ul>
                 </li> 

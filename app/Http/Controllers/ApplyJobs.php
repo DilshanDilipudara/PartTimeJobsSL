@@ -40,26 +40,24 @@ class ApplyJobs extends Controller
         
       app('App\Http\Controllers\MailController')->JobsApplymail($JobIDforUserID);
         
-          $flag = false;                
-         foreach($JobIDforUserID as $value){
+         //  $flag = false;                
+         // foreach($JobIDforUserID as $value){
             
-            if( $userId==$value->User_ID){
-                  $flag = true;
-                  break;
-            }
-         } 
+         //    if( $userId==$value->User_ID){
+         //          $flag = true;
+         //          break;
+         //    }
+         // } 
          
-         if($flag == false){
+        // if($flag == false){
             DB::table('JobApplyUsers') 
-             
-              ->insert(['User_ID' => $userId , 'Job_ID' => $ID,'ApplyJobs' => 1 ]);
-         
-         return redirect('/');
-         }
-         else{
-            //show error in the page
+              ->insert(['User_ID' => $userId , 'Job_ID' => $ID,'ApplyJobs' => 1 ]);        
             return redirect('/');
-         }
+         // }
+         // else{
+         //    //show error in the page
+         //    return redirect('/');
+         // }
 
         
      }

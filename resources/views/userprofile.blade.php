@@ -139,7 +139,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</ul>
 								</li>
 							</ul>
-						
+							
+							<div class="ml-auto">
+                               <a href="{{('/editprofile'.$value->id)}}" class="btn btn-success py-2">Edit Profile</a>
+						  </div>
 						
              
 				</div>
