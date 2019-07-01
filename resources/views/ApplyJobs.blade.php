@@ -67,7 +67,7 @@
                 <li><a href="/ApplyJobs">Apply User</a></li>
                @endif
                 <li><a href="/About">About</a></li>
-                <li><a href="/Contact">Contact</a></li>
+              <!--  <li><a href="/Contact">Contact</a></li> -->
                 <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
                 
                 @if(!auth()->guest())
@@ -75,7 +75,7 @@
                <li class="has-children">
                   <a href="/" class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">Setting</span></a>
                   <ul class="dropdown">
-                    <li><a href="/Profile">Profile</a></li>
+                    <li><a href="/userprofile">Profile</a></li>
                     <li><a href="/AccountSetting">Account Setting</a></li>
                   </ul>
                 </li> 
@@ -116,8 +116,8 @@
 
     <div class="unit-5 overlay" style="background-image: url('images/hero_bg_2.jpg');">
       <div class="container text-center">
-        <h2 class="mb-0">Post a Job</h2>
-        <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep">></span> <span>Post a Job</span></p>
+        <h2 class="mb-0">Apply User</h2>
+        <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep"></span> <span>Apply User</span></p>
       </div>
     </div>
 
@@ -175,7 +175,7 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-6" data-aos="fade" >
-            <h2>Frequently Ask Questions</h2>
+            <h2>Find For User Apply Jobs</h2>
           </div>
         </div>
         

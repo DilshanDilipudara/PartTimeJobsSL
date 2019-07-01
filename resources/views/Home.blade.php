@@ -375,7 +375,7 @@
                 <h2 class="h5">Search Millions of Jobs</h2>
               </div>
               <div class="unit-3-body">
-                <p>You can easy to find a prat time job here. Our team is biggest srilankan part time job site. </p>
+                <p>You can find it easily a parttime job here. Our team is the biggest parttime job site of Sri Lanka. </p>
               </div>
             </div>
 
@@ -393,7 +393,7 @@
                 <h2 class="h5">Location Search</h2>
               </div>
               <div class="unit-3-body">
-                <p>You have recived mail to your area has a part time job. your are part time job owner easy to find.</p>
+                <p>You have recived mail to your area has a part time job. you are part time job owner find it easily.</p>
               </div>
             </div>
 
@@ -411,7 +411,7 @@
                 <h2 class="h5">Top Careers</h2>
               </div>
               <div class="unit-3-body">
-                 we have joining with largest company in sri lanka. If it has jab vacancies the can easily find a candidate in our webs site.</p>
+                 we have joining with largest company in sri lanka. If it has jab vacancies the can  find it easily a candidate in our webs site.</p>
               </div>
             </div>
 
@@ -431,7 +431,7 @@
                 <h2 class="h5">Search Expert Candidates</h2>
               </div>
               <div class="unit-3-body">
-                <p>If you find candidate your work you can easy to find good ability,good perfomence candidate easy.</p>
+                <p>If you find candidate your work you can easy to find good ability,good perfomence candidate find it easily.</p>
               </div>
             </div>
 
@@ -449,7 +449,7 @@
                 <h2 class="h5">Easy To Manage Jobs</h2>
               </div>
               <div class="unit-3-body">
-                <p>You can't waste your time you can 1 second find a candidate in your work. </p>
+                <p>You waste your time to find for candidate but you can one second find a candidate in your work. </p>
               </div>
             </div>
 
@@ -467,7 +467,7 @@
                 <h2 class="h5">Online Reviews</h2>
               </div>
               <div class="unit-3-body">
-                <p>Your find candidate you can see his history in his profile.</p>
+                <p>You find candidate you can see his history in his profile.</p>
               </div>
             </div>
 

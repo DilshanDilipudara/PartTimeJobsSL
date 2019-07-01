@@ -134,11 +134,14 @@
           <div class="col-lg-6 col-md-12">
             <div class="bg-white pl-lg-5 pl-0  pb-lg-5 pb-0">
             <h2 class="font-weight-bold text-black" data-aos="fade">About</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque perferendis, laudantium quod architecto velit ad officiis facere eveniet in fuga fugiat delectus rerum doloribus quos consectetur unde, expedita, quibusdam corporis impedit quia sequi aliquid sit. Ducimus labore molestias odio nam necessitatibus laboriosam vero saepe enim nobis. Repudiandae quidem, sint earum dolorum consequuntur dignissimos excepturi mollitia omnis aliquid, corporis, unde!</p>
+            <p>Since we formed in 2019, we have become part of the Sri Lanka largest hiring website, offering jobseekers the chance to search, view and apply for live job adverts, in any industry,
+             across the whole of the Sri Lanka.
+             But with so much choice, we have developed tools and technology to help you make finding the right job easier than ever.
+              We recommended jobs specific to your skills and experience,  and with instant alerts, we can help make sure that you never miss an opportunity.</p>
             <ul class="site-block-check">
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Dicta doloribus veniam impedit, enim!</li>
-              <li>Quod, facilis cupiditate repellat voluptas.</li>
+              <li>We’ve got roles for every construction or built environment skillset and interest, in the UK and overseas.</li>
+              <li>CatererGlobal is where hospitality finds great people.</li>
+              <li>Quod, facilis cupiditate repellat voDicta doloribus veniam impedit, enimDicta doloribus veniam impedit, enimDicta doloribus veniam impedit, enimluptas.</li>
               <li>Quae impedit id maxime fugiat.</li>
               <li>Esse aut iste dolor. In.</li>
             </ul>
