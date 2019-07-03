@@ -53,21 +53,12 @@
 
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active"><a href="/">Home</a></li>
-                <!-- <li class="has-children">
-                  <a href="/Candidate">Candidate</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Full Time</a></li>
-                    <li><a href="#">Part Time</a></li>
-                    <li><a href="#">Freelance</a></li>
-                    <li><a href="#">Internship</a></li>
-                    <li><a href="#">Termporary</a></li>
-                  </ul>
-                </li> -->
+              
                 @if(!auth()->guest())
                 <li><a href="/ApplyJobs">Apply User</a></li>
                @endif
                 <li><a href="/About">About</a></li>
-                <li><a href="/Contact">Contact</a></li>
+                <!-- <li><a href="/Contact">Contact</a></li> -->
                 <li><a href="/New_Post"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a></li>
                 
                 @if(!auth()->guest())
