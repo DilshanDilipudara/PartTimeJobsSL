@@ -2,13 +2,13 @@
 <br><br><br>
 
 
-<h2>->Clone Project</h2>
+<h2>Clone Project</h2>
                  
                   git clone https://github.com/DilshanDilipudara/PartTimeJobsSL.git
                   
                   
 
-<h2>->Requement</h2>
+<h2>Requement</h2>
    
                  * laravel
                  * mysql
