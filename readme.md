@@ -25,4 +25,7 @@
   <h2>Link</h2>
   
   
-     <a href ="http://www.parttimejobsl.tk/">Home</a>
+                 * Home     ->   http://www.parttimejobsl.tk/
+                 * Login    ->   http://www.parttimejobsl.tk/login
+                 * Register ->   http://www.parttimejobsl.tk/register
+  
