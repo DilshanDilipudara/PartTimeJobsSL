@@ -1,14 +1,28 @@
-<h1>               Sri Lankan Part Time Jobs Site </h1>
+<h1>Sri Lankan Part Time Jobs Site </h1>
 <br><br><br>
 
-<h2>clone project</h2>
+
+<h2>->Clone Project</h2>
                  
                   git clone https://github.com/DilshanDilipudara/PartTimeJobsSL.git
                   
                   
 
-<h2> Language </h2>
+<h2>->Requement</h2>
+   
+                 * laravel
+                 * mysql
+                 * HTML
+                 * CSS
+                 * JavaScript
+                 
+                 
+<p>You can find it easily a parttime job here. Our team is the biggest parttime job site of Sri Lanka.</p>
+
    
    
-           <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-           <p > <img src="https://worldvectorlogo.com/logo/mysql-5"></p>
+   
+  <h2>Link</h2>
+  
+  
+               <a href ="http://www.parttimejobsl.tk/">Home</a>
