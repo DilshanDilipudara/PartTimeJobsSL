@@ -1,4 +1,4 @@
-<h1>Sri Lankan Part Time Jobs Site </h1>
+<h1 align=center>Sri Lankan Part Time Jobs Site </h1>
 <br><br><br>
 
 
