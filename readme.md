@@ -2,15 +2,20 @@
 <br><br><br>
 
 
-<h2>Clone Project</h2>
-                 
+<h2>Building the source</h2>
+              
+  1.Clone this repository using the following command.   
+  
                   git clone https://github.com/DilshanDilipudara/PartTimeJobsSL.git
-                  
+  
+  2. If you downlaod the source, you need to update the composer using the following command.
+                 
+                  composer update
                   
 
 <h2>Requement</h2>
    
-                 * laravel
+                 * laravel 5.8
                  * mysql
                  * HTML
                  * CSS
@@ -22,7 +27,7 @@
    
    
    
-  <h2>Link</h2>
+  <h2>Useful links</h2>
   
   
                  * Home     ->   http://www.parttimejobsl.tk/
